@@ -6,8 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.enchantments.ModEnchantments;
-import net.xanthian.arbiters_seal.items.Bows;
-import net.xanthian.arbiters_seal.items.Swords;
+import net.xanthian.arbiters_seal.items.*;
 
 public class Init implements ModInitializer {
 
@@ -20,6 +19,10 @@ public class Init implements ModInitializer {
 
         Swords.registerSwordItems();
         Bows.registerBowItems();
+        Rapiers.registerRapierItems();
+        Mauls.registerMaulItems();
+        Helmets.registerHelmetItems();
+
         ModEnchantments.registerModEnchantments();
 
     }

@@ -30,31 +30,36 @@ public class Bows {
     public static final Item SILVER_BOW = registerItem("bows/silver_bow", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A bow etched with silver engravings, humming with magical power.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A bow etched with silver engravings,").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("humming with magical power.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item COMPOSITE_BOW = registerItem("bows/composite_bow", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A powerful bow made of horn and wood.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A powerful bow made of").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("horn and wood.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item TEORITE_BOW = registerItem("bows/teorite_bow", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A teorite bow that wards off enemy magic.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A teorite bow that wards").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("off enemy magic.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item MACH_BOW = registerItem("bows/mach_bow", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A light bow with an amazing rate of fire.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A light bow with an amazing").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("rate of fire.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item TRUE_FLIGHT = registerItem("bows/true_flight", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("An enhanced recurve bow able to shoot almost as far as a gun.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("An enhanced recurve bow able to").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("shoot almost as far as a gun.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item WARBOW = registerItem("bows/warbow", new ModBowItem(){
@@ -66,7 +71,8 @@ public class Bows {
     public static final Item YOICHI_BOW = registerItem("bows/yoichi_bow", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A bow that uses barbed arrows to inflict horrible wounds.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A bow that uses barbed arrows").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("to inflict horrible wounds.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }
         @Override
         public Rarity getRarity(ItemStack stack) {
@@ -76,7 +82,8 @@ public class Bows {
     public static final Item DOMINANCE = registerItem("bows/dominance", new ModBowItem(){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A fearsome weapon with arrows that always seek the heart.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A fearsome weapon with arrows").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("that always seek the heart.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }
         @Override
         public Rarity getRarity(ItemStack stack) {
