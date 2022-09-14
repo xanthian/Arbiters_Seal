@@ -1,0 +1,6 @@
+{
+    "parent": "arbiters_seal:item/bows/mach_bow",
+    "textures": {
+        "layer0": "arbiters_seal:item/bows/mach_bow_pulling_2"
+    }
+}

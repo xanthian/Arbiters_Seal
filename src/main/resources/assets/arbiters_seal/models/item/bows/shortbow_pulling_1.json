@@ -1,0 +1,6 @@
+{
+    "parent": "arbiters_seal:item/bows/shortbow",
+    "textures": {
+        "layer0": "arbiters_seal:item/bows/shortbow_pulling_1"
+    }
+}

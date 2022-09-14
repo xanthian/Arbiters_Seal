@@ -1,0 +1,6 @@
+{
+    "parent": "arbiters_seal:item/bows/true_flight",
+    "textures": {
+        "layer0": "arbiters_seal:item/bows/true_flight_pulling_1"
+    }
+}

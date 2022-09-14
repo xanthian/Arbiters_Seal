@@ -1,0 +1,6 @@
+{
+    "parent": "arbiters_seal:item/bows/composite_bow",
+    "textures": {
+        "layer0": "arbiters_seal:item/bows/composite_bow_pulling_1"
+    }
+}

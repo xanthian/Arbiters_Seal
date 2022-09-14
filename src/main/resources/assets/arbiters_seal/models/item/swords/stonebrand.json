@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "arbiters_seal:item/swords/stonebrand"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, 90, 55 ],
+      "translation": [ 0, 8, 0.5 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 90, 55 ],
+      "translation": [ 0, 6, 0.5 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, -90, -25 ],
+      "translation": [0, 7, 4]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, -90, -25 ],
+      "translation": [0, 7, 4]
+    }
+  }
+}
