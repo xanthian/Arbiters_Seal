@@ -55,6 +55,13 @@ public class Mauls {
             tooltip.add(Text.literal("ancient warriors.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
+    public static final Item PESTILENCE = registerItem("mauls/pestilence", new ModMaulItem(ToolMaterials.NETHERITE, 3, 3F){
+        @Override
+        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+            tooltip.add(Text.literal("A weapon imbued with many").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("curses").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }});
+
     public static final Item CLOCKWORK_HAMMER = registerItem("mauls/clockwork_hammer", new ModMaulItem(ToolMaterials.NETHERITE, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
@@ -78,17 +85,7 @@ public class Mauls {
         }
     });
 
-    public static final Item PESTILENCE = registerItem("mauls/pestilence", new ModMaulItem(ToolMaterials.NETHERITE, 3, 3F){
-        @Override
-        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A weapon imbued with many").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("curses").formatted(Formatting.ITALIC, Formatting.GRAY));
-        }
-        @Override
-        public Rarity getRarity(ItemStack stack) {
-            return Rarity.RARE;
-        }
-    });
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

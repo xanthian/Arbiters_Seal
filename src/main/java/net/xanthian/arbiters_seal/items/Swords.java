@@ -92,6 +92,17 @@ public class Swords {
             tooltip.add(Text.literal("tame the darkness.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
+    public static final Item GUARDIAN_SWORD = registerItem("swords/guardian_sword", new ModSwordItem(ToolMaterials.NETHERITE, 3, 3F){
+        @Override
+        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+            tooltip.add(Text.literal("A weapon covered in protective").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("runes.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }
+        @Override
+        public Rarity getRarity(ItemStack stack) {
+            return Rarity.UNCOMMON;
+        }});
+
     public static final Item DENDRITE_SWORD = registerItem("swords/dendrite_sword", new ModSwordItem(ToolMaterials.NETHERITE, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
@@ -115,38 +126,20 @@ public class Swords {
         @Override
         public Rarity getRarity(ItemStack stack) {
             return Rarity.UNCOMMON;
-        }
-    });
-
-    public static final Item SOUL_EATER = registerItem("swords/soul_eater", new ModSwordItem(ToolMaterials.NETHERITE, 3, 3F){
-    @Override
-    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("A diabolical weapon that feeds").formatted(Formatting.ITALIC, Formatting.GRAY));
-        tooltip.add(Text.literal("its wielders lust for power.").formatted(Formatting.ITALIC, Formatting.GRAY));
-    }
-        @Override
-        public Rarity getRarity(ItemStack stack) {
-            return Rarity.UNCOMMON;
-        }
-    });
-
-    public static final Item GUARDIAN_SWORD = registerItem("swords/guardian_sword", new ModSwordItem(ToolMaterials.NETHERITE, 3, 3F){
-        @Override
-        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A weapon covered in protective").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("runes.").formatted(Formatting.ITALIC, Formatting.GRAY));
-        }
-        @Override
-        public Rarity getRarity(ItemStack stack) {
-            return Rarity.UNCOMMON;
-        }
-    });
+        }});
 
     public static final Item ETERNIAS = registerItem("swords/eternias", new ModSwordItem(ToolMaterials.NETHERITE, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("The strongest,").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("deadliest of all swords.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }});
+
+    public static final Item SOUL_EATER = registerItem("swords/soul_eater", new ModSwordItem(ToolMaterials.NETHERITE, 3, 3F){
+        @Override
+        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+            tooltip.add(Text.literal("A diabolical weapon that feeds").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("its wielders lust for power.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }
         @Override
         public Rarity getRarity(ItemStack stack) {

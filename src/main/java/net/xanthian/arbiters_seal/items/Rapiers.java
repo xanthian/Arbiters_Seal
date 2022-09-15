@@ -68,12 +68,7 @@ public class Rapiers {
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("An emporer's sabre of office.").formatted(Formatting.ITALIC, Formatting.GRAY));
-        }
-            @Override
-            public Rarity getRarity(ItemStack stack) {
-                return Rarity.UNCOMMON;
-            }
-        });
+        }});
 
     public static final Item DEL_CHLISS = registerItem("rapiers/del_chliss", new ModRapierItem(ToolMaterials.NETHERITE, 3, 3F){
         @Override
@@ -83,7 +78,7 @@ public class Rapiers {
         }
         @Override
         public Rarity getRarity(ItemStack stack) {
-            return Rarity.RARE;
+            return Rarity.UNCOMMON;
         }
     });
 

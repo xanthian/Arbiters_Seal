@@ -7,7 +7,7 @@ import net.xanthian.arbiters_seal.Init;
 
 public class ModSwordItem extends SwordItem {
     public ModSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
-        super(toolMaterial, attackDamage, attackSpeed, new FabricItemSettings().group(Init.ARBITERS_SEAL));
+        super(toolMaterial, attackDamage, attackSpeed, new FabricItemSettings().group(Init.ARBITERS_SEAL_WEAPONS));
     }
 
     //@Override

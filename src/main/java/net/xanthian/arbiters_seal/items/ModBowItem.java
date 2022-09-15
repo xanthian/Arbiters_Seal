@@ -6,6 +6,6 @@ import net.xanthian.arbiters_seal.Init;
 
 public class ModBowItem extends BowItem {
     public ModBowItem() {
-        super(new FabricItemSettings().group(Init.ARBITERS_SEAL));
+        super(new FabricItemSettings().group(Init.ARBITERS_SEAL_WEAPONS));
     }
 }

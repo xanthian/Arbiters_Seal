@@ -8,6 +8,6 @@ import net.xanthian.arbiters_seal.Init;
 
 public class ModHelmetItem extends ArmorItem {
     public ModHelmetItem(ArmorMaterial material) {
-        super(material, EquipmentSlot.HEAD, new FabricItemSettings().group(Init.ARBITERS_SEAL));
+        super(material, EquipmentSlot.HEAD, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
     }
 }

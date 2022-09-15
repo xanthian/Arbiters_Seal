@@ -73,10 +73,6 @@ public class Bows {
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A bow that uses barbed arrows").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("to inflict horrible wounds.").formatted(Formatting.ITALIC, Formatting.GRAY));
-        }
-        @Override
-        public Rarity getRarity(ItemStack stack) {
-            return Rarity.UNCOMMON;
         }});
 
     public static final Item DOMINANCE = registerItem("bows/dominance", new ModBowItem(){
@@ -87,7 +83,7 @@ public class Bows {
         }
         @Override
         public Rarity getRarity(ItemStack stack) {
-            return Rarity.RARE;
+            return Rarity.UNCOMMON;
         }
     });
 
