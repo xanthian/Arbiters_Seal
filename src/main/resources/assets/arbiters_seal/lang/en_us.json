@@ -1,6 +1,7 @@
 {
   "itemGroup.arbiters_seal.arbiters_seal_weapons": "Arbiters Seal Weapons",
   "itemGroup.arbiters_seal.arbiters_seal_armor": "Arbiters Seal Armor",
+  "itemGroup.arbiters_seal.arbiters_seal_items": "Arbiters Seal Items",
 
   "item.arbiters_seal.bows.shortbow": "Shortbow",
   "item.arbiters_seal.bows.longbow": "Longbow",
@@ -95,6 +96,31 @@
   "item.arbiters_seal.daggers.flash_knife": "Flash Knife",
   "item.arbiters_seal.daggers.worm_tooth": "Worm Tooth",
   "item.arbiters_seal.daggers.dendrite_knife": "Dendrite Knife",
-  "item.arbiters_seal.daggers.dragons_nail": "Dragon Nail"
+  "item.arbiters_seal.daggers.dragons_nail": "Dragon Nail",
+
+  "item.arbiters_seal.axes.axe": "Axe",
+  "item.arbiters_seal.axes.battleaxe": "Battleaxe",
+  "item.arbiters_seal.axes.silver_axe": "Silver Axe",
+  "item.arbiters_seal.axes.chopper": "Chopper",
+  "item.arbiters_seal.axes.teorite_axe": "Teorite Axe",
+  "item.arbiters_seal.axes.blood_axe": "Blood Axe",
+  "item.arbiters_seal.axes.marauder_axe": "Marauder Axe",
+  "item.arbiters_seal.axes.ornate_axe": "Ornate Axe",
+  "item.arbiters_seal.axes.dark_reign": "Dark Reign",
+  "item.arbiters_seal.axes.executioner": "Executioner",
+  "item.arbiters_seal.axes.cry_havoc": "Cry Havoc",
+
+  "item.arbiters_seal.maces.mace": "Mace",
+  "item.arbiters_seal.maces.thumper": "Thumper",
+  "item.arbiters_seal.maces.silver_mace": "Silver Mace",
+  "item.arbiters_seal.maces.battlemace": "Battlemace",
+  "item.arbiters_seal.maces.energy_mace": "Energy Mace",
+  "item.arbiters_seal.maces.teorite_mace": "Teorite Mace",
+  "item.arbiters_seal.maces.holy_mace": "Holy Mace",
+  "item.arbiters_seal.maces.goedendag": "Goedendag",
+  "item.arbiters_seal.maces.pernach": "Pernach",
+  "item.arbiters_seal.maces.skullcrusher": "Skullcrusher",
+  "item.arbiters_seal.maces.gods_messenger": "God's Messenger"
+
 
 }

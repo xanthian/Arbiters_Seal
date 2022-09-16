@@ -15,15 +15,20 @@ public class Init implements ModInitializer {
             () -> new ItemStack(Swords.EXCALIBUR));
     public static final ItemGroup ARBITERS_SEAL_ARMOR = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_armor"),
             () -> new ItemStack(Helmets.GREEN_BERET));
+    public static final ItemGroup ARBITERS_SEAL_ITEMS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_items"),
+            () -> new ItemStack(Materials.TEORITE_INGOT));
 
     @Override
     public void onInitialize() {
 
-        Swords.registerSwordItems();
+        Axes.registerAxeItems();
         Bows.registerBowItems();
         Daggers.registerDaggerItems();
-        Rapiers.registerRapierItems();
+        Maces.registerMaceItems();
+        Materials.registerMaterialItems();
         Mauls.registerMaulItems();
+        Rapiers.registerRapierItems();
+        Swords.registerSwordItems();
         Helmets.registerHelmetItems();
 
         ModEnchantments.registerModEnchantments();
