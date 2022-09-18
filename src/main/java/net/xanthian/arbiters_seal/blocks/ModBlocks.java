@@ -110,6 +110,8 @@ public class ModBlocks {
                     UniformIntProvider.create(3, 7)));
     public static final Block TEORITE_BLOCK = registerBlock("materials/teorite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block RAW_TEORITE_BLOCK = registerBlock("materials/raw_teorite_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK)));
 
 // SILVER
     public static final Block SILVER_ORE = registerBlock("materials/silver_ore",
@@ -126,6 +128,8 @@ public class ModBlocks {
                     UniformIntProvider.create(3, 7)));
     public static final Block SILVER_BLOCK = registerBlock("materials/silver_block",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+    public static final Block RAW_SILVER_BLOCK = registerBlock("materials/raw_silver_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

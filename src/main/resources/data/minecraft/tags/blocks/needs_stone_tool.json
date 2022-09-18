@@ -1,0 +1,10 @@
+{
+  "values": [
+    "arbiters_seal:materials/silver_ore",
+    "arbiters_seal:materials/deepslate_silver_ore",
+    "arbiters_seal:materials/nether_silver_ore",
+    "arbiters_seal:materials/end_silver_ore",
+    "arbiters_seal:materials/raw_silver_block",
+    "arbiters_seal:materials/silver_block"
+  ]
+}
