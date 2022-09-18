@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.entity.ModSignTypes;
 import net.xanthian.arbiters_seal.world.features.tree.EbonySaplingGenerator;
 
 public class ModBlocks {
@@ -37,51 +38,58 @@ public class ModBlocks {
 
 
     //stair
-    public static final Block EBONY_STAIRS = registerBlock("materials/ebony_stairs",
+    public static final Block EBONY_STAIRS = registerBlock("objects/ebony_stairs",
             new StairsBlock(ModBlocks.EBONY_PLANKS.getDefaultState(),
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
                             .sounds(BlockSoundGroup.WOOD)));
 
     //slab
-    public static final Block EBONY_SLAB = registerBlock("materials/ebony_slab",
+    public static final Block EBONY_SLAB = registerBlock("objects/ebony_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     //fences
-    public static final Block EBONY_FENCE = registerBlock("materials/ebony_fence",
+    public static final Block EBONY_FENCE = registerBlock("objects/ebony_fence",
             new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
-    public static final Block EBONY_FENCE_GATE = registerBlock("materials/ebony_fence_gate",
+    public static final Block EBONY_FENCE_GATE = registerBlock("objects/ebony_fence_gate",
             new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     //button
-    public static final Block EBONY_BUTTON = registerBlock("materials/ebony_button",
+    public static final Block EBONY_BUTTON = registerBlock("objects/ebony_button",
             new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     //pressure_plate
-    public static final Block EBONY_PRESSURE_PLATE = registerBlock("materials/ebony_pressure_plate",
+    public static final Block EBONY_PRESSURE_PLATE = registerBlock("objects/ebony_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                             .sounds(BlockSoundGroup.WOOD)));
 
     //door
-    public static final Block EBONY_DOOR = registerBlock("materials/ebony_door",
+    public static final Block EBONY_DOOR = registerBlock("objects/ebony_door",
             new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
                     .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
     //trapdoor
-    public static final Block EBONY_TRAPDOOR = registerBlock("materials/ebony_trapdoor",
+    public static final Block EBONY_TRAPDOOR = registerBlock("objects/ebony_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f,2.f)
                     .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
+    // sign
+    public static final Block EBONY_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("objects/ebony_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WALL_SIGN), ModSignTypes.EBONY));
+    public static final Block EBONY_SIGN_BLOCK = registerBlockWithoutBlockItem("objects/ebony_sign",
+            new SignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_SIGN), ModSignTypes.EBONY));
+
+
     //leaves
-    public static final Block EBONY_LEAVES = registerBlock("materials/ebony_leaves",
+    public static final Block EBONY_LEAVES = registerBlock("objects/ebony_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LEAVES).nonOpaque()));
 
     //sapling
-    public static final Block EBONY_SAPLING = registerBlock("materials/ebony_sapling",
+    public static final Block EBONY_SAPLING = registerBlock("objects/ebony_sapling",
             new SaplingBlock(new EbonySaplingGenerator(),
                     FabricBlockSettings.copyOf(Blocks.DARK_OAK_SAPLING)));
 
@@ -130,6 +138,10 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
     public static final Block RAW_SILVER_BLOCK = registerBlock("materials/raw_silver_block",
             new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

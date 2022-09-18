@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_right_open",
-  "textures": {
-    "bottom": "arbiters_seal:block/materials/ebony_door_bottom",
-    "top": "arbiters_seal:block/materials/ebony_door_top"
-  }
-}

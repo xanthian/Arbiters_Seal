@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/ebony_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    " X ",
+    "  #"
+  ],
+  "result": {
+    "item": "arbiters_seal:daggers/ebony_dagger"
+  }
+}
