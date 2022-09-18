@@ -5,23 +5,23 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.xanthian.arbiters_seal.items.Materials;
+import net.xanthian.arbiters_seal.items.ModItems;
 
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
 
     BRONZE("bronze", 16, new int[]{2, 5, 7, 2}, 28,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Materials.BRONZE_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
     SILVER("silver", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Materials.SILVER_INGOT)),
+    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
     STEEL("bronze", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Materials.STEEL_INGOT)),
+    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
     TEORITE("bronze", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Materials.TEORITE_INGOT)),
+    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
 
     DENDRITE("dendrite", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Materials.DENDRITE_CRYSTAL));
+    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
 
         private static final int[] BASE_DURABILITY;
         private final String name;

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "arbiters_seal:block/materials/ebony_planks",
+    "side": "arbiters_seal:block/materials/ebony_planks",
+    "top": "arbiters_seal:block/materials/ebony_planks"
+  }
+}

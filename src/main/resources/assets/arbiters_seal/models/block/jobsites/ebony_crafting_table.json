@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "arbiters_seal:block/jobsites/ebony_crafting_table_front",
+    "up": "arbiters_seal:block/jobsites/ebony_crafting_table_top",
+    "down": "arbiters_seal:block/materials/ebony_planks",
+    "north": "arbiters_seal:block/jobsites/ebony_crafting_table_front",
+    "south": "arbiters_seal:block/jobsites/ebony_crafting_table_side",
+    "west": "arbiters_seal:block/jobsites/ebony_crafting_table_front",
+    "east": "arbiters_seal:block/jobsites/ebony_crafting_table_side"
+  }
+}

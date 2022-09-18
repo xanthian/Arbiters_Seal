@@ -2,21 +2,22 @@ package net.xanthian.arbiters_seal.material;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.xanthian.arbiters_seal.items.Materials;
+import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.items.ModItems;
 
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    BRONZE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(Materials.BRONZE_INGOT)),
-    SILVER(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(Materials.SILVER_INGOT)),
-    STEEL(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(Materials.STEEL_INGOT)),
-    TEORITE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(Materials.TEORITE_INGOT)),
+    BRONZE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
+    SILVER(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
+    STEEL(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+    TEORITE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
 
-    DENDRITE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(Materials.DENDRITE_CRYSTAL)),
+    DENDRITE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL)),
 
-    EBONY(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(Materials.EBONY_PLANKS));
+    EBONY(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS));
 
     private final int miningLevel;
     private final int itemDurability;

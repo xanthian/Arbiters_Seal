@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_orientable_trapdoor_bottom",
+  "textures": {
+    "texture": "arbiters_seal:block/materials/ebony_trapdoor"
+  }
+}

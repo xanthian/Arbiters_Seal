@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "arbiters_seal:item/materials/ebony_planks"
-  }
+  "parent": "arbiters_seal:block/materials/ebony_planks"
 }

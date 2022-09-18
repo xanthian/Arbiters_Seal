@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arbiters_seal:block/materials/ebony_planks",
+    "side": "arbiters_seal:block/jobsites/ebony_bookshelf"
+  }
+}

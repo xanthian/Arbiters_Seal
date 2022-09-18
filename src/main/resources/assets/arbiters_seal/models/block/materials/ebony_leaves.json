@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "arbiters_seal:block/materials/ebony_leaves"
+  }
+}

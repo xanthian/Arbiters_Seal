@@ -3,8 +3,7 @@
   "minVersion": "0.8",
   "package": "net.xanthian.arbiters_seal.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
-  ],
+  "mixins": ["CraftingScreenHandlerMixin"  ],
   "client": [ ],
   "injectors": {
     "defaultRequire": 1

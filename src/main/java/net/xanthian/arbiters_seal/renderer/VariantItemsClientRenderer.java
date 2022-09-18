@@ -7,7 +7,7 @@ import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.xanthian.arbiters_seal.items.ModCrossbowItem;
+import net.xanthian.arbiters_seal.items.tools.ModCrossbowItem;
 
 @Environment(EnvType.CLIENT)
 public class VariantItemsClientRenderer {

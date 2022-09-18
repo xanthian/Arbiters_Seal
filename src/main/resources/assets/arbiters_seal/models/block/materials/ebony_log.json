@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arbiters_seal:block/materials/ebony_log_top",
+    "side": "arbiters_seal:block/materials/ebony_log"
+  }
+}

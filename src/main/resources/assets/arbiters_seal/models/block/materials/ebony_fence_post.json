@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "arbiters_seal:block/materials/ebony_planks"
+  }
+}
