@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:materials/ebony_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "arbiters_seal:objects/ebony_trapdoor"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:objects/ebony_slab"
+    }
+  },
+  "pattern": [
+    "# #",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "item": "minecraft:composter"
+  }
+}

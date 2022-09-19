@@ -6,6 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.config.ArbitersSealConfig;
 import net.xanthian.arbiters_seal.enchantments.ModEnchantments;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
@@ -28,6 +29,7 @@ public class Init implements ModInitializer {
 
         // Sapling & Ore Gen
         ModConfiguredFeatures.registerConfiguredFeatures();
+        ArbitersSealConfig.registerConfigs();
 
         // Generic Item registration
         ModItems.registerModItems();
@@ -38,12 +40,14 @@ public class Init implements ModInitializer {
         Bows.registerBowItems();
         Crossbows.registerCrossbowItems();
         Daggers.registerDaggerItems();
+        //Guns.registerGunItems()
         Maces.registerMaceItems();
         Mauls.registerMaulItems();
         Rapiers.registerRapierItems();
         Rods.registerRodItems();
         Scythes.registerScytheItems();
         Spears.registerSpearItems();
+        Staffs.registerStaffItems();
         Swords.registerSwordItems();
 
         // Armor registration

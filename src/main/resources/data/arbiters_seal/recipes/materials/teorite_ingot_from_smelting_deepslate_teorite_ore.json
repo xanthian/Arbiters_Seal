@@ -2,9 +2,9 @@
   "type": "minecraft:smelting",
   "cookingtime": 200,
   "experience": 0.7,
-  "group": "iron_ingot",
+  "group": "teorite_ingot",
   "ingredient": {
-    "item": "arbiters_seal:materials/nether_teorite_ore"
+    "item": "arbiters_seal:materials/deepslate_teorite_ore"
   },
   "result": "arbiters_seal:materials/teorite_ingot"
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "arbiters_seal:materials/ebony_planks"
+    },
+    "S": {
+      "item": "arbiters_seal:objects/ebony_slab"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "result": {
+    "item": "minecraft:barrel"
+  }
+}

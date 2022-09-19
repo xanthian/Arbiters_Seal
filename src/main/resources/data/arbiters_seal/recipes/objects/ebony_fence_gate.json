@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "arbiters_seal:materials/ebony_planks"
+    }
+  },
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "result": {
+    "item": "arbiters_seal:objects/ebony_fence_gate"
+  }
+}

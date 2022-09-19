@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "iron_ingot",
+  "group": "teorite_ingot",
   "ingredients": [
     {
       "item": "arbiters_seal:materials/teorite_block"
