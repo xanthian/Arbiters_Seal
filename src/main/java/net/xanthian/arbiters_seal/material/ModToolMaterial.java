@@ -10,14 +10,13 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    BRONZE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
-    SILVER(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
-    STEEL(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    TEORITE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
+    BRONZE(1, 250, 6.0F, 2.0F, 14,() -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
+    SILVER(1, 50, 8.0F, 0.0F, 20,() -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
+    TEORITE(2, 500, 5.0F, 2.0F, 12,() -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
+    EBONY(3, 500, 8.0F, 3.0F, 6,() -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS)),
+    STEEL(3, 350, 8.0F, 3.0F, 10,() -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+    DENDRITE(3, 1250, 8.0F, 3.0F, 16,() -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
 
-    DENDRITE(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL)),
-
-    EBONY(5, 1800, 7.0F, 7.0F, 25,() -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS));
 
     private final int miningLevel;
     private final int itemDurability;

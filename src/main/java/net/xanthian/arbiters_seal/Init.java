@@ -11,6 +11,7 @@ import net.xanthian.arbiters_seal.enchantments.ModEnchantments;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
 import net.xanthian.arbiters_seal.items.tools.*;
+import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 import net.xanthian.arbiters_seal.world.features.ModConfiguredFeatures;
 import net.xanthian.arbiters_seal.world.gen.ModWorldGen;
 
@@ -56,5 +57,6 @@ public class Init implements ModInitializer {
         // Other stuff
         ModEnchantments.registerModEnchantments();
         ModWorldGen.generateModWorldGen();
+        ModStatusEffects.registerStatusEffects();
     }
 }
