@@ -139,6 +139,14 @@ public class ModBlocks {
     public static final Block RAW_SILVER_BLOCK = registerBlock("materials/raw_silver_block",
             new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
 
+// RANDOM
+    public static final Block ADAMANT_BLOCK = registerBlock("materials/adamant_block",
+        new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+    public static final Block AEGISITE_BLOCK = registerBlock("materials/aegisite_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+    public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
     }

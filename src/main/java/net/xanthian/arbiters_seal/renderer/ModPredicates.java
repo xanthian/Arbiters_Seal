@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.items.tools.ModCrossbowItem;
 
 @Environment(EnvType.CLIENT)
-public class VariantItemsClientRenderer {
+public class ModPredicates {
 
     // Bows
     public static void registerBowPredicates(Item bowItem) {
