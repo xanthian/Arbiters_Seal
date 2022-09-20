@@ -30,12 +30,21 @@ public class ModDaggerItem extends SwordItem {
                 }
             }
         }
+//to-do
+        //if ((mainHand.getItem() == Daggers.TONGUESLICER)) {
+            //Random random = new Random();
+            //if (random.nextFloat() <= 0.62f) {
+               // if (target.getStatusEffect(StatusEffects.BLINDNESS) == null || target.getStatusEffect(StatusEffects.BLINDNESS).getDuration() < 20) {
+                    //target.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200, 0, true, true, true), target);
+               // }
+            //}
+       // }
 
         if ((mainHand.getItem() == Daggers.TEORITE_DAGGER)) {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getStatusEffect(ModStatusEffects.ROOT) == null || target.getStatusEffect(ModStatusEffects.ROOT).getDuration() < 20) {
-                    target.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ROOT, 200, 5, true, true, true), target);
+                    target.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ROOT, 100, 5, true, true, true), target);
                 }
             }
         }

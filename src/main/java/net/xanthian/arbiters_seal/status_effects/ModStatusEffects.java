@@ -9,10 +9,12 @@ public class ModStatusEffects {
 
     public static final StatusEffect BLEED = new BleedStatusEffect();
     public static final StatusEffect ROOT = new RootStatusEffect();
+    public static final StatusEffect LIFERECOVERY_COOLDOWN = new LifeRecoveryCooldownEffect();
 
 
     public static void registerStatusEffects() {
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "bleed"), BLEED);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "root"), ROOT);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "liferecovery_cooldown"), LIFERECOVERY_COOLDOWN);
     }
 }

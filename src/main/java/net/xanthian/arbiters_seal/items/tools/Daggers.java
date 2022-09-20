@@ -59,7 +59,7 @@ public class Daggers {
             tooltip.add(Text.literal("curses.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item MAIN_GAUCHE = registerItem("daggers/main_gauche", new ModDaggerItem(ToolMaterials.IRON, 3, -1.8F){
+    public static final Item MAIN_GAUCHE = registerItem("daggers/main_gauche", new ModDaggerItem(ToolMaterials.IRON, 2, -1.8F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("An offhand weapon used to").formatted(Formatting.ITALIC, Formatting.GRAY));

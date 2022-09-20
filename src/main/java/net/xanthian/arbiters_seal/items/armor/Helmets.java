@@ -95,7 +95,7 @@ public class Helmets {
     public static final Item WITCH_CROWN = registerItem("helmets/witch_crown", new ModHelmetItem(ArmorMaterials.NETHERITE){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A hate woven from raw").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A hat woven from raw").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("moonlight, enhances all martial").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("abilities.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }

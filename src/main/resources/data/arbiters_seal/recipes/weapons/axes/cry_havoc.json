@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/adamant_ingot"
+    },
+    "Z": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    }
+  },
+  "pattern": [
+    "X X",
+    "ZYZ",
+    " # "
+  ],
+  "result": {
+    "item": "arbiters_seal:axes/battleaxe"
+  }
+}
