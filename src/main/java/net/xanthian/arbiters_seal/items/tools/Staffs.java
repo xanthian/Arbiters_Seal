@@ -17,74 +17,80 @@ import java.util.List;
 
 public class Staffs {
 
-    public static final Item PLOW = registerItem("staffs/plow", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item WOOD_STAFF = registerItem("staffs/wood_staff", new ModStaffItem(ToolMaterials.IRON, 1, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A peasant's tool, scorned by").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("by real warriors.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("Just a regular wooden stick.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item STAFF = registerItem("staffs/staff", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item WHITE_STAFF = registerItem("staffs/white_staff", new ModStaffItem(ToolMaterials.IRON, 1, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A staff built for battle.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A staff carved out of pure").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("alabaster, blessed by a very").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("vocal priest.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item SILVER_STAFF = registerItem("staffs/silver_staff", new ModStaffItem(ModToolMaterial.SILVER, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A silver-bladed staff to hack").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("the undead apart.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A straight staff with a silver").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("headpiece.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item CRIMSON_STAFF = registerItem("staffs/crimson_staff", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item HEALING_STAFF = registerItem("staffs/healing_staff", new ModStaffItem(ToolMaterials.IRON, 2, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("Stained by the blood of its").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("victims, this staff has a dark").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("past.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A staff that heals wounds with").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("a mere touch.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item TEORITE_STAFF = registerItem("staffs/teorite_staff", new ModStaffItem(ModToolMaterial.TEORITE, 3, 3F){
+    public static final Item HEAVY_STAFF = registerItem("staffs/heavy_staff", new ModStaffItem(ToolMaterials.IRON, 3, 3F){
+        @Override
+        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+            tooltip.add(Text.literal("An ornate quarterstaff.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }});
+
+    public static final Item TEORITE_STAFF = registerItem("staffs/teorite_staff", new ModStaffItem(ModToolMaterial.TEORITE, 2, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("This teorite staff will sweep").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("spells away.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item FAUCHARD = registerItem("staffs/fauchard", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item GOLD_STAFF = registerItem("staffs/gold_staff", new ModStaffItem(ToolMaterials.GOLD, 4, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A long-bladed polearm.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A gaudy staff with golden").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("decorations.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item ENERGY_STAFF = registerItem("staffs/energy_staff", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item BLACK_STAFF = registerItem("staffs/black_staff", new ModStaffItem(ModToolMaterial.EBONY, 2, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("A magical staff bearing a blade").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("of pure energy.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("A charred wood staff of").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("unknown origin.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item KAMAITACHI = registerItem("staffs/kamaitachi", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item GATEKEEPER = registerItem("staffs/gatekeeper", new ModStaffItem(ToolMaterials.IRON, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("An exotic weapon designed to").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("rip flesh from bone.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("The staff of office of the").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("warden of the underworld.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item DAYS_HARVEST = registerItem("staffs/days_harvest", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item MALIGENII = registerItem("staffs/maligenii", new ModStaffItem(ToolMaterials.IRON, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("This strange weapon inflicts").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("surprisingly deep cuts.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("The preferred implement of").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("archmages.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item REAPER = registerItem("staffs/reaper", new ModStaffItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item GODSLEG = registerItem("staffs/godsleg", new ModStaffItem(ToolMaterials.DIAMOND, 3, 3F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-            tooltip.add(Text.literal("This glowing staff cuts").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("through the darkness to find its").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("prey.").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("Carved out of the femur of a").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("forgotten god.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }
         @Override
         public Rarity getRarity(ItemStack stack) {

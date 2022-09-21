@@ -33,8 +33,8 @@ public class Init implements ModInitializer {
         ArbitersSealConfig.registerConfigs();
 
         // Generic Item registration
-        ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModItems.registerModItems();
 
         // Weapon Registration
         Axes.registerAxeItems();

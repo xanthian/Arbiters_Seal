@@ -18,6 +18,5 @@ public class ModEnchantments {
     }
 
     public static void registerModEnchantments() {
-        System.out.println("Registering Health Regen for " +Init.MOD_ID);
-    }
+            }
 }

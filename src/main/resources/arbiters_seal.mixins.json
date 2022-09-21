@@ -4,12 +4,13 @@
   "package": "net.xanthian.arbiters_seal.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlockEntityTypeMixin",
     "CraftingScreenHandlerMixin",
     "EnchantingTableBlockMixin",
-    "SignTypeAccessor",
-    "BlockEntityTypeMixin"
+    "LivingEntityMixin",
+    "SignTypeAccessor"
   ],
-  "client": [ ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

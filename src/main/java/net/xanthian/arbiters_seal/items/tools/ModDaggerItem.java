@@ -1,6 +1,7 @@
 package net.xanthian.arbiters_seal.items.tools;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -30,15 +31,17 @@ public class ModDaggerItem extends SwordItem {
                 }
             }
         }
-//to-do
-        //if ((mainHand.getItem() == Daggers.TONGUESLICER)) {
-            //Random random = new Random();
-            //if (random.nextFloat() <= 0.62f) {
-               // if (target.getStatusEffect(StatusEffects.BLINDNESS) == null || target.getStatusEffect(StatusEffects.BLINDNESS).getDuration() < 20) {
-                    //target.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200, 0, true, true, true), target);
-               // }
-            //}
-       // }
+
+        if ((mainHand.getItem() == Daggers.TONGUESLICER)) {
+            Random random = new Random();
+            if (random.nextFloat() <= 0.62f) {
+                if (target.getType() == EntityType.GHAST || target.getType() == EntityType.BLAZE || target.getType() == EntityType.GUARDIAN) {
+                    if (target.getStatusEffect(ModStatusEffects.MUTE) == null || target.getStatusEffect(ModStatusEffects.MUTE).getDuration() < 20) {
+                        target.addStatusEffect(new StatusEffectInstance(ModStatusEffects.MUTE, 200, 0, true, true, true), target);
+                    }
+                }
+            }
+        }
 
         if ((mainHand.getItem() == Daggers.TEORITE_DAGGER)) {
             Random random = new Random();
