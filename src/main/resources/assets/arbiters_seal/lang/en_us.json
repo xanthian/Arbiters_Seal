@@ -24,6 +24,24 @@
   "item.arbiters_seal.bows.dominance": "Dominance",
   "item.arbiters_seal.bows.dominance.tooltip": "that always seek the heart.\nA fearsome weapon with arrows",
 
+  "item.arbiters_seal.rods.rod": "Rod",
+  "item.arbiters_seal.rods.ancient_rod": "Ancient Rod",
+  "item.arbiters_seal.rods.silver_rod": "Silver Rod",
+  "item.arbiters_seal.rods.water_rod": "Water Rod",
+  "item.arbiters_seal.rods.fire_rod": "Fire Rod",
+  "item.arbiters_seal.rods.earth_rod": "Earth Rod",
+  "item.arbiters_seal.rods.thunder_rod": "Thunder Rod",
+  "item.arbiters_seal.rods.teorite_rod": "Teorite Rod",
+  "item.arbiters_seal.rods.ebony_rod": "Ebony Rod",
+  "item.arbiters_seal.rods.jeweled_rod": "Jeweled Rod",
+  "item.arbiters_seal.rods.heavy_rod": "Heavy Rod",
+  "item.arbiters_seal.rods.glacier_rod": "Glacier Rod",
+  "item.arbiters_seal.rods.blazing_rod": "Blazing Rod",
+  "item.arbiters_seal.rods.quake_rod": "Quake Rod",
+  "item.arbiters_seal.rods.surge_rod": "Surge Rod",
+  "item.arbiters_seal.rods.void_rod": "Void Rod",
+  "item.arbiters_seal.rods.prism_rod": "Prism Rod",
+  
   "item.arbiters_seal.swords.shortsword": "Shortsword",
   "item.arbiters_seal.swords.longsword": "Longsword",
   "item.arbiters_seal.swords.silver_sword": "Silver Sword",
@@ -161,5 +179,17 @@
   "item.arbiters_seal.scythes.energy_scythe": "Energy Scythe",
   "item.arbiters_seal.scythes.kamaitachi": "Kamaitachi",
   "item.arbiters_seal.scythes.days_harvest": "Day's Harvest",
-  "item.arbiters_seal.scythes.reaper": "Reaper"
+  "item.arbiters_seal.scythes.reaper": "Reaper",
+
+  "item.arbiters_seal.staffs.wood_staff": "Wood Staff",
+  "item.arbiters_seal.staffs.white_staff": "White Staff",
+  "item.arbiters_seal.staffs.silver_staff": "Silver Staff",
+  "item.arbiters_seal.staffs.healing_staff": "Healing Staff",
+  "item.arbiters_seal.staffs.heavy_staff": "Heavy Staff",
+  "item.arbiters_seal.staffs.teorite_staff": "Teorite Staff",
+  "item.arbiters_seal.staffs.gold_staff": "Gold Staff",
+  "item.arbiters_seal.staffs.black_staff": "Black Staff",
+  "item.arbiters_seal.staffs.gatekeeper": "Gatekeeper",
+  "item.arbiters_seal.staffs.maligenii": "Maligenii",
+  "item.arbiters_seal.staffs.godsleg": "Godsleg"
 }

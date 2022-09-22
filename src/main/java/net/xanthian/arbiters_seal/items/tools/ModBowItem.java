@@ -1,8 +1,13 @@
 package net.xanthian.arbiters_seal.items.tools;
 
+import com.google.common.collect.Multimap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -23,6 +28,10 @@ public class ModBowItem extends BowItem {
         this.tiers = tier;
     }
 
+    @Override
+    public int getRange() {
+        return this.tiers.getRangeBonus();
+    }
 
     @Override
     public int getEnchantability() {
@@ -42,14 +51,16 @@ public class ModBowItem extends BowItem {
             String[] infoLines = info.split("\\r?\\n");
 
             for (String infoLine : infoLines) {
-                tooltip.add(1, Text.literal(infoColour + infoLine));
+                tooltip.add(1, Text.literal(infoLine).formatted(Formatting.ITALIC, Formatting.GRAY));
             }
         } else {
-            tooltip.add(Text.literal(infoColour + I18n.translate(stack.getTranslationKey() + ".tooltip")));
+            tooltip.add(Text.literal(I18n.translate(stack.getTranslationKey() + ".tooltip").formatted(Formatting.ITALIC, Formatting.GRAY)));
         }
         //tooltip.add(Text.translatable(stack.getTranslationKey()+".tooltip").formatted(Formatting.ITALIC, Formatting.GRAY));
-        tooltip.add(Text.literal("+" + Float.toString(this.tiers.getAttackDamageBonus()) + " ")
-                .append(Text.literal("Attack Damage")).formatted(Formatting.DARK_GREEN));
+        tooltip.add(Text.literal("+" + this.tiers.getAttackDamageBonus() + " ")
+                .append(Text.literal("Attack Bonus")).formatted(Formatting.DARK_GREEN));
+        tooltip.add(Text.literal(this.tiers.getRangeBonus() + " ")
+                .append(Text.literal("Attack Range")).formatted(Formatting.DARK_GREEN));
         super.appendTooltip(stack, world, tooltip, context);
     }
 }
