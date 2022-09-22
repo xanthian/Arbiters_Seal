@@ -191,5 +191,23 @@
   "item.arbiters_seal.staffs.black_staff": "Black Staff",
   "item.arbiters_seal.staffs.gatekeeper": "Gatekeeper",
   "item.arbiters_seal.staffs.maligenii": "Maligenii",
-  "item.arbiters_seal.staffs.godsleg": "Godsleg"
+  "item.arbiters_seal.staffs.godsleg": "Godsleg",
+
+  "item.arbiters_seal.shields.buckler": "Buckler",
+  "item.arbiters_seal.shields.bronze_shield": "Bronze Shield",
+  "item.arbiters_seal.shields.steel_shield": "Steel Shield",
+  "item.arbiters_seal.shields.gold_shield": "Gold Shield",
+  "item.arbiters_seal.shields.water_shield": "Water Shield",
+  "item.arbiters_seal.shields.fire_shield": "Fire Shield",
+  "item.arbiters_seal.shields.earth_shield": "Earth Shield",
+  "item.arbiters_seal.shields.thunder_shield": "Thunder Shield",
+  "item.arbiters_seal.shields.teorite_shield": "Teorite Shield",
+  "item.arbiters_seal.shields.aegis_shield": "Aegis Shield",
+  "item.arbiters_seal.shields.arbiter_shield": "Arbiter Shield",
+  "item.arbiters_seal.shields.magic_shield": "Magic Shield",
+  "item.arbiters_seal.shields.valiant_shield": "Valiant Shield",
+  "item.arbiters_seal.shields.behemoth_guard": "Behemoth Guard",
+  "item.arbiters_seal.shields.curse_shield": "Cursed Shield",
+  "item.arbiters_seal.shields.shield_of_the_six": "Shield of the Six"
+
 }
