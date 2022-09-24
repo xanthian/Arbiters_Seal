@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/ebony_planks"
+    },
+    "1": {
+      "item": "arbiters_seal:materials/godwood"
+    },
+    "2": {
+      "item": "arbiters_seal:materials/angel_tears"
+    }
+  },
+  "pattern": [
+    "2X2",
+    "X 1",
+    "  #"
+  ],
+  "result": {
+    "item": "arbiters_seal:staffs/godsleg"
+  }
+}

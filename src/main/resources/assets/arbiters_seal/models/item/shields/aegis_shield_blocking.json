@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "shield": "arbiters_seal:item/shields/aegis_shield"
+    "layer0":"arbiters_seal:item/shields/aegis_shield"
   },
 
   "display": {

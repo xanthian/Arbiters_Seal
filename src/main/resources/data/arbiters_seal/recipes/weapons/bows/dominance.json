@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:string"
+    },
+    "1": {
+      "item": "arbiters_seal:materials/godwood"
+    },
+    "3": {
+      "item": "arbiters_seal:materials/snakebite_oil"
+    }
+  },
+  "pattern": [
+    " 3X",
+    "1 3",
+    " 3X"
+  ],
+  "result": {
+    "item": "arbiters_seal:bows/dominance"
+  }
+}

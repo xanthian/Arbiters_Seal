@@ -9,6 +9,7 @@ import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.config.ArbitersSealConfig;
 import net.xanthian.arbiters_seal.enchantments.ModEnchantments;
 import net.xanthian.arbiters_seal.items.*;
+import net.xanthian.arbiters_seal.items.armor.Chestpieces;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
 import net.xanthian.arbiters_seal.items.shields.ShieldItems;
 import net.xanthian.arbiters_seal.items.weapons.*;
@@ -53,6 +54,7 @@ public class Init implements ModInitializer {
         Swords.registerSwordItems();
 
         // Armor registration
+        Chestpieces.registerChestpieceItems();
         Helmets.registerHelmetItems();
         ShieldItems.registerShieldItems();
 

@@ -4,10 +4,10 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.particle.ParticleTypes;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 
@@ -19,11 +19,11 @@ public class ModAxeItem extends AxeItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
-
-        if ((mainHand.getItem() == Axes.BLOOD_AXE)) {
-            if (attacker.getStatusEffect(ModStatusEffects.LIFERECOVERY_COOLDOWN) == null) {
-                attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 20, -5, true, false, true), target);
-                attacker.addStatusEffect(new StatusEffectInstance(ModStatusEffects.LIFERECOVERY_COOLDOWN, 1000, 0, true, false, true), target);
+        if (!target.world.isClient() && (mainHand.getItem() == Axes.BLOOD_AXE)) {
+            if (attacker.getStatusEffect(ModStatusEffects.LIFERECOVERY_COOLDOWN) == null && (attacker.getHealth() != attacker.getMaxHealth())) {
+                attacker.heal(6.0F);
+                attacker.addStatusEffect(new StatusEffectInstance(ModStatusEffects.LIFERECOVERY_COOLDOWN, 500, 0, true, false, true), target);
+                target.world.addParticle(ParticleTypes.HEART, target.getX() + 0.5, target.getY() + 1D, target.getZ() + 1, 0d, 0.05D, 0d);
                 //}
             }
         }

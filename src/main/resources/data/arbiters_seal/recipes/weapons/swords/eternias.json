@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "1": {
+      "item": "arbiters_seal:materials/meteorite"
+    },
+    "2": {
+      "item": "arbiters_seal:materials/adamant_ingot"
+    }
+  },
+  "pattern": [
+    " 1 ",
+    " 2 ",
+    " # "
+  ],
+  "result": {
+    "item": "arbiters_seal:swords/eternias"
+  }
+}

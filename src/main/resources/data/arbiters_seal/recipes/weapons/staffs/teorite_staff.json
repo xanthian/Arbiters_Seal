@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/teorite_ingot"
+    }
+  },
+  "pattern": [
+    "XX#",
+    "X #",
+    "  #"
+  ],
+  "result": {
+    "item": "arbiters_seal:staffs/teorite_staff"
+  }
+}

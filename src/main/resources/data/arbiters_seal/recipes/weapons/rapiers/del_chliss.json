@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "1": {
+      "item": "arbiters_seal:materials/adamant_ingot"
+    },
+    "2": {
+      "item": "arbiters_seal:materials/angel_tears"
+    }
+  },
+  "pattern": [
+    "  2",
+    " 1 ",
+    "#  "
+  ],
+  "result": {
+    "item": "arbiters_seal:rapiers/del_chliss"
+  }
+}
