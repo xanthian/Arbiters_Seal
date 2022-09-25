@@ -10,7 +10,7 @@
     "LivingEntityMixin",
     "SignTypeAccessor"
   ],
-  "client": [],
+  "client": ["AbstractClientPlayerEntityMixin"],
   "injectors": {
     "defaultRequire": 1
   }

@@ -44,11 +44,16 @@ public class Helmets {
             tooltip.add(Text.literal("confidence.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item SAGE_HAT = registerItem("helmets/sage_hat", new ModHelmetItem(ArmorMaterials.NETHERITE){
+    public static final Item SAGE_HAT = registerItem("helmets/sage_hat", new ModHelmetItem(ArmorMaterials.NETHERITE) {
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A tall hat worn by religious").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("types.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }
+
+        @Override
+        public Rarity getRarity(ItemStack stack) {
+            return Rarity.RARE;
         }});
 
     public static final Item TEORITE_CIRCLET = registerItem("helmets/teorite_circlet", new ModHelmetItem(ModArmorMaterial.TEORITE){
@@ -182,8 +187,11 @@ public class Helmets {
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("The hat of a highly skilled").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("travelling warrior.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }
+        @Override
+        public Rarity getRarity(ItemStack stack) {
+            return Rarity.UNCOMMON;
         }});
-
     public static final Item NINJA_COWL = registerItem("helmets/ninja_cowl", new ModHelmetItem(ArmorMaterials.NETHERITE){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
@@ -250,6 +258,10 @@ public class Helmets {
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A thick racoon fur cap, very").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("warm.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }
+        @Override
+        public Rarity getRarity(ItemStack stack) {
+            return Rarity.RARE;
         }});
 
     public static final Item MORION = registerItem("helmets/morion", new ModHelmetItem(ArmorMaterials.NETHERITE){
@@ -272,6 +284,10 @@ public class Helmets {
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("An armet carved out of green").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("crystal.").formatted(Formatting.ITALIC, Formatting.GRAY));
+        }
+        @Override
+        public Rarity getRarity(ItemStack stack) {
+            return Rarity.UNCOMMON;
         }});
 
     public static final Item ROYAL_HELM = registerItem("helmets/royal_helm", new ModHelmetItem(ArmorMaterials.NETHERITE){

@@ -6,7 +6,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.items.weapons.Bows;
+import net.xanthian.arbiters_seal.items.tools.Bows;
 
 import static net.xanthian.arbiters_seal.renderer.ModPredicates.registerBowPredicates;
 

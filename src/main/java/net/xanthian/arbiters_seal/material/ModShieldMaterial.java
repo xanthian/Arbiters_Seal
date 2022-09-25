@@ -11,29 +11,31 @@ import java.util.function.Supplier;
 public enum ModShieldMaterial implements ModShieldTiers {
 
     //Vanilla
-    WOOD(59, 15, () -> Ingredient.fromTag(ItemTags.PLANKS)),
-    STONE( 131, 5, () -> Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS)),
-    IRON(250, 14, () -> Ingredient.ofItems(Items.IRON_INGOT)),
-    DIAMOND(1561, 10, () -> Ingredient.ofItems(Items.DIAMOND)),
-    GOLD(32, 22, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
-    NETHERITE(2031, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+    WOOD(59, 15,100, () -> Ingredient.fromTag(ItemTags.PLANKS)),
+    STONE( 131, 5,100, () -> Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS)),
+    IRON(250, 14, 90,() -> Ingredient.ofItems(Items.IRON_INGOT)),
+    DIAMOND(1561, 10,75, () -> Ingredient.ofItems(Items.DIAMOND)),
+    GOLD(32, 22, 110,() -> Ingredient.ofItems(Items.GOLD_INGOT)),
+    NETHERITE(2031, 15,50, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
     //Mod
-    BRONZE(250, 14, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
-    SILVER(50, 20, () -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
-    TEORITE(500, 12, () -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
-    EBONY(500, 6, () -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS)),
-    STEEL(350, 10, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    DENDRITE(1250, 16, () -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
+    BRONZE(250, 14,90, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
+    SILVER(50, 20,110, () -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
+    TEORITE(500, 12,85, () -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
+    EBONY(500, 6,80, () -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS)),
+    STEEL(350, 10,90, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+    DENDRITE(1250, 16,70, () -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
 
 
     private final int itemDurability;
     private final int enchantability;
+    private final int cooldownTicks;
     private final Supplier<Ingredient> repairIngredient;
 
-    ModShieldMaterial(int itemDurability, int enchantability, Supplier<Ingredient> repairIngredient) {
+    ModShieldMaterial(int itemDurability, int enchantability,int cooldown, Supplier<Ingredient> repairIngredient) {
         this.itemDurability = itemDurability;
         this.enchantability = enchantability;
+        this.cooldownTicks = cooldown;
         this.repairIngredient = repairIngredient;
     }
 
@@ -45,6 +47,11 @@ public enum ModShieldMaterial implements ModShieldTiers {
     @Override
     public int getEnchantabilty() {
         return this.enchantability;
+    }
+
+    @Override
+    public int getCooldownTicks() {
+        return this.cooldownTicks;
     }
 
     @Override

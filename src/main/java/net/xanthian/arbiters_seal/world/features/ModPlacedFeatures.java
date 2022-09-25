@@ -20,16 +20,14 @@ public class ModPlacedFeatures {
 
 // Teorite Gen
     public static final RegistryEntry<PlacedFeature> TEORITE_ORE_PLACED = PlacedFeatures.register("teorite_ore_placed",
-            ModConfiguredFeatures.TEORITE_ORE, modifiersWithCount(7, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-24),
-                YOffset.fixed(56))));
+            ModConfiguredFeatures.TEORITE_ORE, modifiersWithCount(7, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(40),
+                YOffset.fixed(60))));
 
     public static final RegistryEntry<PlacedFeature> NETHER_TEORITE_ORE_PLACED = PlacedFeatures.register("nether_teorite_ore_placed",
-            ModConfiguredFeatures.NETHER_TEORITE_ORE, modifiersWithCount(7,
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(50))));
+            ModConfiguredFeatures.NETHER_TEORITE_ORE, modifiersWithCount(10, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
 
     public static final RegistryEntry<PlacedFeature> END_TEORITE_ORE_PLACED = PlacedFeatures.register("end_teorite_ore_placed",
-            ModConfiguredFeatures.END_TEORITE_ORE, modifiersWithCount(7,
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.fixed(40))));
+            ModConfiguredFeatures.END_TEORITE_ORE, modifiersWithCount(10, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
 
 // Silver Gen
     public static final RegistryEntry<PlacedFeature> SILVER_ORE_PLACED = PlacedFeatures.register("silver_ore_placed",
@@ -42,9 +40,11 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> END_SILVER_ORE_PLACED = PlacedFeatures.register("end_silver_ore_placed",
             ModConfiguredFeatures.END_SILVER_ORE, modifiersWithCount(10, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
 
+// Geode
     public static final RegistryEntry<PlacedFeature> DENDRITE_GEODE_PLACED = PlacedFeatures.register("dendrite_geode",
             ModConfiguredFeatures.DENDRITE_GEODE, RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(),
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50),YOffset.fixed(65)));
+
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());

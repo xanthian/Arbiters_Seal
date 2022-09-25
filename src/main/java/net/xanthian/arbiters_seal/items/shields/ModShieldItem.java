@@ -2,9 +2,16 @@ package net.xanthian.arbiters_seal.items.shields;
 
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.material.ModShieldTiers;
+import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 
 public class ModShieldItem extends FabricShieldItem {
     private final ModShieldTiers tier;
@@ -18,8 +25,24 @@ public class ModShieldItem extends FabricShieldItem {
         return this.tier.getRepairIngredient().test(repairItem);
     }
     @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return !stack.hasEnchantments();
+    public int getCooldownTicks() {
+        return this.tier.getCooldownTicks();
     }
 
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack offHand = user.getEquippedStack(EquipmentSlot.OFFHAND);
+        if (offHand.getItem() == ShieldItems.ARBITER_SHIELD) {
+            if (user.getStatusEffect(ModStatusEffects.MUTE) !=null) {
+                user.removeStatusEffect(ModStatusEffects.MUTE);
+            }
+            if (user.getStatusEffect(StatusEffects.BLINDNESS) !=null) {
+                user.removeStatusEffect(StatusEffects.BLINDNESS);
+        }
+            if (user.getStatusEffect(StatusEffects.SLOWNESS) !=null) {
+                user.removeStatusEffect(StatusEffects.SLOWNESS);
+            }
+        }
+        return super.use(world, user, hand);
+    }
 }

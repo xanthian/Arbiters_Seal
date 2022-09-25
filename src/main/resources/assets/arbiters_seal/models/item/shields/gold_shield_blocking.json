@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "arbiters_seal:item/shields/magic_shield"
+    "layer0": "arbiters_seal:item/shields/gold_shield"
   },
 
   "display": {

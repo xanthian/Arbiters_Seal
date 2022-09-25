@@ -4,9 +4,13 @@ import net.minecraft.recipe.Ingredient;
 
 public interface ModBowTiers {
 
-        int getItemDurability();
-        float getAttackDamageBonus();
+        int getDurability();
+
+        float getDamageBonus();
+
         int getRangeBonus();
-        int getEnchantabilty();
+
+        int getEnchantability();
+
         Ingredient getRepairIngredient();
 }

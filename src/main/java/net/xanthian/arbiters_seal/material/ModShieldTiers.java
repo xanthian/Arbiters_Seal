@@ -6,5 +6,6 @@ public interface ModShieldTiers {
 
         int getItemDurability();
         int getEnchantabilty();
+        int getCooldownTicks();
         Ingredient getRepairIngredient();
 }
