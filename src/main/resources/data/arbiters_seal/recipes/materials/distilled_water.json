@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.7,
   "ingredient": {
-    "item": "minecraft:water_bottle"
+    "item": "minecraft:potion"
   },
   "result": "arbiters_seal:materials/distilled_water"
 }

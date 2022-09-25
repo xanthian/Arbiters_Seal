@@ -27,6 +27,11 @@ public class ModBowItem extends BowItem {
     }
 
     @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return !stack.hasEnchantments();
+    }
+
+    @Override
     public int getEnchantability() {
         return this.tiers.getEnchantabilty();
     }

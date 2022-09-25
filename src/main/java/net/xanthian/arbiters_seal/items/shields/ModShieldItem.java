@@ -17,5 +17,9 @@ public class ModShieldItem extends FabricShieldItem {
     public boolean canRepair(ItemStack item, ItemStack repairItem) {
         return this.tier.getRepairIngredient().test(repairItem);
     }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return !stack.hasEnchantments();
+    }
 
 }

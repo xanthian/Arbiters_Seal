@@ -11,5 +11,6 @@ public class ModWorldGen {
         //if (ArbitersSealConfig.ore_gen == true) {
             ModOreGeneration.generateOres();
         //}
+            ModGeodeGeneration.generateGeodes();
     }
 }

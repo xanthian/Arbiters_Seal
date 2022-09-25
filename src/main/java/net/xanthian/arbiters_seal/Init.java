@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.config.ArbitersSealConfig;
-import net.xanthian.arbiters_seal.enchantments.ModEnchantments;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Chestpieces;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
@@ -59,7 +58,6 @@ public class Init implements ModInitializer {
         ShieldItems.registerShieldItems();
 
         // Other stuff
-        ModEnchantments.registerModEnchantments();
         ModWorldGen.generateModWorldGen();
         ModStatusEffects.registerStatusEffects();
     }

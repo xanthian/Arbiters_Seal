@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "arbiters_seal:block/materials/dendrite_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "arbiters_seal:block/materials/dendrite_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "arbiters_seal:block/materials/dendrite_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "arbiters_seal:block/materials/dendrite_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "arbiters_seal:block/materials/dendrite_cluster"
+    },
+    "facing=west": {
+      "model": "arbiters_seal:block/materials/dendrite_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

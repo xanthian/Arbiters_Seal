@@ -14,10 +14,68 @@ import net.xanthian.arbiters_seal.entity.ModSignTypes;
 import net.xanthian.arbiters_seal.world.features.tree.EbonySaplingGenerator;
 
 public class ModBlocks {
-// EBONY
+
+    // TEORITE
+    public static final Block TEORITE_ORE = registerBlock("materials/teorite_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block DEEPSLATE_TEORITE_ORE = registerBlock("materials/deepslate_teorite_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block NETHER_TEORITE_ORE = registerBlock("materials/nether_teorite_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block END_TEORITE_ORE = registerBlock("materials/end_teorite_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block TEORITE_BLOCK = registerBlock("materials/teorite_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block RAW_TEORITE_BLOCK = registerBlock("materials/raw_teorite_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK)));
+
+    // SILVER
+    public static final Block SILVER_ORE = registerBlock("materials/silver_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block DEEPSLATE_SILVER_ORE = registerBlock("materials/deepslate_silver_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block NETHER_SILVER_ORE = registerBlock("materials/nether_silver_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block END_SILVER_ORE = registerBlock("materials/end_silver_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
+                    UniformIntProvider.create(3, 7)));
+    public static final Block SILVER_BLOCK = registerBlock("materials/silver_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+    public static final Block RAW_SILVER_BLOCK = registerBlock("materials/raw_silver_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
+
+    // RANDOM
+    public static final Block ADAMANT_BLOCK = registerBlock("materials/adamant_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+    public static final Block AEGISITE_BLOCK = registerBlock("materials/aegisite_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+    public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+
+    // DENDRITE
+    public static final Block DENDRITE_BLOCK = registerBlock("materials/dendrite_block",
+            new AmethystBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
+    public static final Block DENDRITE_CLUSTER = registerBlock("materials/dendrite_cluster",
+            new AmethystClusterBlock(7,3,FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)));
+    public static final Block BUDDING_DENDRITE = registerBlock("materials/budding_dendrite",
+            new BuddingAmethystBlock(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST)));
+    public static final Block SMALL_DENDRITE_BUD = registerBlock("materials/small_dendrite_bud",
+            new AmethystClusterBlock(3,4, FabricBlockSettings.copyOf(Blocks.SMALL_AMETHYST_BUD)));
+    public static final Block MEDIUM_DENDRITE_BUD = registerBlock("materials/medium_dendrite_bud",
+            new AmethystClusterBlock(4, 3, FabricBlockSettings.copyOf(Blocks.MEDIUM_AMETHYST_BUD)));
+    public static final Block LARGE_DENDRITE_BUD = registerBlock("materials/large_dendrite_bud",
+            new AmethystClusterBlock(5, 3, FabricBlockSettings.copyOf(Blocks.LARGE_AMETHYST_BUD)));
+
+    // EBONY
     public static final Block EBONY_PLANKS = registerBlock("materials/ebony_planks",
-                    new Block(AbstractBlock.Settings.of(Material.WOOD, MapColor.BLACK).
-                            strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DARK_OAK_PLANKS)));
 
     //logs
     public static final Block EBONY_LOG = registerBlock("materials/ebony_log",
@@ -69,12 +127,12 @@ public class ModBlocks {
 
     //door
     public static final Block EBONY_DOOR = registerBlock("objects/ebony_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.f)
                     .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
     //trapdoor
     public static final Block EBONY_TRAPDOOR = registerBlock("objects/ebony_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f,2.f)
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f, 2.f)
                     .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
     // sign
@@ -103,49 +161,7 @@ public class ModBlocks {
     public static final Block EBONY_CRAFTING_TABLE = registerBlock("jobsites/ebony_crafting_table",
             new CraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
 
-// TEORITE
-    public static final Block TEORITE_ORE = registerBlock("materials/teorite_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE),
-                UniformIntProvider.create(3, 7)));
-    public static final Block DEEPSLATE_TEORITE_ORE = registerBlock("materials/deepslate_teorite_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block NETHER_TEORITE_ORE = registerBlock("materials/nether_teorite_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block END_TEORITE_ORE = registerBlock("materials/end_teorite_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block TEORITE_BLOCK = registerBlock("materials/teorite_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block RAW_TEORITE_BLOCK = registerBlock("materials/raw_teorite_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK)));
 
-// SILVER
-    public static final Block SILVER_ORE = registerBlock("materials/silver_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block DEEPSLATE_SILVER_ORE = registerBlock("materials/deepslate_silver_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block NETHER_SILVER_ORE = registerBlock("materials/nether_silver_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block END_SILVER_ORE = registerBlock("materials/end_silver_ore",
-            new OreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE),
-                    UniformIntProvider.create(3, 7)));
-    public static final Block SILVER_BLOCK = registerBlock("materials/silver_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
-    public static final Block RAW_SILVER_BLOCK = registerBlock("materials/raw_silver_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
-
-// RANDOM
-    public static final Block ADAMANT_BLOCK = registerBlock("materials/adamant_block",
-        new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
-    public static final Block AEGISITE_BLOCK = registerBlock("materials/aegisite_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
-    public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
@@ -155,7 +171,6 @@ public class ModBlocks {
         registerBlockItem(name, block);
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
     }
-
     private static Item registerBlockItem(String name, Block block){
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)));

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "arbiters_seal:block/materials/large_dendrite_bud"
+  }
+}

@@ -17,6 +17,10 @@ import java.util.List;
 
 public class ModItems {
 
+//EBONY
+    public static final Item EBONY_SIGN = registerItem("objects/ebony_sign",
+            new SignItem(new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS).maxCount(16), ModBlocks.EBONY_SIGN_BLOCK, ModBlocks.EBONY_WALL_SIGN_BLOCK));
+
 // BRONZE
     public static final Item BRONZE_INGOT = registerItem("materials/bronze_ingot", new ModMaterialsItem());
 
@@ -244,11 +248,6 @@ public class ModItems {
             tooltip.add(Text.literal("days. It would need to be restored").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("to be of any use.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
-
-
-    //Random Stuff
-    public static final Item EBONY_SIGN = registerItem("objects/ebony_sign",
-            new SignItem(new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS).maxCount(16), ModBlocks.EBONY_SIGN_BLOCK, ModBlocks.EBONY_WALL_SIGN_BLOCK));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);
