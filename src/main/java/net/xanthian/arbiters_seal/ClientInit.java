@@ -18,6 +18,7 @@ public class ClientInit implements ClientModInitializer {
     public void onInitializeClient() {
 
         //Bows
+
         registerBowPredicates(Bows.COMPOSITE_BOW);
         registerBowPredicates(Bows.LONGBOW);
         registerBowPredicates(Bows.MACH_BOW);
@@ -38,7 +39,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMALL_DENDRITE_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MEDIUM_DENDRITE_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DENDRITE_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALOE_VERA, RenderLayer.getCutout());
 
-                    // Crossbows
     }
 }

@@ -14,7 +14,8 @@ public class ModPredicates {
 
     // Bows
     public static void registerBowPredicates(Item bowItem) {
-        ModelPredicateProviderRegistry.register(bowItem, new Identifier("pull"), (itemStack, world, livingEntity, i) -> {
+        ModelPredicateProviderRegistry.register(bowItem, new Identifier("pull"),
+                (itemStack, world, livingEntity, i) -> {
             if (livingEntity == null) {
                 return 0.0F;
             } else {
@@ -22,7 +23,8 @@ public class ModPredicates {
             }
         });
         ModelPredicateProviderRegistry.register(bowItem, new Identifier("pulling"),
-                (itemStack, clientWorld, livingEntity, i) -> livingEntity != null && livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack ? 1.0F : 0.0F);
+                (itemStack, clientWorld, livingEntity, i) ->
+                        livingEntity != null && livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack ? 1.0F : 0.0F);
     }
 
     // Crossbow

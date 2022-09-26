@@ -1,8 +1,6 @@
 package net.xanthian.arbiters_seal.world.features;
 
-import com.terraformersmc.modmenu.util.mod.Mod;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.BlockTagProvider;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -97,6 +95,14 @@ public class ModConfiguredFeatures {
                                 UniformIntProvider.create(3, 4),
                                 UniformIntProvider.create(1, 2),
                         -16, 16, 0.05D, 1));
+
+    // ALOE PLANT
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> ALOE_VERA_PLANT =
+            ConfiguredFeatures.register("aloe_vera_plant", Feature.FLOWER,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ALOE_VERA)))));
+
+
 
     public static void registerConfiguredFeatures() {
     }

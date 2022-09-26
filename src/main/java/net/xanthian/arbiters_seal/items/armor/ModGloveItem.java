@@ -8,6 +8,6 @@ import net.xanthian.arbiters_seal.Init;
 
 public class ModGloveItem extends ArmorItem {
     public ModGloveItem(ArmorMaterial material) {
-        super(material, EquipmentSlot.HEAD, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
+        super(material, EquipmentSlot.OFFHAND, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
     }
 }

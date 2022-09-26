@@ -6,12 +6,17 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.blocks.ModFlammableBlocks;
+import net.xanthian.arbiters_seal.blocks.ModStrippableBlocks;
 import net.xanthian.arbiters_seal.config.ArbitersSealConfig;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Chestpieces;
+import net.xanthian.arbiters_seal.items.armor.Feets;
+import net.xanthian.arbiters_seal.items.armor.Gloves;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
-import net.xanthian.arbiters_seal.items.shields.ShieldItems;
+import net.xanthian.arbiters_seal.items.shields.Shields;
 import net.xanthian.arbiters_seal.items.tools.*;
+import net.xanthian.arbiters_seal.items.trinkets.Trinkets;
 import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 import net.xanthian.arbiters_seal.world.features.ModConfiguredFeatures;
 import net.xanthian.arbiters_seal.world.gen.ModWorldGen;
@@ -55,10 +60,15 @@ public class Init implements ModInitializer {
         // Armor registration
         Chestpieces.registerChestpieceItems();
         Helmets.registerHelmetItems();
-        ShieldItems.registerShieldItems();
+        Gloves.registerGloveItems();
+        Feets.registerFeetItems();
+        Trinkets.registerTrinketItems();
+        Shields.registerShieldItems();
 
         // Other stuff
         ModWorldGen.generateModWorldGen();
         ModStatusEffects.registerStatusEffects();
+        ModFlammableBlocks.registerFlammableBlocks();
+        ModStrippableBlocks.registerStrippables();
     }
 }

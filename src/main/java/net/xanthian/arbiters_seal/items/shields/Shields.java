@@ -8,7 +8,7 @@ import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.material.ModShieldMaterial;
 import net.minecraft.util.registry.Registry;
 
-public class ShieldItems {
+public class Shields {
 
     public static final Item BUCKLER = registerItem("shields/buckler", new ModShieldItem(1, ModShieldMaterial.WOOD));
     public static final Item BRONZE_SHIELD = registerItem("shields/bronze_shield", new ModShieldItem(1, ModShieldMaterial.BRONZE));

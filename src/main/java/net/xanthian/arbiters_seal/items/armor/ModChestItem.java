@@ -8,6 +8,6 @@ import net.xanthian.arbiters_seal.Init;
 
 public class ModChestItem extends ArmorItem {
     public ModChestItem(ArmorMaterial material) {
-        super(material, EquipmentSlot.HEAD, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
+        super(material, EquipmentSlot.CHEST, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
     }
 }

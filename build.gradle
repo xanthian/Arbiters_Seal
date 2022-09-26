@@ -11,9 +11,10 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url = 'https://jitpack.io' }
+	maven { url = "https://jitpack.io" }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
+	maven { url = "https://ladysnake.jfrog.io/artifactory/mods" }
 }
 dependencies {
 	// To change the versions see the gradle.properties file
@@ -38,6 +39,7 @@ dependencies {
 	include("com.github.Chocohead:Fabric-ASM:v${project.fabric_asm_version}")
 
 	// trinkets
+	modImplementation "dev.emi:trinkets:${trinkets_version}"
 }
 
 processResources {

@@ -1,7 +1,5 @@
 package net.xanthian.arbiters_seal.world.features;
 
-import net.minecraft.util.Rarity;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.PlacedFeature;
@@ -41,9 +39,13 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.END_SILVER_ORE, modifiersWithCount(10, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
 
 // Geode
-    public static final RegistryEntry<PlacedFeature> DENDRITE_GEODE_PLACED = PlacedFeatures.register("dendrite_geode",
+    public static final RegistryEntry<PlacedFeature> DENDRITE_GEODE_PLACED = PlacedFeatures.register("dendrite_geode_placed",
             ModConfiguredFeatures.DENDRITE_GEODE, RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(),
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50),YOffset.fixed(65)));
+
+// Aloe
+    public static final RegistryEntry<PlacedFeature> ALOE_VERA_PLACED = PlacedFeatures.register("aloe_vera_placed",
+        ModConfiguredFeatures.ALOE_VERA_PLANT, modifiersWithRarity(10,PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP));
 
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

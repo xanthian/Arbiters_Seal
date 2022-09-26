@@ -32,7 +32,7 @@ public class ModShieldItem extends FabricShieldItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack offHand = user.getEquippedStack(EquipmentSlot.OFFHAND);
-        if (offHand.getItem() == ShieldItems.ARBITER_SHIELD) {
+        if (offHand.getItem() == Shields.ARBITER_SHIELD) {
             if (user.getStatusEffect(ModStatusEffects.MUTE) !=null) {
                 user.removeStatusEffect(ModStatusEffects.MUTE);
             }

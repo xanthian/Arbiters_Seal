@@ -8,6 +8,6 @@ import net.xanthian.arbiters_seal.Init;
 
 public class ModFeetItem extends ArmorItem {
     public ModFeetItem(ArmorMaterial material) {
-        super(material, EquipmentSlot.HEAD, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
+        super(material, EquipmentSlot.FEET, new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
     }
 }

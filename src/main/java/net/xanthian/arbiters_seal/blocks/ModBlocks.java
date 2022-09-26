@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
@@ -58,6 +57,9 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
     public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static final Block ALOE_VERA = registerBlock("materials/aloe_vera",
+            new DeadBushBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
+
 
     // DENDRITE
     public static final Block DENDRITE_BLOCK = registerBlock("materials/dendrite_block",
@@ -79,62 +81,49 @@ public class ModBlocks {
 
     //logs
     public static final Block EBONY_LOG = registerBlock("materials/ebony_log",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.BLACK)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG)));
 
     public static final Block EBONY_WOOD = registerBlock("materials/ebony_wood",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.BLACK)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WOOD)));
 
     public static final Block STRIPPED_EBONY_LOG = registerBlock("materials/stripped_ebony_log",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.BLACK)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_DARK_OAK_LOG)));
 
     public static final Block STRIPPED_EBONY_WOOD = registerBlock("materials/stripped_ebony_wood",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.BLACK)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_DARK_OAK_WOOD)));
 
 
     //stair
     public static final Block EBONY_STAIRS = registerBlock("objects/ebony_stairs",
             new StairsBlock(ModBlocks.EBONY_PLANKS.getDefaultState(),
-                    FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
-                            .sounds(BlockSoundGroup.WOOD)));
+                    FabricBlockSettings.copyOf(Blocks.DARK_OAK_STAIRS)));
 
     //slab
     public static final Block EBONY_SLAB = registerBlock("objects/ebony_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
-                    .sounds(BlockSoundGroup.WOOD)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_SLAB)));
 
     //fences
     public static final Block EBONY_FENCE = registerBlock("objects/ebony_fence",
-            new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .sounds(BlockSoundGroup.WOOD)));
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_FENCE)));
     public static final Block EBONY_FENCE_GATE = registerBlock("objects/ebony_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .sounds(BlockSoundGroup.WOOD)));
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_FENCE_GATE)));
 
     //button
     public static final Block EBONY_BUTTON = registerBlock("objects/ebony_button",
-            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
-                    .sounds(BlockSoundGroup.WOOD)));
+            new WoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_BUTTON)));
 
     //pressure_plate
     public static final Block EBONY_PRESSURE_PLATE = registerBlock("objects/ebony_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                            .sounds(BlockSoundGroup.WOOD)));
+                    FabricBlockSettings.copyOf(Blocks.DARK_OAK_PRESSURE_PLATE)));
 
     //door
     public static final Block EBONY_DOOR = registerBlock("objects/ebony_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.f)
-                    .sounds(BlockSoundGroup.WOOD).nonOpaque()));
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_DOOR)));
 
     //trapdoor
     public static final Block EBONY_TRAPDOOR = registerBlock("objects/ebony_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f, 2.f)
-                    .sounds(BlockSoundGroup.WOOD).nonOpaque()));
-
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_TRAPDOOR)));
     // sign
     public static final Block EBONY_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("objects/ebony_wall_sign",
             new WallSignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WALL_SIGN), ModSignTypes.EBONY));
