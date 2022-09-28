@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0":"arbiters_seal:item/shields/arbiter_shield"
+  },
+
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 60, 320, 0 ],
+      "translation": [ 0.50, 1.00, 0.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 60, 320, 0 ],
+      "translation": [ 0.50, 1.00, 0.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 200, 200, 0 ],
+      "translation": [ 1.00, -2.00, 0.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 1.00, -2.00, 0.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    }
+  },
+
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "arbiters_seal:item/shields/arbiter_shield_blocking"
+    }
+  ]
+}

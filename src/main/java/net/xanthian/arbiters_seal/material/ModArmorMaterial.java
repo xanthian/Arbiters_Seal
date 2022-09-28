@@ -11,17 +11,20 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
 
-    BRONZE("bronze", 16, new int[]{2, 5, 7, 2}, 28,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
-    SILVER("silver", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
-    STEEL("bronze", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    TEORITE("bronze", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
+    BRONZE("bronze", 11, new int[]{1, 4, 6, 1}, 9,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
 
-    DENDRITE("dendrite", 16, new int[]{2, 5, 7, 2}, 28,
-    SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
+    SILVER("silver", 9, new int[]{2, 4, 6, 2}, 23,
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
+
+    STEEL("bronze", 16, new int[]{2, 5, 7, 2}, 5,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.5f, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+
+    TEORITE("bronze", 20, new int[]{3, 6, 8, 3}, 15,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.5f, 0.1f, () -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
+
+    DENDRITE("dendrite", 35, new int[]{3, 6, 8, 3}, 20,
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, 0.1f, () -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
 
         private static final int[] BASE_DURABILITY;
         private final String name;

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "C": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    },
+    "S": {
+      "item": "arbiters_seal:materials/sinewdle_fruit"
+    }
+  },
+  "pattern": [
+    "LCL",
+    "SLS",
+    "L L"
+  ],
+  "result": {
+    "item": "arbiters_seal:chestpieces/white_robe"
+  }
+}

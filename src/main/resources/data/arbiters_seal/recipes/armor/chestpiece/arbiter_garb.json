@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "D": {
+      "item": "arbiters_seal:materials/demon_leather"
+    },
+    "Q": {
+      "item": "arbiters_seal:materials/quality_thread"
+    }
+  },
+  "pattern": [
+    "LDL",
+    "QLQ",
+    "L L"
+  ],
+  "result": {
+    "item": "arbiters_seal:chestpieces/arbiter_garb"
+  }
+}

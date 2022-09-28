@@ -18,7 +18,7 @@ import java.util.List;
 public class Helmets {
 
     // CLOTH
-    public static final Item CIRCLET = registerItem("helmets/circlet", new ModHelmetItem(ArmorMaterials.NETHERITE){
+    public static final Item CIRCLET = registerItem("helmets/circlet", new ModHelmetItem(ModArmorMaterial.BRONZE){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A thin bronze hair ornament.").formatted(Formatting.ITALIC, Formatting.GRAY));
@@ -147,7 +147,7 @@ public class Helmets {
             tooltip.add(Text.literal("charlatans and dandies.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item RED_BERET = registerItem("helmets/red_beret", new ModHelmetItem(ArmorMaterials.NETHERITE){
+    public static final Item RED_BERET = registerItem("helmets/red_beret", new ModHelmetItem(ModArmorMaterial.BRONZE){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A beret dyed red to hide head").formatted(Formatting.ITALIC, Formatting.GRAY));
@@ -192,6 +192,7 @@ public class Helmets {
         public Rarity getRarity(ItemStack stack) {
             return Rarity.UNCOMMON;
         }});
+
     public static final Item NINJA_COWL = registerItem("helmets/ninja_cowl", new ModHelmetItem(ArmorMaterials.NETHERITE){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {

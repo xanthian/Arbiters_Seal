@@ -36,7 +36,7 @@ public class Init implements ModInitializer {
 
         // Sapling & Ore Gen
         ModConfiguredFeatures.registerConfiguredFeatures();
-        ArbitersSealConfig.registerConfigs();
+        //ArbitersSealConfig.registerConfigs();
 
         // Generic Item registration
         ModBlocks.registerModBlocks();
@@ -45,7 +45,7 @@ public class Init implements ModInitializer {
         // Weapon Registration
         Axes.registerAxeItems();
         Bows.registerBowItems();
-        Crossbows.registerCrossbowItems();
+        //Crossbows.registerCrossbowItems();
         Daggers.registerDaggerItems();
         //Guns.registerGunItems()
         Maces.registerMaceItems();
@@ -58,11 +58,11 @@ public class Init implements ModInitializer {
         Swords.registerSwordItems();
 
         // Armor registration
-        Chestpieces.registerChestpieceItems();
+        //Chestpieces.registerChestpieceItems();
         Helmets.registerHelmetItems();
-        Gloves.registerGloveItems();
-        Feets.registerFeetItems();
-        Trinkets.registerTrinketItems();
+        //Gloves.registerGloveItems();
+        //Feets.registerFeetItems();
+        //Trinkets.registerTrinketItems();
         Shields.registerShieldItems();
 
         // Other stuff

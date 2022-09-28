@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "arbiters_seal:item/shields/arbiter_shield"
+  },
+
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 40, 330, 0 ],
+      "translation": [ 0.00, 0.00, -1.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 40, 330, 0 ],
+      "translation": [ 0.00, 0.00, -1.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 0, 20 ],
+      "translation": [ -6.00, 0.00, 0.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, 0, 20 ],
+      "translation": [ -6.00, 0.00, 0.00 ],
+      "scale": [ 1.00, 1.00, 1.00 ]
+    }
+  }
+}

@@ -79,11 +79,11 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> DENDRITE_GEODE =
             ConfiguredFeatures.register("dendrite_geode", Feature.GEODE,
                 new GeodeFeatureConfig(
-                        new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                                BlockStateProvider.of(ModBlocks.DENDRITE_BLOCK),
-                                BlockStateProvider.of(ModBlocks.BUDDING_DENDRITE),
-                                BlockStateProvider.of(Blocks.END_STONE),
-                                BlockStateProvider.of(Blocks.END_STONE),
+                        new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR), //inside geode
+                                BlockStateProvider.of(ModBlocks.DENDRITE_BLOCK), //inner block
+                                BlockStateProvider.of(ModBlocks.BUDDING_DENDRITE), //geode block
+                                BlockStateProvider.of(Blocks.END_STONE), //middle block
+                                BlockStateProvider.of(Blocks.END_STONE), //outer block
                                 List.of(ModBlocks.SMALL_DENDRITE_BUD.getDefaultState(),
                                         ModBlocks.MEDIUM_DENDRITE_BUD.getDefaultState(),
                                         ModBlocks.LARGE_DENDRITE_BUD.getDefaultState(),

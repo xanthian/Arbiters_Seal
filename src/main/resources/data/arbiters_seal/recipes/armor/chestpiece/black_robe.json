@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "minecraft:black_wool"
+    },
+    "D": {
+      "item": "arbiters_seal:materials/dragonsblood_sap"
+    },
+    "Q": {
+      "item": "arbiters_seal:materials/quality_thread"
+    }
+  },
+  "pattern": [
+    "BDB",
+    "BQB",
+    "B B"
+  ],
+  "result": {
+    "item": "arbiters_seal:chestpieces/white_robe"
+  }
+}
