@@ -27,7 +27,7 @@ public class ModConfiguredFeatures {
                     new TwoLayersFeatureSize(1, 0, 2)).build());
 
     public static final RegistryEntry<PlacedFeature> EBONY_CHECKED =
-            PlacedFeatures.register("ebony_checked", EBONY_TREE,
+            PlacedFeatures.register("ebony_checked", ModConfiguredFeatures.EBONY_TREE,
                     PlacedFeatures.wouldSurvive(ModBlocks.EBONY_SAPLING));
 
     public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>>EBONY_SPAWN =

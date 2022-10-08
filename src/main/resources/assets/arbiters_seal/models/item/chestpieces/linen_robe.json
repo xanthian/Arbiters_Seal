@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arbiters_seal:item/chestpieces/magma_robe"
+    "layer0": "arbiters_seal:item/chestpieces/linen_robe"
   }
 }

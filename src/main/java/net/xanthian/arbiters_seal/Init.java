@@ -58,10 +58,10 @@ public class Init implements ModInitializer {
         Swords.registerSwordItems();
 
         // Armor registration
-        //Chestpieces.registerChestpieceItems();
+        Chestpieces.registerChestpieceItems();
         Helmets.registerHelmetItems();
         //Gloves.registerGloveItems();
-        //Feets.registerFeetItems();
+        Feets.registerFeetItems();
         //Trinkets.registerTrinketItems();
         Shields.registerShieldItems();
 

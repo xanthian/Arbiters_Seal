@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "W": {
+    "B": {
       "item": "minecraft:black_wool"
     },
     "D": {

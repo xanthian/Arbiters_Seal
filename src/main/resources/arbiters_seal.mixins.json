@@ -11,7 +11,8 @@
     "SignTypeAccessor"
   ],
   "client": [
-    "AbstractClientPlayerEntityMixin"
+    "AbstractClientPlayerEntityMixin",
+    "ArmorRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

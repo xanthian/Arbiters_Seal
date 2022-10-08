@@ -11,10 +11,10 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url = "https://jitpack.io" }
+	maven { url "https://jitpack.io" }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
-	maven { url = "https://ladysnake.jfrog.io/artifactory/mods" }
+	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
 }
 dependencies {
 	// To change the versions see the gradle.properties file
@@ -25,7 +25,7 @@ dependencies {
 	// Fapi
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	// Fabric Shield Lib
-	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v${project.fabric_shield_lib_version}"
+	modImplementation 'com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.6.1-pre1-1.19'
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}

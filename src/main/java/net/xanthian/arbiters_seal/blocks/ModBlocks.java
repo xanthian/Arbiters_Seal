@@ -155,7 +155,6 @@ public class ModBlocks {
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
     }
-
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);

@@ -193,7 +193,7 @@ public class Helmets {
             return Rarity.UNCOMMON;
         }});
 
-    public static final Item NINJA_COWL = registerItem("helmets/ninja_cowl", new ModHelmetItem(ArmorMaterials.NETHERITE){
+    public static final Item NINJA_COWL = registerItem("helmets/ninja_cowl", new ModHelmetItem(ModArmorMaterial.NINJA){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A cowl allowed to only the").formatted(Formatting.ITALIC, Formatting.GRAY));

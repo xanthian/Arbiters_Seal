@@ -27,7 +27,7 @@ public class Shields {
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("Military shield, obsolete since").formatted(Formatting.ITALIC, Formatting.GRAY));
-            tooltip.add(Text.literal("discovery of Bronze").formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal("discovery of steel").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
     public static final Item STEEL_SHIELD = registerItem("shields/steel_shield", new ModShieldItem(1, ModShieldMaterial.STEEL){

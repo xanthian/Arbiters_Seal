@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arbiters_seal:item/chestpieces/arbiters_garb"
+    "layer0": "arbiters_seal:item/chestpieces/valiant_armor"
   }
 }

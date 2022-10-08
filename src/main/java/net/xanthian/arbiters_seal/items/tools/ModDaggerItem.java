@@ -22,8 +22,7 @@ public class ModDaggerItem extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
-
-        if ((mainHand.getItem() == Daggers.DIRK)) {
+        if (mainHand.getItem() == Daggers.DIRK) {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getStatusEffect(StatusEffects.BLINDNESS) == null || target.getStatusEffect(StatusEffects.BLINDNESS).getDuration() < 20) {
@@ -43,7 +42,7 @@ public class ModDaggerItem extends SwordItem {
             }
         }
 
-        if ((mainHand.getItem() == Daggers.TEORITE_DAGGER)) {
+        if (mainHand.getItem() == Daggers.TEORITE_DAGGER) {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getStatusEffect(ModStatusEffects.ROOT) == null || target.getStatusEffect(ModStatusEffects.ROOT).getDuration() < 20) {
@@ -52,7 +51,7 @@ public class ModDaggerItem extends SwordItem {
             }
         }
 
-        if ((mainHand.getItem() == Daggers.KUNAI)) {
+        if (mainHand.getItem() == Daggers.KUNAI) {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getStatusEffect(StatusEffects.WEAKNESS) == null || target.getStatusEffect(StatusEffects.WEAKNESS).getDuration() < 20) {
@@ -61,7 +60,7 @@ public class ModDaggerItem extends SwordItem {
             }
         }
 
-        if ((mainHand.getItem() == Daggers.WORM_TOOTH)) {
+        if (mainHand.getItem() == Daggers.WORM_TOOTH) {
             Random random = new Random();
             if (random.nextFloat() <= 0.75f) {
                 if (target.getStatusEffect(StatusEffects.POISON) == null || target.getStatusEffect(StatusEffects.POISON).getDuration() < 20) {
@@ -70,7 +69,7 @@ public class ModDaggerItem extends SwordItem {
             }
         }
 
-        if ((mainHand.getItem() == Daggers.DENDRITE_KNIFE)) {
+        if (mainHand.getItem() == Daggers.DENDRITE_KNIFE) {
             Random random = new Random();
             if (random.nextFloat() <= 0.75f) {
                 if (target.getStatusEffect(ModStatusEffects.BLEED) == null || target.getStatusEffect(ModStatusEffects.BLEED).getDuration() < 20) {
@@ -79,7 +78,7 @@ public class ModDaggerItem extends SwordItem {
             }
         }
 
-        if ((mainHand.getItem() == Daggers.DRAGONS_NAIL)) {
+        if (mainHand.getItem() == Daggers.DRAGONS_NAIL) {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getStatusEffect(ModStatusEffects.BLEED) == null || target.getStatusEffect(ModStatusEffects.BLEED).getDuration() < 20) {
