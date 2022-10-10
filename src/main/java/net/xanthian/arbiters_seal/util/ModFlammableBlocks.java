@@ -1,6 +1,7 @@
-package net.xanthian.arbiters_seal.blocks;
+package net.xanthian.arbiters_seal.util;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.xanthian.arbiters_seal.blocks.ModBlocks;
 
 public class ModFlammableBlocks {
     public static void registerFlammableBlocks() {

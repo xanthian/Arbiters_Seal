@@ -130,6 +130,9 @@ public class ModBlocks {
     public static final Block EBONY_SIGN_BLOCK = registerBlockWithoutBlockItem("objects/ebony_sign",
             new SignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_SIGN), ModSignTypes.EBONY));
 
+    public static final Block EBONY_LADDER = registerBlock("objects/ebony_ladder",
+            new LadderBlock(FabricBlockSettings.copyOf(Blocks.LADDER).nonOpaque()));
+
 
     //leaves
     public static final Block EBONY_LEAVES = registerBlock("objects/ebony_leaves",

@@ -7,7 +7,6 @@ import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.xanthian.arbiters_seal.items.tools.ModCrossbowItem;
 
 @Environment(EnvType.CLIENT)
 public class ModPredicates {
@@ -28,7 +27,7 @@ public class ModPredicates {
     }
 
     // Crossbow
-    public static void registerCrossbowPredicates(ModCrossbowItem crossbowItem) {
+    public static void registerCrossbowPredicates(Item crossbowItem) {
         ModelPredicateProviderRegistry.register(crossbowItem, new Identifier("pull"), (itemStack, clientWorld, livingEntity, seed) -> {
             if (livingEntity == null) {
                 return 0;

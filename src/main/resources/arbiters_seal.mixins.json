@@ -12,7 +12,8 @@
   ],
   "client": [
     "AbstractClientPlayerEntityMixin",
-    "ArmorRendererMixin"
+    "ArmorRendererMixin",
+    "HeldItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
