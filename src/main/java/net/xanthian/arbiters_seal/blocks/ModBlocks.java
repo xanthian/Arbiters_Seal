@@ -57,9 +57,12 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
     public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block STEEL_BLOCK = registerBlock("materials/steel_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block ALOE_VERA = registerBlock("materials/aloe_vera",
             new DeadBushBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
-
 
     // DENDRITE
     public static final Block DENDRITE_BLOCK = registerBlock("materials/dendrite_block",
@@ -78,49 +81,37 @@ public class ModBlocks {
     // EBONY
     public static final Block EBONY_PLANKS = registerBlock("materials/ebony_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.DARK_OAK_PLANKS)));
-
     //logs
     public static final Block EBONY_LOG = registerBlock("materials/ebony_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG)));
-
     public static final Block EBONY_WOOD = registerBlock("materials/ebony_wood",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WOOD)));
-
     public static final Block STRIPPED_EBONY_LOG = registerBlock("materials/stripped_ebony_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_DARK_OAK_LOG)));
-
     public static final Block STRIPPED_EBONY_WOOD = registerBlock("materials/stripped_ebony_wood",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_DARK_OAK_WOOD)));
-
-
     //stair
     public static final Block EBONY_STAIRS = registerBlock("objects/ebony_stairs",
             new StairsBlock(ModBlocks.EBONY_PLANKS.getDefaultState(),
                     FabricBlockSettings.copyOf(Blocks.DARK_OAK_STAIRS)));
-
     //slab
     public static final Block EBONY_SLAB = registerBlock("objects/ebony_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_SLAB)));
-
     //fences
     public static final Block EBONY_FENCE = registerBlock("objects/ebony_fence",
             new FenceBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_FENCE)));
     public static final Block EBONY_FENCE_GATE = registerBlock("objects/ebony_fence_gate",
             new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_FENCE_GATE)));
-
     //button
     public static final Block EBONY_BUTTON = registerBlock("objects/ebony_button",
             new WoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_BUTTON)));
-
     //pressure_plate
     public static final Block EBONY_PRESSURE_PLATE = registerBlock("objects/ebony_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.copyOf(Blocks.DARK_OAK_PRESSURE_PLATE)));
-
     //door
     public static final Block EBONY_DOOR = registerBlock("objects/ebony_door",
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_DOOR)));
-
     //trapdoor
     public static final Block EBONY_TRAPDOOR = registerBlock("objects/ebony_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_TRAPDOOR)));
@@ -129,15 +120,12 @@ public class ModBlocks {
             new WallSignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WALL_SIGN), ModSignTypes.EBONY));
     public static final Block EBONY_SIGN_BLOCK = registerBlockWithoutBlockItem("objects/ebony_sign",
             new SignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_SIGN), ModSignTypes.EBONY));
-
+    //ladder
     public static final Block EBONY_LADDER = registerBlock("objects/ebony_ladder",
             new LadderBlock(FabricBlockSettings.copyOf(Blocks.LADDER).nonOpaque()));
-
-
     //leaves
     public static final Block EBONY_LEAVES = registerBlock("objects/ebony_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LEAVES).nonOpaque()));
-
     //sapling
     public static final Block EBONY_SAPLING = registerBlock("objects/ebony_sapling",
             new SaplingBlock(new EbonySaplingGenerator(),
@@ -152,8 +140,6 @@ public class ModBlocks {
             new ComposterBlock(FabricBlockSettings.copyOf(Blocks.COMPOSTER)));
     public static final Block EBONY_CRAFTING_TABLE = registerBlock("jobsites/ebony_crafting_table",
             new CraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
-
-
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);

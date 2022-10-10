@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "arbiters_seal:materials/silver_block"
+      "item": "arbiters_seal:materials/cold_iron_block"
     }
   ],
   "result": {
     "count": 9,
-    "item": "arbiters_seal:materials/silver_ingot"
+    "item": "arbiters_seal:materials/cold_iron_ingot"
   }
 }

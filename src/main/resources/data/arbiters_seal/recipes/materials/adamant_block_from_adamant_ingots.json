@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "c:silver_ingots"
+      "item": "arbiters_seal:materials/adamant_ingot"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "###"
   ],
   "result": {
-    "item": "arbiters_seal:materials/silver_block"
+    "item": "arbiters_seal:materials/adamant_block"
   }
 }
