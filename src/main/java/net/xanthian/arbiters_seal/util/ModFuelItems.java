@@ -10,6 +10,7 @@ import net.xanthian.arbiters_seal.items.tools.Swords;
 
 public class ModFuelItems {
     public static void  registerFuelItems(){
+        registerFuels();
     }
 
     private static void registerFuels(){
