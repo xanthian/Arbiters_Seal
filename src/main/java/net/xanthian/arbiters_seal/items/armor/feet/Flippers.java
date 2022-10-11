@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.items.armor.Feet;
 import net.xanthian.arbiters_seal.items.armor.ModFeetItem;
 
-
 public class Flippers extends ModFeetItem {
     public Flippers(ArmorMaterial material) {
         super(material);
@@ -27,6 +26,6 @@ public class Flippers extends ModFeetItem {
                 }
             }
         }
-
+        super.inventoryTick(stack, world, entity, slot, selected);
     }
 }

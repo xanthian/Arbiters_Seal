@@ -1,10 +1,15 @@
 package net.xanthian.arbiters_seal.items.tools;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
+import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -17,10 +22,27 @@ import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 public class ModScytheItem extends SwordItem {
     public ModScytheItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new FabricItemSettings().group(Init.ARBITERS_SEAL_WEAPONS));
+    }
+
+    private static final UUID REACH_MODIFIER = UUID.fromString("61b11cc9-728d-4873-81a3-00ddfc70509b");
+    private static final UUID ATTACK_RANGE_MODIFIER = UUID.fromString("373d7cc8-a876-4a11-b209-5c6c61a17408");
+
+    @Override
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
+        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
+        builder.putAll(modifiers);
+
+        if(slot == EquipmentSlot.MAINHAND) {
+            builder.put(ReachEntityAttributes.REACH, new EntityAttributeModifier(REACH_MODIFIER, "Scythe reach reduction", 2f, EntityAttributeModifier.Operation.ADDITION));
+            builder.put(ReachEntityAttributes.ATTACK_RANGE, new EntityAttributeModifier(ATTACK_RANGE_MODIFIER, "Scythe attack range reduction", 2f, EntityAttributeModifier.Operation.ADDITION));
+        }
+        return builder.build();
     }
 
     @Override
