@@ -12,6 +12,12 @@
     "arbiters_seal:materials/nether_teorite_ore",
     "arbiters_seal:materials/end_teorite_ore",
     "arbiters_seal:materials/teorite_block",
-    "arbiters_seal:materials/raw_teorite_block"
+    "arbiters_seal:materials/raw_teorite_block",
+
+    "arbiters_seal:materials/aegisite_block",
+    "arbiters_seal:materials/adamant_block",
+    "arbiters_seal:materials/bronze_block",
+    "arbiters_seal:materials/cold_iron_block",
+    "arbiters_seal:materials/steel_block"
   ]
 }

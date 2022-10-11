@@ -4,11 +4,12 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.items.trinkets.rings.PureBand;
 
 public class Trinkets {
 
     // RING
-    public static final Item PURE_BAND = registerItem("trinkets/pure_band", new ModTrinketItem());
+    public static final Item PURE_BAND = registerItem("trinkets/pure_band", new PureBand());
     public static final Item SHINING_BAND = registerItem("trinkets/shining_band", new ModTrinketItem());
     public static final Item CLARITY_BAND = registerItem("trinkets/clarity_band", new ModTrinketItem());
     public static final Item OATH_BAND = registerItem("trinkets/oath_band", new ModTrinketItem());

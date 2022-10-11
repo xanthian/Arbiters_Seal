@@ -44,20 +44,6 @@ public class ModFeetItem extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient && (entity instanceof PlayerEntity player)) {
 
-            // Flippers = Swim speed
-            if (EquippedArmors.isWearingFlippers(player) && player.isTouchingWater()) {
-                //if (player.age % 60 == 0) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1, 0, false, false, true));
-                //}
-            }
-
-            //Hover Boots = Hover on land
-            if (EquippedArmors.isWearingHoverBoots(player) && !player.isTouchingWater() && player.isSprinting()) {
-                if (player.age % 60 == 0) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 100, 0, false, false, true));
-                }
-            }
-
             //Jet Boots = Jump Boost on land with small chance of levitation to fit the description
             if (EquippedArmors.isWearingJetBoots(player) && !player.isTouchingWater()) {
                 if (player.age % 60 == 0) {

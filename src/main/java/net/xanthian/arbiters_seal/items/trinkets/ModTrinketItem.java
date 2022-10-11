@@ -4,9 +4,6 @@ import dev.emi.trinkets.api.TrinketItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -19,19 +16,7 @@ public class ModTrinketItem extends TrinketItem {
     public ModTrinketItem() {
         super(new FabricItemSettings().group(Init.ARBITERS_SEAL_ARMOR));
     }
-    @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
-        if (!world.isClient) {
-            if (entity instanceof LivingEntity player) {
-                //if (player.getEquippedStack(TrinketSlot.canInsert(Trinkets.PURE_BAND))) ;
-                {
-                    if (player.getStatusEffect(StatusEffects.POISON) != null) {
-                        player.removeStatusEffect(StatusEffects.POISON);
-                    }
-                }
-            }
-        }
-    }
+
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         String key = (stack.getTranslationKey() + ".tooltip");

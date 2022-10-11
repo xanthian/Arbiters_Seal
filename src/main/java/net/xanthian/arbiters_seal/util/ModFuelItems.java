@@ -3,6 +3,7 @@ package net.xanthian.arbiters_seal.util;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.items.ModItems;
+import net.xanthian.arbiters_seal.items.shields.Shields;
 import net.xanthian.arbiters_seal.items.tools.Daggers;
 import net.xanthian.arbiters_seal.items.tools.Rods;
 import net.xanthian.arbiters_seal.items.tools.Staffs;
@@ -42,5 +43,6 @@ public class ModFuelItems {
         registry.add(Staffs.BLACK_STAFF, 200);
         registry.add(Staffs.WOOD_STAFF, 100);
         registry.add(Swords.EBONY_SWORD, 200);
+        registry.add(Shields.BUCKLER, 100);
     }
 }

@@ -15,7 +15,13 @@ repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
+	maven { url "https://maven.jamieswhiteshirt.com/libs-release"
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
+	}
 }
+
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -40,8 +46,14 @@ dependencies {
 
 	// trinkets
 	modImplementation "dev.emi:trinkets:${trinkets_version}"
-}
 
+	// reach entity attributes
+	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
+	include "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
+}
+loom {
+	accessWidenerPath = file("src/main/resources/arbiters_seal.accesswidener")
+}
 processResources {
 	inputs.property "version", project.version
 

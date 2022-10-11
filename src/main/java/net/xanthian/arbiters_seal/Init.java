@@ -8,10 +8,11 @@ import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.util.ModFlammableBlocks;
 import net.xanthian.arbiters_seal.util.ModFuelItems;
+import net.xanthian.arbiters_seal.util.ModPOITypes;
 import net.xanthian.arbiters_seal.util.ModStrippableBlocks;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Chestpieces;
-import net.xanthian.arbiters_seal.items.armor.Feets;
+import net.xanthian.arbiters_seal.items.armor.Feet;
 import net.xanthian.arbiters_seal.items.armor.Gloves;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
 import net.xanthian.arbiters_seal.items.shields.Shields;
@@ -61,7 +62,7 @@ public class Init implements ModInitializer {
         Chestpieces.registerChestpieceItems();
         Helmets.registerHelmetItems();
         Gloves.registerGloveItems();
-        Feets.registerFeetItems();
+        Feet.registerFeetItems();
         Trinkets.registerTrinketItems();
         Shields.registerShieldItems();
 
@@ -71,5 +72,6 @@ public class Init implements ModInitializer {
         ModFlammableBlocks.registerFlammableBlocks();
         ModStrippableBlocks.registerStrippables();
         ModFuelItems.registerFuelItems();
+        ModPOITypes.init();
     }
 }

@@ -20,6 +20,7 @@
     "client": ["net.xanthian.arbiters_seal.ClientInit"]
   },
   "mixins": ["arbiters_seal.mixins.json"],
+  "accessWidener": "arbiters_seal.accesswidener",
 
   "depends": {
     "fabricloader": ">=0.14.9",

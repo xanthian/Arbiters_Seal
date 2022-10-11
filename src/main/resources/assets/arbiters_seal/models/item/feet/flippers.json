@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arbiters_seal:item/feets/gremlin_treads"
+    "layer0": "arbiters_seal:item/feet/flippers"
   }
 }

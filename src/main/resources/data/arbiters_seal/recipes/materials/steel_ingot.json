@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:charcoal"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "CI",
+    "IC"
+  ],
+  "result": {
+    "item": "arbiters_seal:materials/steel_ingot"
+  }
+}
