@@ -2,7 +2,6 @@ package net.xanthian.arbiters_seal.items.tools;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
@@ -29,24 +28,8 @@ import java.util.UUID;
 
 public class ModDaggerItem extends SwordItem {
 
-    private static final UUID REACH_MODIFIER = UUID.fromString("845DB27C-C624-495F-8C9F-6020A9A58B6B");
-    private static final UUID ATTACK_RANGE_MODIFIER = UUID.fromString("aa94b3ab-f1a7-470b-9069-1ca3d61170e8");
-
     public ModDaggerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new FabricItemSettings().group(Init.ARBITERS_SEAL_WEAPONS));
-    }
-
-    @Override
-    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
-        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
-        builder.putAll(modifiers);
-
-        if(slot == EquipmentSlot.MAINHAND) {
-            builder.put(ReachEntityAttributes.REACH, new EntityAttributeModifier(REACH_MODIFIER, "Dagger reach reduction", -2f, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(ReachEntityAttributes.ATTACK_RANGE, new EntityAttributeModifier(ATTACK_RANGE_MODIFIER, "Dagger attack range reduction", -2f, EntityAttributeModifier.Operation.ADDITION));
-        }
-        return builder.build();
     }
 
     @Override

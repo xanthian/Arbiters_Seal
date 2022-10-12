@@ -17,20 +17,20 @@ import java.util.List;
 
 public class Maces {
 
-    public static final Item MACE = registerItem("maces/mace", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item MACE = registerItem("maces/mace", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A wooden cudgel to break").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("bones.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item THUMPER = registerItem("maces/thumper", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item THUMPER = registerItem("maces/thumper", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A lightweight morningstar").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item SILVER_MACE = registerItem("maces/silver_mace", new ModMaceItem(ModToolMaterial.SILVER, 3, 3F){
+    public static final Item SILVER_MACE = registerItem("maces/silver_mace", new ModMaceItem(ModToolMaterial.SILVER, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A mace inscribed with silver").formatted(Formatting.ITALIC, Formatting.GRAY));
@@ -38,42 +38,42 @@ public class Maces {
             tooltip.add(Text.literal("against poison.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item BATTLEMACE = registerItem("maces/battlemace", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item BATTLEMACE = registerItem("maces/battlemace", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("The claw of a great dragon. A").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("single cut from this will kill").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item ENERGY_MACE = registerItem("maces/energy_mace", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item ENERGY_MACE = registerItem("maces/energy_mace", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A spiked mace mainly used by").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("soldiers.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item TEORITE_MACE = registerItem("maces/teorite_mace", new ModMaceItem(ModToolMaterial.TEORITE, 3, 3F){
+    public static final Item TEORITE_MACE = registerItem("maces/teorite_mace", new ModMaceItem(ModToolMaterial.TEORITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A mace glowing with mystical").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("powers.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item HOLY_MACE = registerItem("maces/holy_mace", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item HOLY_MACE = registerItem("maces/holy_mace", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A blessed mace destined to").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("obliterate evil.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item GOEDENDAG = registerItem("maces/goedendag", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item GOEDENDAG = registerItem("maces/goedendag", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A spiked club to ensure your").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("enemies don't have a great day.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item PERNACH = registerItem("maces/pernach", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item PERNACH = registerItem("maces/pernach", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A flanged mace to smash").formatted(Formatting.ITALIC, Formatting.GRAY));
@@ -81,14 +81,14 @@ public class Maces {
             tooltip.add(Text.literal("defensive enchantments.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item SKULLCRUSHER = registerItem("maces/skullcrusher", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item SKULLCRUSHER = registerItem("maces/skullcrusher", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A vicious morningstar with").formatted(Formatting.ITALIC, Formatting.GRAY));
             tooltip.add(Text.literal("particularly sharp spikes.").formatted(Formatting.ITALIC, Formatting.GRAY));
         }});
 
-    public static final Item GODS_MESSENGER = registerItem("maces/gods_messenger", new ModMaceItem(ToolMaterials.NETHERITE, 3, 3F){
+    public static final Item GODS_MESSENGER = registerItem("maces/gods_messenger", new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F){
         @Override
         public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
             tooltip.add(Text.literal("A glorious scepter, lighter than").formatted(Formatting.ITALIC, Formatting.GRAY));
