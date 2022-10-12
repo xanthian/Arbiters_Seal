@@ -1,29 +1,35 @@
 package net.xanthian.arbiters_seal.items.armor.feet;
 
-import net.minecraft.entity.Entity;
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import net.xanthian.arbiters_seal.items.armor.Feet;
 import net.xanthian.arbiters_seal.items.armor.ModFeetItem;
 
+import java.util.UUID;
+
 public class GremlinTreads extends ModFeetItem {
+
+    private static final UUID SPEED_MODIFIER = UUID.fromString("130844c4-7337-4c56-a8ad-6494779b3e7f");
+
     public GremlinTreads(ArmorMaterial material) {
         super(material);
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (!world.isClient && (entity instanceof PlayerEntity player)) {
-            ItemStack feet = player.getEquippedStack(EquipmentSlot.FEET);
-            if (feet.getItem() == Feet.GREMLIN_TREADS && !player.isTouchingWater()) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1, 1, false, false, true));
-            }
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
+        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
+        builder.putAll(modifiers);
+
+        if(slot == EquipmentSlot.FEET) {
+            builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                    new EntityAttributeModifier(SPEED_MODIFIER, "Speed Increase", 0.20000000298023224,
+                            EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         }
-        super.inventoryTick(stack, world, entity, slot, selected);
+        return builder.build();
     }
 }

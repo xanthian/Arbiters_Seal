@@ -21,8 +21,8 @@ public class HoverBoots extends ModFeetItem {
         if (!world.isClient && (entity instanceof PlayerEntity player)) {
             ItemStack feet = player.getEquippedStack(EquipmentSlot.FEET);
             if (feet.getItem() == Feet.HOVER_BOOTS) {
-                if (player.age % 180 == 0) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 100, 0, false, false, true));
+                if (player.age % 180 == 0 && player.isSprinting()) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 220, 0, false, false, true));
                 }
             }
         }

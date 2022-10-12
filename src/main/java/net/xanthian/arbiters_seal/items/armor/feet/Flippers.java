@@ -20,7 +20,7 @@ public class Flippers extends ModFeetItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient && (entity instanceof PlayerEntity player)) {
             ItemStack feet = player.getEquippedStack(EquipmentSlot.FEET);
-            if (feet.getItem() == Feet.FLIPPERS) {
+            if (feet.getItem() == Feet.FLIPPERS && player.isTouchingWater()) {
                 if (player.age % 180 == 0) {
                     player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1, 0, false, false, true));
                 }

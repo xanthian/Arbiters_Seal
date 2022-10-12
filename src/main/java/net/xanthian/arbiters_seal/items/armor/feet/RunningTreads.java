@@ -27,8 +27,8 @@ public class RunningTreads extends ModFeetItem {
 
         if(slot == EquipmentSlot.FEET) {
             builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED,
-                    new EntityAttributeModifier(SPEED_MODIFIER, "Speed Increase", 0.025,
-                            EntityAttributeModifier.Operation.ADDITION));
+                    new EntityAttributeModifier(SPEED_MODIFIER, "Speed Increase", 0.10000000298023224,
+                            EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         }
         return builder.build();
     }
