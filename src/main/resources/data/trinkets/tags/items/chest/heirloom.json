@@ -1,6 +1,21 @@
 {
   "replace": false,
   "values": [
-    "arbiters_seal:trinkets/pure_band"
+    "arbiters_seal:trinkets/amethyst_earring",
+    "arbiters_seal:trinkets/ancient_locket",
+    "arbiters_seal:trinkets/battle_locket",
+    "arbiters_seal:trinkets/clarity_band",
+    "arbiters_seal:trinkets/energy_locket",
+    "arbiters_seal:trinkets/glasses",
+    "arbiters_seal:trinkets/mirror_locket",
+    "arbiters_seal:trinkets/oath_band",
+    "arbiters_seal:trinkets/phoenix_band",
+    "arbiters_seal:trinkets/pure_band",
+    "arbiters_seal:trinkets/ruby_earring",
+    "arbiters_seal:trinkets/sapphire_earring",
+    "arbiters_seal:trinkets/shield_locket",
+    "arbiters_seal:trinkets/shining_band",
+    "arbiters_seal:trinkets/vigil_band",
+    "arbiters_seal:trinkets/zephyr_locket"
   ]
 }

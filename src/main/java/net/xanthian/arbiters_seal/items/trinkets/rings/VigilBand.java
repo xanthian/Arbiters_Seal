@@ -1,4 +1,6 @@
 package net.xanthian.arbiters_seal.items.trinkets.rings;
 
-public class VigilBand {
+import net.xanthian.arbiters_seal.items.trinkets.ModTrinketItem;
+
+public class VigilBand extends ModTrinketItem {
 }

@@ -512,6 +512,31 @@
   "item.arbiters_seal.trinkets.vigil_band": "Vigil Band",
   "item.arbiters_seal.trinkets.vigil_band.tooltip": "A garnet ring, to keep one alert.",
   "item.arbiters_seal.trinkets.zephyr_locket": "Zephyr Locket",
-  "item.arbiters_seal.trinkets.zephyr_locket.tooltip": "wind.\nwearer the swiftness of the\nA pendant that grants the"
+  "item.arbiters_seal.trinkets.zephyr_locket.tooltip": "wind.\nwearer the swiftness of the\nA pendant that grants the",
+
+  "item.arbiters_seal.crossbows.aerolus": "Aerolus",
+  "item.arbiters_seal.crossbows.aerolus.tooltip": "power.\nsteel, granting it unrivaled\nA crossbow made entirely of",
+  "item.arbiters_seal.crossbows.auto_crossbow": "Auto Crossbow",
+  "item.arbiters_seal.crossbows.auto_crossbow.tooltip": "bolts.\nancient king, it fires a volley of\nThe trademark weapon of an",
+  "item.arbiters_seal.crossbows.crossbow": "Crossbow",
+  "item.arbiters_seal.crossbows.crossbow.tooltip": "A simple hunting weapon.",
+  "item.arbiters_seal.crossbows.earth_crossbow": "Earth Crossbow",
+  "item.arbiters_seal.crossbows.earth_crossbow.tooltip": "granite bolts.\nA light crossbow that fires hard",
+  "item.arbiters_seal.crossbows.fire_crossbow": "Fire Crossbow",
+  "item.arbiters_seal.crossbows.fire_crossbow.tooltip": "that turn into meteors.\nA light crossbow with bolts that",
+  "item.arbiters_seal.crossbows.heavy_crossbow": "Heavy Crossbow",
+  "item.arbiters_seal.crossbows.heavy_crossbow.tooltip": "crossbow.\nA crank-operated battle",
+  "item.arbiters_seal.crossbows.ice_crossbow": "Ice Crossbow",
+  "item.arbiters_seal.crossbows.ice_crossbow.tooltip": "icicles.\nA magical crossbow that shoots",
+  "item.arbiters_seal.crossbows.quarreller": "Quarreller",
+  "item.arbiters_seal.crossbows.quarreller.tooltip": "that drive their target insane.\nAn ebony crossbow with bolts",
+  "item.arbiters_seal.crossbows.silver_crossbow": "Silver Crossbow",
+  "item.arbiters_seal.crossbows.silver_crossbow.tooltip": "inlays.\nA heavy crossbow with silver",
+  "item.arbiters_seal.crossbows.teorite_crossbow": "Teorite Crossbow",
+  "item.arbiters_seal.crossbows.teorite_crossbow.tooltip": "protects against baneful magic.\nA teorite crossbow that",
+  "item.arbiters_seal.crossbows.thunder_crossbow": "Thunder Crossbow",
+  "item.arbiters_seal.crossbows.thunder_crossbow.tooltip": "lightning bolts.\nA crossbow that shoots",
+  "item.arbiters_seal.crossbows.williams": "William's",
+  "item.arbiters_seal.crossbows.williams.tooltip": "unbelievable accuracy.\nA marksman's weapon with"
 
 }

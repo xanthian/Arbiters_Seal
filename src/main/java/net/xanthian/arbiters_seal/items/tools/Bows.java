@@ -1,11 +1,10 @@
 package net.xanthian.arbiters_seal.items.tools;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.items.tools.bows.Dominance;
 import net.xanthian.arbiters_seal.material.ModBowMaterial;
 
 public class Bows {
@@ -38,12 +37,7 @@ public class Bows {
             new ModBowItem(ModBowMaterial.DIAMOND));
 
     public static final Item DOMINANCE = registerItem("bows/dominance",
-            new ModBowItem(ModBowMaterial.NETHERITE) {
-        @Override
-        public Rarity getRarity(ItemStack stack) {
-            return Rarity.UNCOMMON;
-        }
-    });
+            new Dominance(ModBowMaterial.NETHERITE));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

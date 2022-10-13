@@ -1,4 +1,6 @@
 package net.xanthian.arbiters_seal.items.trinkets.rings;
 
-public class ClarityBand {
+import net.xanthian.arbiters_seal.items.trinkets.ModTrinketItem;
+
+public class ClarityBand extends ModTrinketItem {
 }
