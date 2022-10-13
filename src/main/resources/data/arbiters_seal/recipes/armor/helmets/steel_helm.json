@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "arbiters_seal:materials/steel_ingot"
+      "tag": "c:steel_ingots"
     }
   },
   "pattern": [

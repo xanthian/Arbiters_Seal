@@ -4,7 +4,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.ItemTags;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.items.ModItems;
+import net.xanthian.arbiters_seal.items.OtherItems;
 
 import java.util.function.Supplier;
 
@@ -19,12 +19,12 @@ public enum ModBowMaterial implements ModBowTiers {
     NETHERITE(1536, 3.0F, 20,2, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
     //Mod
-    BRONZE(384, 1.0F, 15,1, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
-    SILVER(192, 1.0F, 16,1, () -> Ingredient.ofItems(ModItems.SILVER_INGOT)),
-    TEORITE(768, 1.5F, 17,1, () -> Ingredient.ofItems(ModItems.TEORITE_INGOT)),
+    BRONZE(384, 1.0F, 15,1, () -> Ingredient.ofItems(OtherItems.BRONZE_INGOT)),
+    SILVER(192, 1.0F, 16,1, () -> Ingredient.ofItems(OtherItems.SILVER_INGOT)),
+    TEORITE(768, 1.5F, 17,1, () -> Ingredient.ofItems(OtherItems.TEORITE_INGOT)),
     EBONY(960, 2.0F, 17,1, () -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS)),
-    STEEL(768, 1.5F, 17,1, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    DENDRITE(1152, 2.5F, 18,2, () -> Ingredient.ofItems(ModItems.DENDRITE_CRYSTAL));
+    STEEL(768, 1.5F, 17,1, () -> Ingredient.ofItems(OtherItems.STEEL_INGOT)),
+    DENDRITE(1152, 2.5F, 18,2, () -> Ingredient.ofItems(OtherItems.DENDRITE_CRYSTAL));
 
 
     private final int durability;

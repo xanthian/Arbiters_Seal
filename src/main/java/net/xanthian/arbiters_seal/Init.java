@@ -30,7 +30,7 @@ public class Init implements ModInitializer {
     public static final ItemGroup ARBITERS_SEAL_ARMOR = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_armor"),
             () -> new ItemStack(Helmets.GREEN_BERET));
     public static final ItemGroup ARBITERS_SEAL_ITEMS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_items"),
-            () -> new ItemStack(ModItems.TEORITE_INGOT));
+            () -> new ItemStack(OtherItems.TEORITE_INGOT));
 
     @Override
     public void onInitialize() {
@@ -41,7 +41,8 @@ public class Init implements ModInitializer {
 
         // Generic Item registration
         ModBlocks.registerModBlocks();
-        ModItems.registerModItems();
+        OtherItems.registerModItems();
+        RareItems.registerRareItems();
 
         // Weapon Registration
         Axes.registerAxeItems();

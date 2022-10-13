@@ -4,12 +4,10 @@
   "itemGroup.arbiters_seal.arbiters_seal_items": "Arbiters Seal Items",
   "trinkets.slot.chest.heirloom" : "Heirloom",
 
-  "effect.arbiters_seal.liferecovery_cooldown": "Heal Cooldown",
+  "effect.arbiters_seal.rebirth": "Rebirth",
   "effect.arbiters_seal.bleed": "Bleed",
   "effect.arbiters_seal.mute": "Mute",
   "effect.arbiters_seal.root": "Root",
-
-  "enchantment.arbiters_seal.health_regeneration": "Health Regeneration",
 
   "item.arbiters_seal.bows.shortbow": "Shortbow",
   "item.arbiters_seal.bows.shortbow.tooltip": "A horsemans bow.",
@@ -405,6 +403,8 @@
   "item.arbiters_seal.chestpieces.flowing_robe.tooltip": "adorned with seashells.\nA collection of diaphanous veils",
   "item.arbiters_seal.chestpieces.gold_armor": "Golden Armor",
   "item.arbiters_seal.chestpieces.gold_armor.tooltip": "More protective than you'd think.\nFancy clothes woven out of gold thread.",
+  "item.arbiters_seal.chestpieces.gold_garb": "Golden Garb",
+  "item.arbiters_seal.chestpieces.gold_garb.tooltip": "?",
   "item.arbiters_seal.chestpieces.judogi": "Judogi",
   "item.arbiters_seal.chestpieces.judogi.tooltip": "steel inserts in strategic locations.\nMartial arts garb with protective",
   "item.arbiters_seal.chestpieces.leather_armor": "Leather Armor",

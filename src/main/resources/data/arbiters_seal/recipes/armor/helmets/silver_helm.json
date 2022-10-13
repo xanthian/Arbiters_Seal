@@ -2,10 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "arbiters_seal:materials/silver_ingot"
+      "tag": "c:silver_ingots"
+    },
+    "W": {
+      "item": "minecraft:red_wool"
     }
   },
   "pattern": [
+    "WWW",
     "XXX",
     "X X"
   ],

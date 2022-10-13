@@ -12,8 +12,8 @@ import net.xanthian.arbiters_seal.Init;
 
 import java.util.List;
 
-public class ModMaterialsItem extends Item {
-    public ModMaterialsItem() {
+public class ModRareItem extends Item {
+    public ModRareItem() {
         super(new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS));
     }
     @Override
