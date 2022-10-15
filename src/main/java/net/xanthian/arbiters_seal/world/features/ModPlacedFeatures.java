@@ -40,12 +40,16 @@ public class ModPlacedFeatures {
 
 // Geode
     public static final RegistryEntry<PlacedFeature> DENDRITE_GEODE_PLACED = PlacedFeatures.register("dendrite_geode_placed",
-            ModConfiguredFeatures.DENDRITE_GEODE, RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(),
+            ModConfiguredFeatures.DENDRITE_GEODE, RarityFilterPlacementModifier.of(75), SquarePlacementModifier.of(),
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50),YOffset.fixed(65)));
 
 // Aloe
     public static final RegistryEntry<PlacedFeature> ALOE_VERA_PLACED = PlacedFeatures.register("aloe_vera_placed",
         ModConfiguredFeatures.ALOE_VERA_PLANT, modifiersWithRarity(10,PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP));
+
+// Angel Tears
+    public static final RegistryEntry<PlacedFeature> ANGEL_TEARS_PLACED = PlacedFeatures.register("angel_tears_placed",
+            ModConfiguredFeatures.ANGEL_TEARS_PLANT, modifiersWithRarity(100,PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP));
 
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

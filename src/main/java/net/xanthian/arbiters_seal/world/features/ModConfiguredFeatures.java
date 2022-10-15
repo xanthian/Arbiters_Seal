@@ -90,7 +90,7 @@ public class ModConfiguredFeatures {
                                         ModBlocks.DENDRITE_CLUSTER.getDefaultState()),
                                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                                 new GeodeLayerThicknessConfig(1.7D, 2.2D, 3.2D, 4.2D),
-                                new GeodeCrackConfig(0.95D, 2.0D, 2),0.35D, 0.083D, true,
+                                new GeodeCrackConfig(0.5D, 2.0D, 2),0.35D, 0.083D, true,
                                 UniformIntProvider.create(4, 6),
                                 UniformIntProvider.create(3, 4),
                                 UniformIntProvider.create(1, 2),
@@ -101,6 +101,12 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("aloe_vera_plant", Feature.FLOWER,
                     ConfiguredFeatures.createRandomPatchFeatureConfig(1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ALOE_VERA)))));
+
+    // ANGEL TEARS PLANT
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> ANGEL_TEARS_PLANT =
+            ConfiguredFeatures.register("angel_tears_plant", Feature.FLOWER,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ANGEL_TEARS)))));
 
 
 

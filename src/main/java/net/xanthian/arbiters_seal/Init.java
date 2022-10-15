@@ -6,10 +6,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.util.ModFlammableBlocks;
-import net.xanthian.arbiters_seal.util.ModFuelItems;
-import net.xanthian.arbiters_seal.util.ModPOITypes;
-import net.xanthian.arbiters_seal.util.ModStrippableBlocks;
+import net.xanthian.arbiters_seal.particle.ModParticles;
+import net.xanthian.arbiters_seal.util.*;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Chestpieces;
 import net.xanthian.arbiters_seal.items.armor.Feet;
@@ -31,6 +29,10 @@ public class Init implements ModInitializer {
             () -> new ItemStack(Helmets.GREEN_BERET));
     public static final ItemGroup ARBITERS_SEAL_ITEMS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_items"),
             () -> new ItemStack(OtherItems.TEORITE_INGOT));
+
+    public static Identifier id(String key) {
+        return new Identifier(MOD_ID, key);
+    }
 
     @Override
     public void onInitialize() {
@@ -68,11 +70,13 @@ public class Init implements ModInitializer {
         Shields.registerShieldItems();
 
         // Other stuff
+        ModAttributes.register();
         ModWorldGen.generateModWorldGen();
         ModStatusEffects.registerStatusEffects();
         ModFlammableBlocks.registerFlammableBlocks();
         ModStrippableBlocks.registerStrippables();
         ModFuelItems.registerFuelItems();
         ModPOITypes.init();
+        ModParticles.registerParticles();
     }
 }

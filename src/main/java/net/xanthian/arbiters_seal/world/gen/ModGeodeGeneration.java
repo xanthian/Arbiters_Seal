@@ -10,7 +10,7 @@ public class ModGeodeGeneration {
 
     public static void generateGeodes() {
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.DENDRITE_GEODE_PLACED.getKey().get());
     }
 }

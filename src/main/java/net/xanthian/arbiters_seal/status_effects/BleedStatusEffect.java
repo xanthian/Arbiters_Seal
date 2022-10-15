@@ -23,7 +23,7 @@ public class BleedStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (entity.getHealth() > 1F) {
+        if (entity.getHealth() > 2F) {
             entity.damage(DamageSource.MAGIC, 1.5F);
         }
     }

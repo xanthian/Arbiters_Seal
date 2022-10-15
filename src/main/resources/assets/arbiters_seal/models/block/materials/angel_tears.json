@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "arbiters_seal:block/materials/angel_tears"
+  }
+}

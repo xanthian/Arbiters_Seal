@@ -26,6 +26,7 @@ public class ShieldOfTheSix extends ModShieldItem {
         public Rarity getRarity(ItemStack stack) {
             return Rarity.EPIC;
         }
+
     @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();

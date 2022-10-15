@@ -18,5 +18,6 @@ public class ModFlammableBlocks {
         registry.add(ModBlocks.EBONY_COMPOSTER, 5, 20);
         registry.add(ModBlocks.EBONY_BOOKSHELF, 30, 20);
         registry.add(ModBlocks.ALOE_VERA, 60, 100);
+        registry.add(ModBlocks.ANGEL_TEARS, 60, 100);
     }
 }
