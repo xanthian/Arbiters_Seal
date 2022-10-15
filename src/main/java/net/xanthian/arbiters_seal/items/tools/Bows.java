@@ -9,8 +9,8 @@ import net.xanthian.arbiters_seal.material.ModBowMaterial;
 
 public class Bows {
 
-    public static final Item SHORTBOW = registerItem("bows/shortbow",
-            new ModBowItem(ModBowMaterial.IRON));
+    //public static final Item SHORTBOW = registerItem("bows/shortbow",
+            //new ModBowItem(ModBowMaterial.IRON));
 
     public static final Item LONGBOW = registerItem("bows/longbow",
             new ModBowItem(ModBowMaterial.IRON));

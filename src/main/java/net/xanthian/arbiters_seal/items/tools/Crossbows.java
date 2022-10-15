@@ -7,8 +7,8 @@ import net.xanthian.arbiters_seal.Init;
 
 public class Crossbows {
 
-    public static final Item CROSSBOW = registerItem("crossbows/crossbow",
-            new ModCrossbowItem());
+    //public static final Item CROSSBOW = registerItem("crossbows/crossbow",
+            //new ModCrossbowItem());
 
     public static final Item HEAVY_CROSSBOW = registerItem("crossbows/heavy_crossbow",
             new ModCrossbowItem());

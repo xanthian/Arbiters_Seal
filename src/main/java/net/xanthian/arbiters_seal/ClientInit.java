@@ -23,7 +23,7 @@ public class ClientInit implements ClientModInitializer {
         registerBowPredicates(Bows.COMPOSITE_BOW);
         registerBowPredicates(Bows.LONGBOW);
         registerBowPredicates(Bows.MACH_BOW);
-        registerBowPredicates(Bows.SHORTBOW);
+        //registerBowPredicates(Bows.SHORTBOW);
         registerBowPredicates(Bows.SILVER_BOW);
         registerBowPredicates(Bows.TEORITE_BOW);
         registerBowPredicates(Bows.TRUE_FLIGHT);
@@ -34,7 +34,7 @@ public class ClientInit implements ClientModInitializer {
         //CROSSBOWS
         registerCrossbowPredicates(Crossbows.AEROLUS);
         registerCrossbowPredicates(Crossbows.AUTO_CROSSBOW);
-        registerCrossbowPredicates(Crossbows.CROSSBOW);
+        //registerCrossbowPredicates(Crossbows.CROSSBOW);
         registerCrossbowPredicates(Crossbows.EARTH_CROSSBOW);
         registerCrossbowPredicates(Crossbows.FIRE_CROSSBOW);
         registerCrossbowPredicates(Crossbows.HEAVY_CROSSBOW);

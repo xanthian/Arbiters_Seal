@@ -9,11 +9,13 @@
     "EnchantingTableBlockMixin",
     "LivingEntityMixin",
     "PointOfInterestTypesAccessor",
+    "RecipeManagerMixin",
     "SignTypeAccessor"
   ],
   "client": [
     "AbstractClientPlayerEntityMixin",
     "ArmorRendererMixin",
+    "ClientPlayNetworkHandlerMixin",
     "HeldItemRendererMixin"
   ],
   "injectors": {

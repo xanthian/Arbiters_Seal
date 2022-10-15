@@ -78,7 +78,6 @@ public class ModBlocks {
             new AmethystClusterBlock(5, 3, FabricBlockSettings.copyOf(Blocks.LARGE_AMETHYST_BUD)));
     public static final Block DENDRITE_CLUSTER = registerBlock("materials/dendrite_cluster",
             new AmethystClusterBlock(7,3,FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)));
-
     // EBONY
     public static final Block EBONY_PLANKS = registerBlock("materials/ebony_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.DARK_OAK_PLANKS)));
@@ -148,7 +147,6 @@ public class ModBlocks {
 
     public static final Block EBONY_CRAFTING_TABLE = registerBlock("jobsites/ebony_crafting_table",
             new CraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
-
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
