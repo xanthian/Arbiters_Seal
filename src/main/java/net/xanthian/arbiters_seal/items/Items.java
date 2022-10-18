@@ -8,7 +8,7 @@ import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 
-public class OtherItems {
+public class Items {
 
     //EBONY
     public static final Item EBONY_SIGN = registerItem("objects/ebony_sign",

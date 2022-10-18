@@ -2,11 +2,10 @@ package net.xanthian.arbiters_seal.material;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.xanthian.arbiters_seal.items.OtherItems;
+import net.xanthian.arbiters_seal.items.Items;
 
 import java.util.function.Supplier;
 
@@ -14,58 +13,58 @@ public enum ModArmorMaterial implements ArmorMaterial {
 
     // VANILLA
     LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.LEATHER)),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.LEATHER)),
 
     CHAIN("chainmail", 15, new int[]{1, 4, 5, 2}, 12,
-            SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.IRON_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.IRON_INGOT)),
 
     IRON("iron", 15, new int[]{2, 5, 6, 2}, 9,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () ->  Ingredient.ofItems(Items.IRON_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () ->  Ingredient.ofItems(net.minecraft.item.Items.IRON_INGOT)),
 
     GOLD("gold", 7, new int[]{1, 3, 5, 2}, 25,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.GOLD_INGOT)),
 
     DIAMOND("diamond", 33, new int[]{3, 6, 8, 3}, 10,
-            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.ofItems(Items.DIAMOND)),
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.DIAMOND)),
 
     TURTLE("turtle", 25, new int[]{2, 5, 6, 2}, 9,
-            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.SCUTE)),
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.SCUTE)),
 
     NETHERITE("netherite", 37, new int[]{3, 6, 8, 3}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(net.minecraft.item.Items.NETHERITE_INGOT)),
 
 
     // MODDED
     BRONZE("bronze", 11, new int[]{1, 4, 6, 1}, 9,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(OtherItems.BRONZE_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.BRONZE_INGOT)),
 
     SILVER("silver", 9, new int[]{2, 4, 6, 2}, 23,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(OtherItems.SILVER_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.SILVER_INGOT)),
 
     STEEL("steel", 16, new int[]{2, 5, 7, 2}, 5,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.5f, () -> Ingredient.ofItems(OtherItems.STEEL_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.5f, () -> Ingredient.ofItems(Items.STEEL_INGOT)),
 
     TEORITE("teorite", 20, new int[]{3, 6, 8, 3}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.5f, 0.1f, () -> Ingredient.ofItems(OtherItems.TEORITE_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.5f, 0.1f, () -> Ingredient.ofItems(Items.TEORITE_INGOT)),
 
     DENDRITE("dendrite", 35, new int[]{3, 6, 8, 3}, 20,
-            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, 0.1f, () -> Ingredient.ofItems(OtherItems.DENDRITE_CRYSTAL)),
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, 0.1f, () -> Ingredient.ofItems(Items.DENDRITE_CRYSTAL)),
 
     // MODDED VANILLA
     CLOTH("cloth", 5, new int[]{1, 2, 3, 1}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.LEATHER)),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.LEATHER)),
 
     NINJA("ninja", 15, new int[]{2, 5, 6, 2}, 9,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () ->  Ingredient.ofItems(Items.IRON_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () ->  Ingredient.ofItems(net.minecraft.item.Items.IRON_INGOT)),
 
     GOLDEN("golden", 7, new int[]{1, 3, 5, 2}, 25,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.GOLD_INGOT)),
 
     DARKSILK("darksilk", 33, new int[]{3, 6, 8, 3}, 10,
-            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.ofItems(Items.DIAMOND)),
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.ofItems(net.minecraft.item.Items.DIAMOND)),
 
     ROYAL("royal", 37, new int[]{3, 6, 8, 3}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(net.minecraft.item.Items.NETHERITE_INGOT));
 
 
 

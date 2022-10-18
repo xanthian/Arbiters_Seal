@@ -13,6 +13,7 @@ public class ModStatusEffects {
     public static final StatusEffect MUTE = new MuteStatusEffect();
     public static final StatusEffect SLEEP = new SleepStatusEffect();
     public static final StatusEffect REBIRTH = new RebirthStatusEffect();
+    public static final StatusEffect DEF_DOWN = new DefenceDownEffect();
 
 
     public static void registerStatusEffects() {
@@ -22,5 +23,6 @@ public class ModStatusEffects {
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "mute"), MUTE);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "sleep"), SLEEP);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "rebirth"), REBIRTH);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(Init.MOD_ID, "def_down"), DEF_DOWN);
     }
 }

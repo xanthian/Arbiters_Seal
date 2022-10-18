@@ -3,19 +3,19 @@ package net.xanthian.arbiters_seal.material;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.items.OtherItems;
+import net.xanthian.arbiters_seal.items.Items;
 
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    BRONZE(1, 250, 6.0F, 2.0F, 14,() -> Ingredient.ofItems(OtherItems.BRONZE_INGOT)),
-    SILVER(1, 50, 8.0F, 0.0F, 20,() -> Ingredient.ofItems(OtherItems.SILVER_INGOT)),
-    TEORITE(2, 500, 5.0F, 2.0F, 12,() -> Ingredient.ofItems(OtherItems.TEORITE_INGOT)),
+    BRONZE(1, 250, 6.0F, 2.0F, 14,() -> Ingredient.ofItems(Items.BRONZE_INGOT)),
+    SILVER(1, 50, 8.0F, 0.0F, 20,() -> Ingredient.ofItems(Items.SILVER_INGOT)),
+    TEORITE(2, 500, 5.0F, 2.0F, 12,() -> Ingredient.ofItems(Items.TEORITE_INGOT)),
     EBONY(3, 500, 8.0F, 3.0F, 6,() -> Ingredient.ofItems(ModBlocks.EBONY_PLANKS)),
-    STEEL(3, 350, 8.0F, 3.0F, 10,() -> Ingredient.ofItems(OtherItems.STEEL_INGOT)),
-    DENDRITE(3, 1250, 8.0F, 3.0F, 16,() -> Ingredient.ofItems(OtherItems.DENDRITE_CRYSTAL));
+    STEEL(3, 350, 8.0F, 3.0F, 10,() -> Ingredient.ofItems(Items.STEEL_INGOT)),
+    DENDRITE(3, 1250, 8.0F, 3.0F, 16,() -> Ingredient.ofItems(Items.DENDRITE_CRYSTAL));
 
 
     private final int miningLevel;

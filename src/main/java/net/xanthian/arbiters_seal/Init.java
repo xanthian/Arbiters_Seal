@@ -6,6 +6,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.items.gadgets.Gadgets;
+import net.xanthian.arbiters_seal.items.potions.PotionItems;
 import net.xanthian.arbiters_seal.particle.ModParticles;
 import net.xanthian.arbiters_seal.util.*;
 import net.xanthian.arbiters_seal.items.*;
@@ -28,7 +30,7 @@ public class Init implements ModInitializer {
     public static final ItemGroup ARBITERS_SEAL_ARMOR = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_armor"),
             () -> new ItemStack(Helmets.GREEN_BERET));
     public static final ItemGroup ARBITERS_SEAL_ITEMS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_items"),
-            () -> new ItemStack(OtherItems.TEORITE_INGOT));
+            () -> new ItemStack(Items.TEORITE_INGOT));
 
     public static Identifier id(String key) {
         return new Identifier(MOD_ID, key);
@@ -43,8 +45,10 @@ public class Init implements ModInitializer {
 
         // Generic Item registration
         ModBlocks.registerModBlocks();
-        OtherItems.registerModItems();
+        Items.registerModItems();
         RareItems.registerRareItems();
+        Gadgets.registerGadgetItems();
+        PotionItems.registerPotions();
 
         // Weapon Registration
         Axes.registerAxeItems();

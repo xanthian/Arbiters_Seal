@@ -2,7 +2,7 @@ package net.xanthian.arbiters_seal.util;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.items.OtherItems;
+import net.xanthian.arbiters_seal.items.Items;
 import net.xanthian.arbiters_seal.items.shields.Shields;
 import net.xanthian.arbiters_seal.items.tools.Daggers;
 import net.xanthian.arbiters_seal.items.tools.Rods;
@@ -30,7 +30,7 @@ public class ModFuelItems {
         registry.add(ModBlocks.EBONY_PLANKS, 300);
         registry.add(ModBlocks.EBONY_PRESSURE_PLATE, 300);
         registry.add(ModBlocks.EBONY_SAPLING, 100);
-        registry.add(OtherItems.EBONY_SIGN, 100);
+        registry.add(Items.EBONY_SIGN, 100);
         registry.add(ModBlocks.EBONY_SLAB, 150);
         registry.add(ModBlocks.EBONY_STAIRS, 300);
         registry.add(ModBlocks.EBONY_TRAPDOOR, 300);

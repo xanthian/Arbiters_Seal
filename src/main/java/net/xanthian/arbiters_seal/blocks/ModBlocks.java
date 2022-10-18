@@ -58,7 +58,7 @@ public class ModBlocks {
     public static final Block ALOE_VERA = registerBlock("materials/aloe_vera",
             new DeadBushBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
     public static final Block ANGEL_TEARS = registerBlock("materials/angel_tears",
-            new ChorusPlantBlock(FabricBlockSettings.copyOf(Blocks.CHORUS_PLANT)));
+            new ChorusPlantBlock(FabricBlockSettings.copyOf(Blocks.CHORUS_PLANT).luminance(7)));
     public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
