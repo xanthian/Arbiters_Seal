@@ -46,15 +46,15 @@ public class ModConfiguredFeatures {
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_TEORITE_ORE.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> TEORITE_ORE =
-            ConfiguredFeatures.register("teorite_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_TEORITE_ORES, 3));
+            ConfiguredFeatures.register("teorite_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_TEORITE_ORES, 7));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> NETHER_TEORITE_ORE =
-            ConfiguredFeatures.register("nether_teorite_ore",Feature.ORE, new OreFeatureConfig(NETHER_TEORITE_ORES, 3));
+            ConfiguredFeatures.register("nether_teorite_ore",Feature.ORE, new OreFeatureConfig(NETHER_TEORITE_ORES, 9));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> END_TEORITE_ORE =
-            ConfiguredFeatures.register("end_teorite_ore",Feature.ORE, new OreFeatureConfig(END_TEORITE_ORES, 3, 0.2F));
+            ConfiguredFeatures.register("end_teorite_ore",Feature.ORE, new OreFeatureConfig(END_TEORITE_ORES, 5, 0.2F));
 
-// SILVER ORE GEN
+    // SILVER ORE GEN
     public static final List<OreFeatureConfig.Target> OVERWORLD_SILVER_ORES = List.of(
             OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.SILVER_ORE.getDefaultState()),
             OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_SILVER_ORE.getDefaultState()));
@@ -66,14 +66,26 @@ public class ModConfiguredFeatures {
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_SILVER_ORE.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SILVER_ORE =
-            ConfiguredFeatures.register("silver_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_SILVER_ORES, 5));
+            ConfiguredFeatures.register("silver_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_SILVER_ORES, 9));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> NETHER_SILVER_ORE =
-            ConfiguredFeatures.register("nether_silver_ore",Feature.ORE, new OreFeatureConfig(NETHER_SILVER_ORES, 5));
+            ConfiguredFeatures.register("nether_silver_ore",Feature.ORE, new OreFeatureConfig(NETHER_SILVER_ORES, 11));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> END_SILVER_ORE =
-            ConfiguredFeatures.register("end_silver_ore",Feature.ORE, new OreFeatureConfig(END_SILVER_ORES, 5, 0.2F));
+            ConfiguredFeatures.register("end_silver_ore",Feature.ORE, new OreFeatureConfig(END_SILVER_ORES, 7, 0.2F));
 
+    // COLD IRON ORE GEN
+    public static final List<OreFeatureConfig.Target> OVERWORLD_COLD_IRON_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COLD_IRON_ORE.getDefaultState()));
+    
+    public static final List<OreFeatureConfig.Target> END_COLD_IRON_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_COLD_IRON_ORE.getDefaultState()));
+    
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> COLD_IRON_ORE =
+            ConfiguredFeatures.register("cold_iron_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_COLD_IRON_ORES, 5));
+    
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> END_COLD_IRON_ORE =
+            ConfiguredFeatures.register("end_cold_iron_ore",Feature.ORE, new OreFeatureConfig(END_COLD_IRON_ORES, 4, 0.2F));
 
     // DENDRITE GEODE
     public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> DENDRITE_GEODE =
@@ -105,7 +117,7 @@ public class ModConfiguredFeatures {
     // ANGEL TEARS PLANT
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> ANGEL_TEARS_PLANT =
             ConfiguredFeatures.register("angel_tears_plant", Feature.FLOWER,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ANGEL_TEARS)))));
 
 

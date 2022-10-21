@@ -1,10 +1,12 @@
 {
+  "replace": false,
   "values": [
     "arbiters_seal:materials/teorite_ore",
     "arbiters_seal:materials/deepslate_teorite_ore",
     "arbiters_seal:materials/nether_teorite_ore",
     "arbiters_seal:materials/end_teorite_ore",
     "arbiters_seal:materials/raw_teorite_block",
-    "arbiters_seal:materials/teorite_block"
+    "arbiters_seal:materials/teorite_block",
+    "arbiters_seal:materials/steel_block"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:materials/tarnished_locket"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/dragonsblood_sap"
+    }
+  },
+  "pattern": [
+    " X ",
+    " # ",
+    " X "
+  ],
+  "result": {
+    "item": "arbiters_seal:trinkets/ancient_locket"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/energized_crystal"
+    },
+    "#": {
+      "item": "arbiters_seal:materials/platinum_thread"
+    }
+  },
+  "pattern": [
+    "# #",
+    "X X"
+  ],
+  "result": {
+    "item": "arbiters_seal:feet/riftwalkers"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:materials/gold_thread"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/dragonsblood_sap"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    " X "
+  ],
+  "result": {
+    "item": "arbiters_seal:trinkets/mirror_locket"
+  }
+}

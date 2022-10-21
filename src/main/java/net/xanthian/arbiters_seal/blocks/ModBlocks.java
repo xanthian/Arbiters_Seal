@@ -50,6 +50,18 @@ public class ModBlocks {
     public static final Block RAW_SILVER_BLOCK = registerBlock("materials/raw_silver_block",
             new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
 
+    // COLD IRON
+    public static final Block DEEPSLATE_COLD_IRON_ORE = registerBlock("materials/deepslate_cold_iron_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE),
+                    UniformIntProvider.create(2, 5)));
+    public static final Block END_COLD_IRON_ORE = registerBlock("materials/end_cold_iron_ore",
+            new OreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE),
+                    UniformIntProvider.create(2, 5)));
+    public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static final Block RAW_COLD_IRON_BLOCK = registerBlock("materials/raw_cold_iron_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+
     // RANDOM
     public static final Block ADAMANT_BLOCK = registerBlock("materials/adamant_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
@@ -61,8 +73,6 @@ public class ModBlocks {
             new ChorusPlantBlock(FabricBlockSettings.copyOf(Blocks.CHORUS_PLANT).luminance(7)));
     public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block COLD_IRON_BLOCK = registerBlock("materials/cold_iron_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
     public static final Block STEEL_BLOCK = registerBlock("materials/steel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 

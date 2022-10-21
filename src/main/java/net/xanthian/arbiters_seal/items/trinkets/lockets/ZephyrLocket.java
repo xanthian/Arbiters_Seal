@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.items.trinkets.necklaces;
+package net.xanthian.arbiters_seal.items.trinkets.lockets;
 
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotReference;

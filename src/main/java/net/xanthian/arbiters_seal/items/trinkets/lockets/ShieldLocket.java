@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.items.trinkets.necklaces;
+package net.xanthian.arbiters_seal.items.trinkets.lockets;
 
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotReference;
@@ -12,16 +12,16 @@ import net.xanthian.arbiters_seal.items.trinkets.ModTrinketItem;
 
 import java.util.UUID;
 
-public class BattleLocket extends ModTrinketItem {
+public class ShieldLocket extends ModTrinketItem {
 
-    private static final UUID ATTACK_DAMAGE_MODIFIER = UUID.fromString("c90ded9e-55bd-4404-85b0-dd6f7c98cfb5");
+    private static final UUID DEFENCE_MODIFIER = UUID.fromString("55dba6d2-8a6f-4997-8ace-fc68f3d7fdbd");
 
     @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
         var modifiers =
                 super.getModifiers(stack, slot, entity, uuid);
-        modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE,
-                new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER, "Attack Damage", 1,
+        modifiers.put(EntityAttributes.GENERIC_ARMOR,
+                new EntityAttributeModifier(DEFENCE_MODIFIER, "Armor", 1,
                         EntityAttributeModifier.Operation.ADDITION));
         return modifiers;
     }

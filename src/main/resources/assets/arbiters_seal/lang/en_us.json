@@ -340,6 +340,9 @@
   "block.arbiters_seal.materials.adamant_block": "Adamant Block",
   "block.arbiters_seal.materials.aegisite_block": "Aegisite Block",
   "block.arbiters_seal.materials.angel_tear": "Angel Tear",
+  "block.arbiters_seal.materials.deepslate_cold_iron_ore": "Deepslate Cold Iron Ore",
+  "block.arbiters_seal.materials.end_cold_iron_ore": "End Cold Iron Ore",
+  "block.arbiters_seal.materials.raw_cold_iron_block": "Raw Cold Iron Block",
   "block.arbiters_seal.materials.cold_iron_block": "Cold Iron Block",
   "item.arbiters_seal.materials.bronze_ingot": "Bronze Ingot",
   "block.arbiters_seal.materials.bronze_block": "Bronze Block",
@@ -349,6 +352,7 @@
   "block.arbiters_seal.materials.steel_block": "Steel Block",
   "item.arbiters_seal.materials.teorite_ingot": "Teorite Ingot",
   "item.arbiters_seal.materials.raw_teorite": "Raw Teorite",
+  "item.arbiters_seal.materials.raw_cold_iron": "Raw Cold Iron",
 
   "item.arbiters_seal.materials.dendrite_crystal": "Dendrite Crystal",
   "block.arbiters_seal.materials.dendrite_block": "Dendrite Block",

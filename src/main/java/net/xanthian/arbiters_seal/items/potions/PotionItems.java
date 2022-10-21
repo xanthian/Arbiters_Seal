@@ -30,4 +30,5 @@ public class PotionItems {
     public static void registerPotions() {
         PHOENIX_ASHES = registerPotion("phoenix_ashes_potion");
     }
+
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:materials/platinum_thread"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/angel_tear"
+    }
+  },
+  "pattern": [
+    "# #",
+    "X X",
+    "  "
+  ],
+  "result": {
+    "item": "arbiters_seal:trinkets/amethyst_earring"
+  }
+}

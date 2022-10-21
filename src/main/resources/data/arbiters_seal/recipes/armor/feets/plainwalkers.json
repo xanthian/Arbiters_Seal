@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/mycoleather"
+    },
+    "#": {
+      "item": "arbiters_seal:materials/diamond_thread"
+    }
+  },
+  "pattern": [
+    "# #",
+    "X X"
+  ],
+  "result": {
+    "item": "arbiters_seal:feet/plainwalkers"
+  }
+}

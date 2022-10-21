@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:materials/gold_thread"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    " X "
+  ],
+  "result": {
+    "item": "arbiters_seal:trinkets/shield_locket"
+  }
+}

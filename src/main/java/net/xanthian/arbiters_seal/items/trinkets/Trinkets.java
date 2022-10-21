@@ -7,7 +7,7 @@ import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.items.trinkets.earrings.AmethystEarring;
 import net.xanthian.arbiters_seal.items.trinkets.earrings.RubyEarring;
 import net.xanthian.arbiters_seal.items.trinkets.earrings.SapphireEarring;
-import net.xanthian.arbiters_seal.items.trinkets.necklaces.*;
+import net.xanthian.arbiters_seal.items.trinkets.lockets.*;
 import net.xanthian.arbiters_seal.items.trinkets.other.Glasses;
 import net.xanthian.arbiters_seal.items.trinkets.rings.*;
 

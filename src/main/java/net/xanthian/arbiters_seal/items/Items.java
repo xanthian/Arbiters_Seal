@@ -37,6 +37,9 @@ public class Items {
     public static final Item DENDRITE_CRYSTAL = registerItem("materials/dendrite_crystal",
         new ModItem());
 
+    public static final Item RAW_COLD_IRON = registerItem("materials/raw_cold_iron",
+            new ModItem());
+
     
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

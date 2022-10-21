@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "arbiters_seal:materials/silver_ore",
     "arbiters_seal:materials/silver_block",
@@ -18,6 +19,17 @@
     "arbiters_seal:materials/adamant_block",
     "arbiters_seal:materials/bronze_block",
     "arbiters_seal:materials/cold_iron_block",
-    "arbiters_seal:materials/steel_block"
+    "arbiters_seal:materials/steel_block",
+
+    "arbiters_seal:materials/dendrite_block",
+    "arbiters_seal:materials/budding_dendrite",
+    "arbiters_seal:materials/dendrite_cluster",
+    "arbiters_seal:materials/small_dendrite_bud",
+    "arbiters_seal:materials/medium_dendrite_bud",
+    "arbiters_seal:materials/large_dendrite_bud",
+
+    "arbiters_seal:materials/deepslate_cold_iron_ore",
+    "arbiters_seal:materials/end_cold_iron_ore"
+
   ]
 }

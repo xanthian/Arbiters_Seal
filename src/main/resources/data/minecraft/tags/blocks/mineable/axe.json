@@ -1,8 +1,10 @@
 {
+  "replace": false,
   "values": [
     "arbiters_seal:jobsites/ebony_crafting_table",
     "arbiters_seal:jobsites/ebony_composter",
     "arbiters_seal:jobsites/ebony_bookshelf",
-    "arbiters_seal:jobsites/ebony_barrel"
+    "arbiters_seal:jobsites/ebony_barrel",
+    "arbiters_seal:objects/ebony_ladder"
   ]
 }

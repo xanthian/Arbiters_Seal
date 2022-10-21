@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "arbiters_seal:materials/silver_ore",
     "arbiters_seal:materials/deepslate_silver_ore",

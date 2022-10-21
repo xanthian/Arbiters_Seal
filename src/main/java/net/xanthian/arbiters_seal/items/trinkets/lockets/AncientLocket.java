@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.items.trinkets.necklaces;
+package net.xanthian.arbiters_seal.items.trinkets.lockets;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Rarity;

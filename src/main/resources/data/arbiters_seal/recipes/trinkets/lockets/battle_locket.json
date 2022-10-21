@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:materials/gold_thread"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/meteorite"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    " X "
+  ],
+  "result": {
+    "item": "arbiters_seal:trinkets/battle_locket"
+  }
+}

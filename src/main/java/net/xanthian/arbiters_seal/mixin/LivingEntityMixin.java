@@ -1,5 +1,6 @@
 package net.xanthian.arbiters_seal.mixin;
 
+import com.terraformersmc.modmenu.util.mod.Mod;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.minecraft.entity.LivingEntity;
@@ -7,6 +8,7 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
@@ -27,6 +29,7 @@ import java.util.List;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
 
+    // Jump Modifier Access
     @Shadow
     @Nullable
     public abstract EntityAttributeInstance getAttributeInstance(EntityAttribute attribute);
@@ -44,6 +47,7 @@ public abstract class LivingEntityMixin {
         }
     }
 
+    // Mute Status effect
     @Inject(at = @At("HEAD"), method = "canTarget(Lnet/minecraft/entity/LivingEntity;)Z", cancellable = true)
     private void pacifyMob(LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity thisEntity = ((LivingEntity) (Object) this);
@@ -52,6 +56,7 @@ public abstract class LivingEntityMixin {
         }
     }
 
+    // Phoenix band totem
     @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
     private void usePhoenixBand(DamageSource source, CallbackInfoReturnable<Boolean> ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
@@ -73,6 +78,26 @@ public abstract class LivingEntityMixin {
                         ci.setReturnValue(true);
                     }
                 }
+            }
+        }
+    }
+
+    // Rebirth status totem
+    @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
+    private void useRebirthStatusEffect(DamageSource source, CallbackInfoReturnable<Boolean> ci) {
+        LivingEntity livingEntity = (LivingEntity) (Object) this;
+        if (source.isOutOfWorld()) {
+            ci.setReturnValue(false);
+        } else {
+            if (livingEntity.getStatusEffect(ModStatusEffects.REBIRTH) != null) {
+                livingEntity.removeStatusEffect(ModStatusEffects.REBIRTH);
+                livingEntity.setHealth(1.0F);
+                livingEntity.clearStatusEffects();
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 900, 1));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 800, 0));
+                livingEntity.world.sendEntityStatus(livingEntity, (byte) 35);
+                ci.setReturnValue(true);
             }
         }
     }

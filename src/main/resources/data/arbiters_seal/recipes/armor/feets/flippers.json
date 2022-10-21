@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/sinewdle_fruit"
+    },
+    "#": {
+      "item": "arbiters_seal:materials/shellac_powder"
+    }
+  },
+  "pattern": [
+    "# #",
+    "X X"
+  ],
+  "result": {
+    "item": "arbiters_seal:feet/flippers"
+  }
+}
