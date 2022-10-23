@@ -29,7 +29,9 @@
     "arbiters_seal:materials/large_dendrite_bud",
 
     "arbiters_seal:materials/deepslate_cold_iron_ore",
-    "arbiters_seal:materials/end_cold_iron_ore"
+    "arbiters_seal:materials/end_cold_iron_ore",
+
+    "arbiters_seal:materials/meteor_block"
 
   ]
 }

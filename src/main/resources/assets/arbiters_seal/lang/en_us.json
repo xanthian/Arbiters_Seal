@@ -10,6 +10,7 @@
   "effect.arbiters_seal.root": "Root",
   "effect.arbiters_seal.sleep": "Sleep",
   "attribute.name.generic_jump_boost": "Jump Height",
+  "attribute.name.generic_exp_boost": "Exp Boost",
 
   "item.arbiters_seal.bows.shortbow": "Shortbow",
   "item.arbiters_seal.bows.shortbow.tooltip": "A horsemans bow.",
@@ -171,7 +172,7 @@
   "item.arbiters_seal.helmets.teorite_helm": "Teorite Helm",
   "item.arbiters_seal.helmets.teorite_helm.tooltip": "A teorite sallet to protect against magic.",
   "item.arbiters_seal.helmets.malcubus_helm": "Malcubus Helm",
-  "item.arbiters_seal.helmets.malcubus_helm.tooltip": "MThe head covering of a devil, proof against seduction.",
+  "item.arbiters_seal.helmets.malcubus_helm.tooltip": "The head covering of a devil, proof against seduction.",
   "item.arbiters_seal.helmets.morion": "Morion",
   "item.arbiters_seal.helmets.morion.tooltip": "An open helmet heavily reinforced to protect against head blows.",
   "item.arbiters_seal.helmets.dendrite_helm": "Dendrite Helm",

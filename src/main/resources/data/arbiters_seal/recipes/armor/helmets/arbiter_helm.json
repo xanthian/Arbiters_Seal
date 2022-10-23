@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/demon_leather"
+    },
+    "Z": {
+      "item": "arbiters_seal:materials/aloe_leaf"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "Z Z"
+  ],
+  "result": {
+    "item": "arbiters_seal:helmets/arbiter_helm"
+  }
+}

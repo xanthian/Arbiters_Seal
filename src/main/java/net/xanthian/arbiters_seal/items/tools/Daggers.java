@@ -41,13 +41,13 @@ public class Daggers {
             new ModDaggerItem(ToolMaterials.IRON, 3, -1.5F));
 
     public static final Item WORM_TOOTH = registerItem("daggers/worm_tooth",
-            new WormTooth(ToolMaterials.IRON, 3, -1.8F));
+            new WormTooth(ToolMaterials.DIAMOND, 2, -1.8F));
 
     public static final Item DENDRITE_KNIFE = registerItem("daggers/dendrite_knife",
             new DendriteKnife(ModToolMaterial.DENDRITE, 3, -1.8F));
 
     public static final Item DRAGONS_NAIL = registerItem("daggers/dragons_nail",
-            new DragonsNail(ToolMaterials.DIAMOND, 3, -1.8F));
+            new DragonsNail(ToolMaterials.NETHERITE, 2, -1.8F));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

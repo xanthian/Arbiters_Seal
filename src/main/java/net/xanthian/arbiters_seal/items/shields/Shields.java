@@ -37,25 +37,25 @@ public class Shields {
             new ModShieldItem(ModShieldMaterial.TEORITE));
 
     public static final Item AEGIS_SHIELD = registerItem("shields/aegis_shield",
-            new ModShieldItem(ModShieldMaterial.TEORITE));
+            new ModShieldItem(ModShieldMaterial.DIAMOND));
 
     public static final Item ARBITER_SHIELD = registerItem("shields/arbiter_shield",
-            new ArbiterShield(ModShieldMaterial.TEORITE));
+            new ArbiterShield(ModShieldMaterial.DIAMOND));
 
     public static final Item MAGIC_SHIELD = registerItem("shields/magic_shield",
-            new ModShieldItem(ModShieldMaterial.TEORITE));
+            new ModShieldItem(ModShieldMaterial.DIAMOND));
 
     public static final Item VALIANT_SHIELD = registerItem("shields/valiant_shield",
-            new ValiantShield(ModShieldMaterial.TEORITE));
+            new ValiantShield(ModShieldMaterial.DIAMOND));
 
     public static final Item BEHEMOTH_GUARD = registerItem("shields/behemoth_guard",
-            new BehemothShield(ModShieldMaterial.TEORITE));
+            new BehemothShield(ModShieldMaterial.NETHERITE));
 
     public static final Item CURSED_SHIELD = registerItem("shields/cursed_shield",
-            new CursedShield(ModShieldMaterial.TEORITE));
+            new CursedShield(ModShieldMaterial.IRON));
 
     public static final Item SHIELD_OF_THE_SIX = registerItem("shields/shield_of_the_six",
-            new ShieldOfTheSix(ModShieldMaterial.TEORITE));
+            new ShieldOfTheSix(ModShieldMaterial.NETHERITE));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

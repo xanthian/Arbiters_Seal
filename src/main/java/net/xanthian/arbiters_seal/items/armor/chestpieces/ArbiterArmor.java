@@ -13,4 +13,5 @@ public class ArbiterArmor extends ModChestItem {
     public Rarity getRarity(ItemStack stack) {
         return Rarity.UNCOMMON;
     }
+
 }

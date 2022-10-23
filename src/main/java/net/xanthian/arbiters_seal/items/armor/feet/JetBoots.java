@@ -19,7 +19,8 @@ import net.xanthian.arbiters_seal.util.ModAttributes;
 import java.util.Random;
 import java.util.UUID;
 
-public class JetBoots extends ModFeetItem {
+public class
+JetBoots extends ModFeetItem {
     public JetBoots(ArmorMaterial material) {
         super(material);
     }

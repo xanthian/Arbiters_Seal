@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/jammy_fruit"
+    },
+    "Z": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    }
+  },
+  "pattern": [
+    "XZX",
+    "YXY",
+    "X X"
+  ],
+  "result": {
+    "item": "arbiters_seal:chestpieces/cold_armor"
+  }
+}

@@ -73,6 +73,8 @@ public class ModBlocks {
             new ChorusPlantBlock(FabricBlockSettings.copyOf(Blocks.CHORUS_PLANT).luminance(7)));
     public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block METEOR_BLOCK = registerBlock("materials/meteor_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE)));
     public static final Block STEEL_BLOCK = registerBlock("materials/steel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 

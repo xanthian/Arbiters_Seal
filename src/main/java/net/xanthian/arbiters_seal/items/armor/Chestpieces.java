@@ -63,11 +63,11 @@ public class Chestpieces {
     public static final Item TRAVELLER_GARB = registerItem("chestpieces/traveller_garb",
             new ModChestItem(ArmorMaterials.LEATHER));
 
-    public static final Item LEATHER_ARMOR = registerItem("chestpieces/leather_armor",
-            new ModChestItem(ArmorMaterials.LEATHER));
+   // public static final Item LEATHER_ARMOR = registerItem("chestpieces/leather_armor",
+            //new ModChestItem(ArmorMaterials.LEATHER));
 
-    public static final Item CHAIN_MAIL = registerItem("chestpieces/chain_mail",
-            new ModChestItem(ArmorMaterials.IRON));
+   // public static final Item CHAIN_MAIL = registerItem("chestpieces/chain_mail",
+           // new ModChestItem(ArmorMaterials.IRON));
 
     public static final Item BRIGANDINE = registerItem("chestpieces/brigandine",
             new ModChestItem(ArmorMaterials.LEATHER));
