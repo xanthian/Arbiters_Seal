@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arbiters_seal:item/materials/angel_tear"
+    "layer0": "arbiters_seal:item/gadgets/energizer"
   }
 }

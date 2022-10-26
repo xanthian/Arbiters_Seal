@@ -2,6 +2,7 @@ package net.xanthian.arbiters_seal.util;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.items.RareItems;
 
 public class ModFlammableBlocks {
     public static void registerFlammableBlocks() {
@@ -18,6 +19,6 @@ public class ModFlammableBlocks {
         registry.add(ModBlocks.EBONY_COMPOSTER, 5, 20);
         registry.add(ModBlocks.EBONY_BOOKSHELF, 30, 20);
         registry.add(ModBlocks.ALOE_VERA, 60, 100);
-        registry.add(ModBlocks.ANGEL_TEARS, 60, 100);
+        registry.add(RareItems.ANGEL_TEARS, 60, 100);
     }
 }

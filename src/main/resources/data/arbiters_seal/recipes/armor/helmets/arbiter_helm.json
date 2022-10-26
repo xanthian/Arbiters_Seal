@@ -13,7 +13,8 @@
   },
   "pattern": [
     "XYX",
-    "Z Z"
+    "Z Z",
+    "  "
   ],
   "result": {
     "item": "arbiters_seal:helmets/arbiter_helm"

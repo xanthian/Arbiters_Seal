@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/dragonsblood_sap"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/aloe_leaf"
+    }
+  },
+  "pattern": [
+    "XYX"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/demoralizer"
+  }
+}

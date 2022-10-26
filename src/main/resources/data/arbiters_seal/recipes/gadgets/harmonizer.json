@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/shellac_powder"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/cobbleweed_pod"
+    }
+  },
+  "pattern": [
+    "XYX"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/harmonizer"
+  }
+}

@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.items.RareItems;
 import net.xanthian.arbiters_seal.items.tools.Bows;
 import net.xanthian.arbiters_seal.items.tools.Crossbows;
 import net.xanthian.arbiters_seal.particle.ModParticles;
@@ -60,8 +61,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MEDIUM_DENDRITE_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DENDRITE_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALOE_VERA, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ANGEL_TEARS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RareItems.ANGEL_TEARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EBONY_LADDER, RenderLayer.getCutout());
-
     }
 }

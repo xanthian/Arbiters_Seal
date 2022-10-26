@@ -26,11 +26,11 @@ public class Init implements ModInitializer {
 
     public static final String MOD_ID = "arbiters_seal";
     public static final ItemGroup ARBITERS_SEAL_WEAPONS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_weapons"),
-            () -> new ItemStack(Swords.EXCALIBUR));
+            () -> new ItemStack(Swords.SOUL_EATER));
     public static final ItemGroup ARBITERS_SEAL_ARMOR = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_armor"),
-            () -> new ItemStack(Helmets.GREEN_BERET));
+            () -> new ItemStack(Helmets.MALCUBUS_HELM));
     public static final ItemGroup ARBITERS_SEAL_ITEMS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "arbiters_seal_items"),
-            () -> new ItemStack(Items.TEORITE_INGOT));
+            () -> new ItemStack(RareItems.METEORITE));
 
     public static Identifier id(String key) {
         return new Identifier(MOD_ID, key);

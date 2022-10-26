@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/meteorite"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    }
+  },
+  "pattern": [
+    "XYX"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/impalotron"
+  }
+}

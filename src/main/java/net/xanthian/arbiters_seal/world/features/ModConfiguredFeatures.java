@@ -12,6 +12,7 @@ import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.items.RareItems;
 
 import java.util.List;
 
@@ -118,7 +119,7 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> ANGEL_TEARS_PLANT =
             ConfiguredFeatures.register("angel_tears_plant", Feature.FLOWER,
                     ConfiguredFeatures.createRandomPatchFeatureConfig(3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ANGEL_TEARS)))));
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(RareItems.ANGEL_TEARS)))));
 
 
 

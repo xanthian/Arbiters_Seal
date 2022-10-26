@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/ammoniac_gum"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/shellac_powder"
+    }
+  },
+  "pattern": [
+    "YXY",
+    " X ",
+    " X "
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/reflectotron"
+  }
+}

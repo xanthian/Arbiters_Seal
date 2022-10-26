@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/snakebike_oil"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/ammoniac_gum"
+    }
+  },
+  "pattern": [
+    "XYX"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/absorber_plus"
+  }
+}

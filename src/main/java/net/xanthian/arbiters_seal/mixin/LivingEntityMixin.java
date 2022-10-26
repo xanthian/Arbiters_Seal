@@ -45,7 +45,6 @@ public abstract class LivingEntityMixin extends Entity {
                     ItemStack itemStack = list.get(0).getRight();
                     if (itemStack != null) {
                         player.addExperience(2 * this.getXpToDrop());
-                        System.out.println();
                     }
                 }
             }

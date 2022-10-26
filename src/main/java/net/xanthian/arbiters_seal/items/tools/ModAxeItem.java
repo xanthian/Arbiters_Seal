@@ -27,7 +27,7 @@ public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, Tool
         String[] infoLines = info.split("\\r?\\n");
 
         for (String infoLine : infoLines) {
-            tooltip.add(1, Text.literal(infoLine).formatted(Formatting.ITALIC, Formatting.GRAY));
+            tooltip.add(Text.literal(infoLine).formatted(Formatting.ITALIC, Formatting.GRAY));
         }
     } else {
         tooltip.add(Text.literal(I18n.translate(key).formatted(Formatting.ITALIC, Formatting.GRAY)));

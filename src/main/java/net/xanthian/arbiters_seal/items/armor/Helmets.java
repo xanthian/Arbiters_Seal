@@ -54,8 +54,8 @@ public class Helmets {
     public static final Item FEATHERED_CAP = registerItem("helmets/feathered_cap",
             new ModHelmetItem(ArmorMaterials.NETHERITE));
 
-    public static final Item LEATHER_HELMET = registerItem("helmets/leather_helmet",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+    //public static final Item LEATHER_HELMET = registerItem("helmets/leather_helmet",
+            //new ModHelmetItem(ArmorMaterials.NETHERITE));
 
     public static final Item GREEN_BERET = registerItem("helmets/green_beret",
             new ModHelmetItem(ArmorMaterials.NETHERITE));
@@ -69,8 +69,8 @@ public class Helmets {
     public static final Item STUDDED_HELM = registerItem("helmets/studded_helm",
             new ModHelmetItem(ArmorMaterials.NETHERITE));
 
-    public static final Item CHAIN_COIF = registerItem("helmets/chain_coif",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+    //public static final Item CHAIN_COIF = registerItem("helmets/chain_coif",
+            //new ModHelmetItem(ArmorMaterials.NETHERITE));
 
     public static final Item SPIDERSILK_CAP = registerItem("helmets/spidersilk_cap",
             new ModHelmetItem(ArmorMaterials.NETHERITE));
@@ -98,7 +98,6 @@ public class Helmets {
             new ModHelmetItem(ModArmorMaterial.STEEL));
 
     public static final Item SILVER_HELM = registerItem("helmets/silver_helm",
-
             new ModHelmetItem(ModArmorMaterial.SILVER));
 
     public static final Item GOLD_HELM = registerItem("helmets/gold_helm",

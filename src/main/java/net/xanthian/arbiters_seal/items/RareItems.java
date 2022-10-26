@@ -1,5 +1,11 @@
 package net.xanthian.arbiters_seal.items;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.ChorusPlantBlock;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -20,8 +26,8 @@ public class RareItems {
     public static final Item AMMONIAC_GUM = registerItem("materials/ammoniac_gum",
             new ModRareItem());
 
-    public static final Item ANGEL_TEAR = registerItem("materials/angel_tear",
-            new ModRareItem());
+    public static final Block ANGEL_TEARS = registerBlock("materials/angel_tears",
+            new ChorusPlantBlock(FabricBlockSettings.copyOf(Blocks.CHORUS_PLANT).luminance(7)));
 
     public static final Item CATALYST = registerItem("materials/catalyst",
             new ModRareItem());
@@ -94,6 +100,14 @@ public class RareItems {
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);
+    }
+    private static Block registerBlock(String name, Block block){
+        registerBlockItem(name, block);
+        return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);
+    }
+    private static Item registerBlockItem(String name, Block block){
+        return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)));
     }
 
     public static void registerRareItems() {}

@@ -15,6 +15,12 @@ repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
+	maven {
+		url "https://maven.jamieswhiteshirt.com/libs-release"
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
+	}
 }
 
 dependencies {
@@ -29,6 +35,8 @@ dependencies {
 	modImplementation 'com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.6.1-pre1-1.19'
 	// trinkets
 	modImplementation "dev.emi:trinkets:${trinkets_version}"
+	// reach entity
+	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:2.3.0"
 
 }
 loom {
