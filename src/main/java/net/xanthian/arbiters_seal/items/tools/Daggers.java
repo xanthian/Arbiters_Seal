@@ -14,7 +14,7 @@ public class Daggers {
             new ModDaggerItem(ToolMaterials.IRON, 1, -1.8F));
     
     public static final Item HIDDEN_KNIFE = registerItem("daggers/hidden_knife",
-            new ModDaggerItem(ToolMaterials.IRON, 1, -1.8F));
+            new HiddenKnife(ToolMaterials.IRON, 1, -1.8F));
 
     public static final Item DIRK = registerItem("daggers/dirk",
             new Dirk(ToolMaterials.IRON, 2, -1.8F));
@@ -35,7 +35,7 @@ public class Daggers {
             new Kunai(ToolMaterials.IRON, 3, -1.8F));
 
     public static final Item JANBIYA = registerItem("daggers/janbiya",
-            new ModDaggerItem(ToolMaterials.GOLD, 5, -1.8F));
+            new Janbiya(ToolMaterials.GOLD, 5, -1.8F));
 
     public static final Item FLASH_KINFE = registerItem("daggers/flash_knife",
             new ModDaggerItem(ToolMaterials.IRON, 3, -1.5F));

@@ -5,6 +5,7 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.items.tools.scythes.DaysHarvest;
 import net.xanthian.arbiters_seal.items.tools.scythes.Reaper;
 import net.xanthian.arbiters_seal.material.ModToolMaterial;
 
@@ -35,7 +36,7 @@ public class Scythes {
             new ModScytheItem(ToolMaterials.NETHERITE, 3, -3.3F));
 
     public static final Item DAYS_HARVEST = registerItem("scythes/days_harvest",
-            new ModScytheItem(ToolMaterials.NETHERITE, 4, -3.3F));
+            new DaysHarvest(ToolMaterials.NETHERITE, 4, -3.3F));
 
     public static final Item REAPER = registerItem("scythes/reaper",
             new Reaper(ToolMaterials.NETHERITE, 5, -3.5F));

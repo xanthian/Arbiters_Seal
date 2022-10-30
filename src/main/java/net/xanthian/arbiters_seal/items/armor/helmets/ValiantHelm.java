@@ -9,6 +9,7 @@ public class ValiantHelm extends ModHelmetItem {
     public ValiantHelm(ArmorMaterial material) {
         super(material);
     }
+
         @Override
         public Rarity getRarity(ItemStack stack) {return Rarity.RARE;}
 }

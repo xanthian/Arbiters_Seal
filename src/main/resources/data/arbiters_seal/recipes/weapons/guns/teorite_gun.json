@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "X": {
+      "item": "arbiters_seal:materials/teorite_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "XXX",
+    "  #"
+  ],
+  "result": {
+    "item": "arbiters_seal:guns/teorite_gun"
+  }
+}

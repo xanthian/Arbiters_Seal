@@ -28,4 +28,8 @@ public class DendriteKnife extends ModDaggerItem {
         }
         return super.postHit(stack, target, attacker);
     }
+    @Override
+    public float getCrit() {
+        return 0.05F;
+    }
 }

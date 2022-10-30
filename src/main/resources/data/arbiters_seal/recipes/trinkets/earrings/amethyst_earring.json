@@ -5,13 +5,13 @@
       "item": "arbiters_seal:materials/platinum_thread"
     },
     "X": {
-      "item": "arbiters_seal:materials/angel_tear"
+      "item": "arbiters_seal:materials/angel_tears"
     }
   },
   "pattern": [
     "# #",
     "X X",
-    "  "
+    "   "
   ],
   "result": {
     "item": "arbiters_seal:trinkets/amethyst_earring"

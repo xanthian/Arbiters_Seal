@@ -16,10 +16,10 @@ public class DragonsNail extends ModDaggerItem {
     public DragonsNail(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed);
     }
-        @Override
-        public Rarity getRarity(ItemStack stack) {
-            return Rarity.RARE;
-        }
+    @Override
+    public Rarity getRarity(ItemStack stack) {
+        return Rarity.RARE;
+    }
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
@@ -36,5 +36,9 @@ public class DragonsNail extends ModDaggerItem {
             }
         }
         return super.postHit(stack, target, attacker);
+    }
+    @Override
+    public float getCrit() {
+        return 0.05F;
     }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/teorite_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "XXX",
+    "   "
+  ],
+  "result": {
+    "item": "arbiters_seal:helmets/teorite_circlet"
+  }
+}

@@ -5,6 +5,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.items.tools.bows.Dominance;
+import net.xanthian.arbiters_seal.items.tools.bows.YoichiBow;
 import net.xanthian.arbiters_seal.material.ModBowMaterial;
 
 public class Bows {
@@ -34,7 +35,7 @@ public class Bows {
             new ModBowItem(ModBowMaterial.DIAMOND));
 
     public static final Item YOICHI_BOW = registerItem("bows/yoichi_bow",
-            new ModBowItem(ModBowMaterial.DIAMOND));
+            new YoichiBow(ModBowMaterial.DIAMOND));
 
     public static final Item DOMINANCE = registerItem("bows/dominance",
             new Dominance(ModBowMaterial.NETHERITE));

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/silver_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "XXX",
+    "   "
+  ],
+  "result": {
+    "item": "arbiters_seal:helmets/silver_circlet"
+  }
+}

@@ -10,10 +10,10 @@
   },
   "pattern": [
     "WoW",
-    "WWW",
+    "WoW",
     " W "
   ],
   "result": {
-    "item": "minecraft:shield"
+    "item": "arbiters_seal:shields/arbiter_shield"
   }
 }

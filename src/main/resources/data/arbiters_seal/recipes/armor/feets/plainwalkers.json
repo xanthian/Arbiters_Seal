@@ -6,11 +6,15 @@
     },
     "#": {
       "item": "arbiters_seal:materials/diamond_thread"
+    },
+    "Z": {
+      "item": "minecraft:netherite_boots"
     }
   },
   "pattern": [
-    "# #",
-    "X X"
+    "   ",
+    "XZ#",
+    "   "
   ],
   "result": {
     "item": "arbiters_seal:feet/plainwalkers"

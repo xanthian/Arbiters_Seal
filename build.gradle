@@ -36,7 +36,8 @@ dependencies {
 	// trinkets
 	modImplementation "dev.emi:trinkets:${trinkets_version}"
 	// reach entity
-	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:2.3.0"
+	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
+	include "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
 
 }
 loom {

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "minecraft:acacia_planks"
+    },
+    "o": {
+      "item": "arbiters_seal:materials/bronze_ingot"
+    }
+  },
+  "pattern": [
+    "WoW",
+    "WoW",
+    " W "
+  ],
+  "result": {
+    "item": "arbiters_seal:shields/bronze_shield"
+  }
+}

@@ -14,7 +14,7 @@
   "pattern": [
     "XYX",
     "Z Z",
-    "  "
+    "   "
   ],
   "result": {
     "item": "arbiters_seal:helmets/arbiter_cap"

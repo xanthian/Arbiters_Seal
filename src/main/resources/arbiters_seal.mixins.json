@@ -15,7 +15,6 @@
   "client": [
     "AbstractClientPlayerEntityMixin",
     "ArmorRendererMixin",
-    "ClientPlayNetworkHandlerMixin",
     "HeldItemRendererMixin"
   ],
   "injectors": {

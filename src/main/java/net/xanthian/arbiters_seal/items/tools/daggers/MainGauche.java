@@ -13,4 +13,9 @@ public class MainGauche extends ModDaggerItem {
         public Rarity getRarity(ItemStack stack) {
         return Rarity.UNCOMMON;
     }
+
+    @Override
+    public float getCrit() {
+        return 0;
+    }
 }

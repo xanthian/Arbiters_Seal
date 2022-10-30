@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "$": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "&": {
+      "item": "arbiters_seal:materials/teorite_ingot"
+    },
+    "~": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "#&#",
+    "~$~",
+    " # "
+  ],
+  "result": {
+    "item": "arbiters_seal:crossbows/teorite_crossbow"
+  }
+}

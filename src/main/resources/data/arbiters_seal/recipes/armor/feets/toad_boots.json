@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "X": {
+    "#": {
       "item": "arbiters_seal:materials/sinewdle_fruit"
     },
-    "#": {
+    "X": {
       "item": "arbiters_seal:materials/snakebite_oil"
+    },
+    "Z": {
+      "item": "minecraft:diamond_boots"
     }
   },
   "pattern": [
-    "# #",
-    "X X"
+    " # ",
+    "XZX"
   ],
   "result": {
     "item": "arbiters_seal:feet/toad_boots"

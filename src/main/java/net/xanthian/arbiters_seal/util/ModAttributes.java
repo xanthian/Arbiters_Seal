@@ -16,15 +16,15 @@ public class ModAttributes {
     public static final EntityAttribute GENERIC_EXP_BOOST =
             new ClampedEntityAttribute("attribute.name.generic_exp_boost", 1.0, 0.0, 2.0).setTracked(true);
 
-   // public static final EntityAttribute GENERIC_SWIM_SPEED =
-    // new ClampedEntityAttribute("attribute.name.generic_water_speed", 1.0, 0.0, 2.0).setTracked(true);
+    public static final EntityAttribute GENERIC_CRIT_BOOST =
+            new ClampedEntityAttribute("attribute.name.generic_crit_boost", 1.0, 0.0, 2.0).setTracked(true);
 
     public static Map<String, EntityAttribute> ATTRIBUTES = new LinkedHashMap<>();
 
     static {
-        //ATTRIBUTES.put("generic.water_speed", GENERIC_SWIM_SPEED);
         ATTRIBUTES.put("generic.jump_boost", GENERIC_JUMP_BOOST);
         ATTRIBUTES.put("generic.exp_boost", GENERIC_EXP_BOOST);
+        ATTRIBUTES.put("generic.crit_boost", GENERIC_CRIT_BOOST);
     }
 
     public static void register() {

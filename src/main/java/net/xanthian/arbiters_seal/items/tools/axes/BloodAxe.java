@@ -24,8 +24,8 @@ public class BloodAxe extends ModAxeItem {
         ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
         if (!target.world.isClient() && (mainHand.getItem() == this)) {
             if (attacker instanceof PlayerEntity player) {
-                if ((player.getItemCooldownManager().isCoolingDown(this) == false) && player.getHealth() < player.getMaxHealth()) {
-                    player.heal(6.0F);
+                if ((player.getItemCooldownManager().isCoolingDown(this) == false) && player.getHealth() < player.getMaxHealth()/2) {
+                    player.heal(8);
                     player.getItemCooldownManager().set(this, 1200);
                     target.world.addParticle(ParticleTypes.HEART, target.getX() + 0.5, target.getY() + 1D, target.getZ() + 1, 0d, 0.05D, 0d);
                 }

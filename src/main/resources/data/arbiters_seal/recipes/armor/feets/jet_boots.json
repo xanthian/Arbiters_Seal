@@ -5,12 +5,15 @@
       "item": "arbiters_seal:materials/mycoleather"
     },
     "#": {
-      "item": "arbiters_seal:materials/angel_tear"
+      "item": "arbiters_seal:materials/angel_tears"
+    },
+    "Z": {
+      "item": "minecraft:netherite_boots"
     }
   },
   "pattern": [
-    "# #",
-    "X X"
+    " # ",
+    "XZX"
   ],
   "result": {
     "item": "arbiters_seal:feet/jet_boots"

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "$": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "&": {
+      "item": "arbiters_seal:materials/steel_ingot"
+    },
+    "~": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "#&#",
+    "~$~",
+    " & "
+  ],
+  "result": {
+    "item": "arbiters_seal:crossbows/aerolus"
+  }
+}

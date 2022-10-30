@@ -3,11 +3,14 @@
   "key": {
     "X": {
       "item": "arbiters_seal:materials/silver_ingot"
+    },
+    "#": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
     " X ",
-    " X ",
+    " # ",
     " X "
   ],
   "result": {

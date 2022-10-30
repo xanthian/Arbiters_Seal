@@ -6,11 +6,14 @@
     },
     "#": {
       "item": "arbiters_seal:materials/aloe_leaf"
+    },
+    "Z": {
+      "item": "minecraft:netherite_boots"
     }
   },
   "pattern": [
-    "# #",
-    "X X"
+    " # ",
+    "XZX"
   ],
   "result": {
     "item": "arbiters_seal:feet/impala_boots"

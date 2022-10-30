@@ -3,11 +3,14 @@
   "key": {
     "X": {
       "item": "arbiters_seal:materials/teorite_ingot"
+    },
+    "#": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
     " X ",
-    " X ",
+    " # ",
     " X "
   ],
   "result": {

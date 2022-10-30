@@ -6,11 +6,15 @@
     },
     "#": {
       "item": "arbiters_seal:materials/platinum_thread"
+    },
+    "Z": {
+      "item": "minecraft:iron_boots"
     }
   },
   "pattern": [
-    "# #",
-    "X X"
+    "   ",
+    "XZ#",
+    "   "
   ],
   "result": {
     "item": "arbiters_seal:feet/riftwalkers"

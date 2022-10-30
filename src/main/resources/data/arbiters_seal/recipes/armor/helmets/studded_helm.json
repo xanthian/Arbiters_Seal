@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/steel_ingot"
+    },
+    "#": {
+      "item": "minecraft:leather_helmet"
+    }
+  },
+  "pattern": [
+    "   ",
+    "X#X",
+    "   "
+  ],
+  "result": {
+    "item": "arbiters_seal:helmets/studded_helm"
+  }
+}

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "arbiters_seal:materials/golden_thread"
+      "item": "arbiters_seal:materials/gold_thread"
     },
     "Y": {
       "item": "minecraft:gold_ingot"

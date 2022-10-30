@@ -6,11 +6,15 @@
     },
     "#": {
       "item": "arbiters_seal:materials/aloe_leaf"
+    },
+    "Z": {
+      "item": "minecraft:iron_boots"
     }
   },
   "pattern": [
-    "# #",
-    "X X"
+    " X ",
+    "#Z#",
+    "   "
   ],
   "result": {
     "item": "arbiters_seal:feet/wayfarer_treads"

@@ -1,43 +1,42 @@
 package net.xanthian.arbiters_seal.items.tools;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.util.ModAttributes;
 
 import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
 public class ModMaceItem extends SwordItem {
+
     public ModMaceItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new FabricItemSettings().group(Init.ARBITERS_SEAL_WEAPONS));
     }
-    @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
+    private static final UUID CRIT_MODIFIER = UUID.fromString("00119cb8-e6be-4ed9-86f6-4b0ab903fb06");
 
-        if (mainHand.getItem() == Maces.SILVER_MACE) {
-            if (attacker.getStatusEffect(StatusEffects.POISON) !=null) {
-                attacker.removeStatusEffect(StatusEffects.POISON);
-            }
-        }
-
-        if (mainHand.getItem() == Maces.GODS_MESSENGER) {
-            if (attacker.getStatusEffect(StatusEffects.HASTE) == null || attacker.getStatusEffect(StatusEffects.HASTE).getDuration() < 20) {
-                attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE,200,0,true, true, true));
-            }
-        }
-        return super.postHit(stack, target, attacker);
+    public float getCrit() {
+        return 0.02f;
     }
+
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         String key = (stack.getTranslationKey() + ".tooltip");
@@ -52,5 +51,34 @@ public class ModMaceItem extends SwordItem {
             tooltip.add(Text.literal(I18n.translate(key).formatted(Formatting.ITALIC, Formatting.GRAY)));
         }
         super.appendTooltip(stack, world, tooltip, context);
+    }
+
+    @Override
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(ItemStack stack, EquipmentSlot slot) {
+        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
+        builder.putAll(modifiers);
+        if (slot == EquipmentSlot.MAINHAND)
+        {
+            builder.put(ModAttributes.GENERIC_CRIT_BOOST, new EntityAttributeModifier(CRIT_MODIFIER, "crit increase", this.getCrit(),
+                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        }
+        return builder.build();
+    }
+
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
+        if (mainHand.getItem() == this) {
+            Random random = new Random();
+            if (random.nextFloat() <= this.getCrit()) {
+                float baseDamage = (float) attacker.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
+                float extraDamageMultiplier = 1.5F;
+                target.damage(DamageSource.GENERIC, (baseDamage * extraDamageMultiplier));
+                target.world.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_CRIT,
+                        SoundCategory.PLAYERS,1.0F,1.0F);
+            }
+        }
+        return super.postHit(stack, target, attacker);
     }
 }

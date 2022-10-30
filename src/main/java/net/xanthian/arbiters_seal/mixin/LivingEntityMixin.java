@@ -32,6 +32,7 @@ import java.util.List;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
 
+    // Double XP Trinket
     @Shadow public abstract int getXpToDrop();
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
