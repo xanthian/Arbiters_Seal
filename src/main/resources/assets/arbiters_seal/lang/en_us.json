@@ -547,9 +547,9 @@
   "item.arbiters_seal.potions.noxious_bomb": "Noxious Bomb",
   "item.arbiters_seal.potions.noxious_bomb.tooltip": "",
   "item.arbiters_seal.potions.phoenix_ashes": "Phoenix Ashes",
-  "item.arbiters_seal.potions.phoenix_ashes.tooltip": "Revives a fallen ally with 40%% HP.",
+  "item.arbiters_seal.potions.phoenix_ashes.tooltip": "Grants the user rebirth for 5 minutes.",
   "item.arbiters_seal.potions.remedy": "Remedy",
-  "item.arbiters_seal.potions.remedy.tooltip": "Removes all debuffs from the target.",
+  "item.arbiters_seal.potions.remedy.tooltip": "Removes all debuffs.",
 
   "item.arbiters_seal.rapiers.fleuret": "Fleuret",
   "item.arbiters_seal.rapiers.fleuret.tooltip": "A gentleman's weapon, more\nfor show than for battle.",

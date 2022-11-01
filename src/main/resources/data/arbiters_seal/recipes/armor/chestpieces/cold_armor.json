@@ -2,19 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:bronze_armor"
     },
-    "Y": {
+    "J": {
       "item": "arbiters_seal:materials/jammy_fruit"
     },
-    "Z": {
+    "C": {
       "item": "arbiters_seal:materials/cold_iron_ingot"
     }
   },
   "pattern": [
-    "XZX",
-    "YXY",
-    "X X"
+    " C ",
+    "JXJ"
   ],
   "result": {
     "item": "arbiters_seal:chestpieces/cold_armor"

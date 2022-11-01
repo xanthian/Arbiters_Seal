@@ -8,7 +8,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.xanthian.arbiters_seal.items.armor.Feet;
 import net.xanthian.arbiters_seal.items.armor.ModFeetItem;
 
 public class HoverBoots extends ModFeetItem {
@@ -20,7 +19,7 @@ public class HoverBoots extends ModFeetItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient && (entity instanceof PlayerEntity player)) {
             ItemStack feet = player.getEquippedStack(EquipmentSlot.FEET);
-            if (feet.getItem() == Feet.HOVER_BOOTS) {
+            if (feet.getItem() == this) {
                 if (player.age % 180 == 0 && player.isSprinting()) {
                     player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 220, 0, false, false, true));
                 }

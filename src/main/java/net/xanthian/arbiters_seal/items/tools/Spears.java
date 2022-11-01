@@ -6,6 +6,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.items.tools.spears.Godray;
+import net.xanthian.arbiters_seal.items.tools.spears.HeavyLance;
+import net.xanthian.arbiters_seal.items.tools.spears.Lance;
 import net.xanthian.arbiters_seal.material.ModToolMaterial;
 
 public class Spears {
@@ -35,13 +37,13 @@ public class Spears {
             new ModSpearItem(ModToolMaterial.TEORITE, 4, -3.0F));
 
     public static final Item LANCE = registerItem("spears/lance",
-            new ModSpearItem(ToolMaterials.IRON, 3, -3.0F));
+            new Lance(ToolMaterials.IRON, 3, -3.0F));
 
     public static final Item PARTISAN = registerItem("spears/partisan",
             new ModSpearItem(ToolMaterials.DIAMOND, 3, -3.0F));
 
     public static final Item HEAVY_LANCE = registerItem("spears/heavy_lance",
-            new ModSpearItem(ToolMaterials.DIAMOND, 3, -3.0F));
+            new HeavyLance(ToolMaterials.DIAMOND, 3, -3.0F));
 
     public static final Item GODRAY = registerItem("spears/godray",
             new Godray(ToolMaterials.NETHERITE, 3, -3.0F));

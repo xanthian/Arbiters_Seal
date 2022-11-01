@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
+    "X": {
+      "item": "arbiters_seal:materials/brass_ingot"
+    },
     "#": {
       "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
-    "XXX",
-    "X#X",
-    " # "
+    " X ",
+    " # ",
+    " X "
   ],
   "result": {
-    "item": "arbiters_seal:mauls/flattener"
+    "item": "arbiters_seal:rods/rod"
   }
 }

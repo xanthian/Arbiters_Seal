@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "L": {
-      "item": "minecraft:leather"
+      "item": "minecraft:leather_chestplate"
     },
     "C": {
       "item": "arbiters_seal:materials/cold_iron_ingot"
@@ -12,9 +12,8 @@
     }
   },
   "pattern": [
-    "LCL",
-    "SLS",
-    "L L"
+    " C ",
+    "SLS"
   ],
   "result": {
     "item": "arbiters_seal:chestpieces/desert_garb"

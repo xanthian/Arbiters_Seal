@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WSW",
+    "W W"
+  ],
+  "result": {
+    "item": "arbiters_seal:chestpieces/cotton_robe"
+  }
+}

@@ -1,20 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "W": {
-      "item": "minecraft:white_wool"
+    "R": {
+      "item": "arbiters_seal:chestpieces/cotton_robe"
     },
-    "A": {
+    "L": {
       "item": "arbiters_seal:materials/aloe_leaf"
     },
     "Q": {
       "item": "arbiters_seal:materials/quality_thread"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
     }
   },
   "pattern": [
-    "WQW",
-    "AWA",
-    "W W"
+    " Q ",
+    "LRL",
+    " W "
   ],
   "result": {
     "item": "arbiters_seal:chestpieces/white_robe"

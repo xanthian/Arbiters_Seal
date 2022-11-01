@@ -6,12 +6,14 @@
     },
     "2": {
       "item": "arbiters_seal:materials/energized_crystal"
+    },
+    "#": {
+      "item": "arbiters_seal:rods/jeweled_rod"
     }
   },
   "pattern": [
-    " 2 ",
     " 1 ",
-    " 2 "
+    "2#2"
   ],
   "result": {
     "item": "arbiters_seal:rods/prism_rod"

@@ -56,8 +56,7 @@ public class ModDaggerItem extends SwordItem {
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
         builder.putAll(modifiers);
-        if (slot == EquipmentSlot.MAINHAND)
-        {
+        if (slot == EquipmentSlot.MAINHAND) {
             builder.put(ModAttributes.GENERIC_CRIT_BOOST, new EntityAttributeModifier(CRIT_MODIFIER, "crit increase", this.getCrit(),
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         }

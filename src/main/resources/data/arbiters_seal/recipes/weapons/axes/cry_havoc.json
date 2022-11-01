@@ -5,7 +5,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:diamond_axe"
     },
     "Y": {
       "item": "arbiters_seal:materials/adamant_ingot"
@@ -15,9 +15,8 @@
     }
   },
   "pattern": [
-    "X X",
-    "ZYZ",
-    " # "
+    "ZXZ",
+    " Y "
   ],
   "result": {
     "item": "arbiters_seal:axes/cry_havoc"

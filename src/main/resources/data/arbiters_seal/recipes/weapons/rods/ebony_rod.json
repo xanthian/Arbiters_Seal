@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
     "X": {
+      "item": "arbiters_seal:materials/ebony_planks"
+    },
+    "#": {
       "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
     " X ",
-    "X#X",
-    " # "
+    " # ",
+    " X "
   ],
   "result": {
-    "item": "arbiters_seal:maces/thumper"
+    "item": "arbiters_seal:rods/rod"
   }
 }

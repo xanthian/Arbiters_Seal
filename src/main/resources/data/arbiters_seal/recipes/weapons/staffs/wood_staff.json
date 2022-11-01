@@ -5,15 +5,15 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:dark_oak_planks"
     }
   },
   "pattern": [
-    "   ",
-    " X ",
-    " # "
+    "XX#",
+    "X #",
+    "  #"
   ],
   "result": {
-    "item": "arbiters_seal:daggers/janbiya"
+    "item": "arbiters_seal:staffs/gold_staff"
   }
 }

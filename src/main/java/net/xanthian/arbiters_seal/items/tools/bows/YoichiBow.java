@@ -42,9 +42,11 @@ public class YoichiBow extends ModBowItem {
     public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(ItemStack stack, EquipmentSlot slot) {
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
-        builder.putAll(modifiers);
+        if (slot == EquipmentSlot.MAINHAND) {
+            builder.putAll(modifiers);
             builder.put(ModAttributes.GENERIC_CRIT_BOOST, new EntityAttributeModifier(CRIT_MODIFIER, "crit increase", critChance,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        }
         return builder.build();
     }
 

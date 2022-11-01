@@ -6,6 +6,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.items.tools.staffs.Godsleg;
+import net.xanthian.arbiters_seal.items.tools.staffs.HealingStaff;
+import net.xanthian.arbiters_seal.items.tools.staffs.WhiteStaff;
 import net.xanthian.arbiters_seal.material.ModToolMaterial;
 
 public class Staffs {
@@ -14,13 +16,13 @@ public class Staffs {
             new ModStaffItem(ToolMaterials.WOOD, 3, -2.9F));
 
     public static final Item WHITE_STAFF = registerItem("staffs/white_staff",
-            new ModStaffItem(ToolMaterials.IRON, 1, -2.9F));
+            new WhiteStaff(ToolMaterials.IRON, 1, -2.9F));
 
     public static final Item SILVER_STAFF = registerItem("staffs/silver_staff",
             new ModStaffItem(ModToolMaterial.SILVER, 3, -2.9F));
 
     public static final Item HEALING_STAFF = registerItem("staffs/healing_staff",
-            new ModStaffItem(ToolMaterials.IRON, 2, -2.9F));
+            new HealingStaff(ToolMaterials.IRON, 2, -2.9F));
 
     public static final Item HEAVY_STAFF = registerItem("staffs/heavy_staff",
             new ModStaffItem(ToolMaterials.IRON, 3, -3.1F));

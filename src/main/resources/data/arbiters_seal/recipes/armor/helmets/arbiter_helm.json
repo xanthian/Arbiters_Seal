@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:diamond_helmet"
     },
     "Y": {
       "item": "arbiters_seal:materials/demon_leather"
@@ -12,9 +12,8 @@
     }
   },
   "pattern": [
-    "XYX",
-    "Z Z",
-    "   "
+    " Y ",
+    "ZXZ"
   ],
   "result": {
     "item": "arbiters_seal:helmets/arbiter_helm"

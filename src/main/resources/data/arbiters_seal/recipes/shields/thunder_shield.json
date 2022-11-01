@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "minecraft:birch_planks"
+    },
+    "o": {
+      "item": "arbiters_seal:materials/steel_ingot"
+    }
+  },
+  "pattern": [
+    "WoW",
+    "WoW",
+    " W "
+  ],
+  "result": {
+    "item": "arbiters_seal:shields/thunder_shield"
+  }
+}

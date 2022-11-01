@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:diamond_chestplate"
     },
     "Y": {
       "item": "arbiters_seal:materials/demon_leather"
@@ -12,9 +12,8 @@
     }
   },
   "pattern": [
-    "XZX",
-    "YXY",
-    "X X"
+    " Z ",
+    "YXY"
   ],
   "result": {
     "item": "arbiters_seal:chestpieces/arbiter_armor"

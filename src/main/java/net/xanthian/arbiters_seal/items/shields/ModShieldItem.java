@@ -46,5 +46,4 @@ public class ModShieldItem extends FabricShieldItem {
         }
         super.appendTooltip(stack, world, tooltip, context);
     }
-
 }

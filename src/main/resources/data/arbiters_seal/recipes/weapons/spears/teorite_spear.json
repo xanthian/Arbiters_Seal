@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    " X ",
+    "  X",
     " # ",
-    " # "
+    "#  "
   ],
   "result": {
     "item": "arbiters_seal:spears/teorite_spear"

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "minecraft:planks"
+      "item": "minecraft:dark_oak_planks"
     },
     "X": {
       "item": "arbiters_seal:materials/silver_ingot"

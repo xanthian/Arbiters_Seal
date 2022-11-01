@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Rarity;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.items.shields.ModShieldItem;
-import net.xanthian.arbiters_seal.items.shields.Shields;
 import net.xanthian.arbiters_seal.material.ModShieldTiers;
 import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 
@@ -25,8 +24,8 @@ public class ArbiterShield extends ModShieldItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
         if (!world.isClient && (entity instanceof PlayerEntity player)) {
-            if (player.getEquippedStack(EquipmentSlot.MAINHAND).isOf(Shields.ARBITER_SHIELD) ||
-                    player.getEquippedStack(EquipmentSlot.OFFHAND).isOf(Shields.ARBITER_SHIELD)) {
+            if (player.getEquippedStack(EquipmentSlot.MAINHAND).isOf(this) ||
+                    player.getEquippedStack(EquipmentSlot.OFFHAND).isOf(this)) {
                 if (player.getStatusEffect(ModStatusEffects.MUTE) != null) {
                     player.removeStatusEffect(ModStatusEffects.MUTE);
                 }

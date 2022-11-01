@@ -1,4 +1,10 @@
 package net.xanthian.arbiters_seal.items.tools.spears;
 
-public class Lance {
+import net.minecraft.item.ToolMaterial;
+import net.xanthian.arbiters_seal.items.tools.ModSpearItem;
+
+public class Lance extends ModSpearItem {
+    public Lance(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
+        super(toolMaterial, attackDamage, attackSpeed);
+    }
 }

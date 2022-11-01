@@ -2,10 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "arbiters_seal:materials/ebony_planks"
+      "item": "arbiters_seal:staffs/gold_staff"
     },
     "1": {
       "item": "arbiters_seal:materials/godwood"
@@ -15,9 +12,8 @@
     }
   },
   "pattern": [
-    "2X2",
-    "X 1",
-    "  #"
+    " 1 ",
+    "2#2"
   ],
   "result": {
     "item": "arbiters_seal:staffs/godsleg"

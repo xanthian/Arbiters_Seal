@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "arbiters_seal:daggers/dagger"
+    },
+    "1": {
+      "item": "arbiters_seal:materials/quality_thread"
+    },
+    "2": {
+      "item": "arbiters_seal:materials/shellac_powder"
+    }
+  },
+  "pattern": [
+    "2 2",
+    " # ",
+    "1 1"
+  ],
+  "result": {
+    "item": "arbiters_seal:daggers/janbiya"
+  }
+}

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "L": {
-      "item": "minecraft:leather"
+      "item": "minecraft:leather_chestplate"
     },
     "D": {
       "item": "arbiters_seal:materials/demon_leather"
@@ -12,9 +12,8 @@
     }
   },
   "pattern": [
-    "LDL",
-    "QLQ",
-    "L L"
+    " D ",
+    "QLQ"
   ],
   "result": {
     "item": "arbiters_seal:chestpieces/arbiter_garb"

@@ -5,15 +5,15 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
+    "   ",
     " X ",
-    "X#X",
     " # "
   ],
   "result": {
-    "item": "arbiters_seal:maces/holy_mace"
+    "item": "arbiters_seal:daggers/dagger"
   }
 }
