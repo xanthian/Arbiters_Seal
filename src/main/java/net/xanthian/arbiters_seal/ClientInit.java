@@ -5,13 +5,18 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.entity.ModEntities;
+import net.xanthian.arbiters_seal.entity.item.ModBoatModel;
 import net.xanthian.arbiters_seal.items.RareItems;
 import net.xanthian.arbiters_seal.items.tools.Bows;
 import net.xanthian.arbiters_seal.items.tools.Crossbows;
 import net.xanthian.arbiters_seal.particle.ModParticles;
 import net.xanthian.arbiters_seal.particle.custom.SleepParticle;
+import net.xanthian.arbiters_seal.renderer.AeothRenderer;
+import net.xanthian.arbiters_seal.renderer.ModBoatRenderer;
 
 import static net.xanthian.arbiters_seal.renderer.ModPredicates.registerBowPredicates;
 import static net.xanthian.arbiters_seal.renderer.ModPredicates.registerCrossbowPredicates;
@@ -24,6 +29,7 @@ public class ClientInit implements ClientModInitializer {
     public void onInitializeClient() {
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.SLEEP_PARTICLE, SleepParticle.Factory::new);
+        ModBoatModel.registerLayers();
 
         //Bows
         registerBowPredicates(Bows.COMPOSITE_BOW);
@@ -63,5 +69,8 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALOE_VERA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RareItems.ANGEL_TEARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EBONY_LADDER, RenderLayer.getCutout());
+        EntityRendererRegistry.register(ModEntities.AEOTH, AeothRenderer::new);
+        EntityRendererRegistry.register(ModEntities.BOAT, context -> new ModBoatRenderer<>(context,false));
+        EntityRendererRegistry.register(ModEntities.CHEST_BOAT, context -> new ModBoatRenderer<>(context, true));
     }
 }
