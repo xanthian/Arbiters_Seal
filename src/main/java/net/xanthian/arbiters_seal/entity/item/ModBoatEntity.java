@@ -7,10 +7,14 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.Packet;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.entity.ModEntities;
-import net.xanthian.arbiters_seal.items.Items;
+import net.xanthian.arbiters_seal.items.BoatItems;
+
+import java.util.function.Supplier;
 
 public class ModBoatEntity extends BoatEntity {
     private static final TrackedData<Integer> WOOD_TYPE = DataTracker.registerData(ModBoatEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -20,7 +24,7 @@ public class ModBoatEntity extends BoatEntity {
     }
 
     public static ModBoatEntity create(World world, double x, double y, double z) {
-        ModBoatEntity boat = ModEntities.BOAT.create(world);
+        ModBoatEntity boat = ModEntities.BOAT.get().create(world);
         boat.setPos(x, y, z);
         boat.setVelocity(Vec3d.ZERO);
         boat.prevX = x;
@@ -61,14 +65,19 @@ public class ModBoatEntity extends BoatEntity {
         return this.getWoodType().getItem();
     }
 
+    @Override
+    public Packet<?> createSpawnPacket() {
+        return new EntitySpawnS2CPacket(this);
+    }
+
     public enum Type {
-        EBONY("ebony", Items.EBONY_BOAT, Items.EBONY_CHEST_BOAT);
+        EBONY("ebony", BoatItems.EBONY_BOAT, BoatItems.EBONY_CHEST_BOAT);
 
         private final String name;
-        private final Item item;
-        private final Item chestItem;
+        private final Supplier<Item> item;
+        private final Supplier<Item> chestItem;
 
-        Type(String name, Item boatItem, Item chestBoatItem) {
+        Type(String name, Supplier<Item> boatItem, Supplier<Item> chestBoatItem) {
             this.name = name;
             this.item = boatItem;
             this.chestItem = chestBoatItem;
@@ -99,11 +108,11 @@ public class ModBoatEntity extends BoatEntity {
         }
 
         public Item getItem() {
-            return item;
+            return item.get();
         }
 
         public Item getChestItem() {
-            return chestItem;
+            return chestItem.get();
         }
     }
 }

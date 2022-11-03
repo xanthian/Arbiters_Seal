@@ -38,7 +38,7 @@ public class ModChestBoatEntity  extends ModBoatEntity implements RideableInvent
     }
 
     public static ModChestBoatEntity create(World world, double x, double y, double z) {
-        ModChestBoatEntity boat = ModEntities.CHEST_BOAT.create(world);
+        ModChestBoatEntity boat = ModEntities.CHEST_BOAT.get().create(world);
         boat.setPos(x, y, z);
         boat.setVelocity(Vec3d.ZERO);
         boat.prevX = x;

@@ -1,6 +1,7 @@
 package net.xanthian.arbiters_seal.entity;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -11,23 +12,30 @@ import net.xanthian.arbiters_seal.entity.item.ModBoatEntity;
 import net.xanthian.arbiters_seal.entity.item.ModChestBoatEntity;
 import net.xanthian.arbiters_seal.entity.mob.AeothEntity;
 
+import java.util.function.Supplier;
+
 public class ModEntities {
 
+    public static <T extends Entity> Supplier<EntityType<T>>
+    registerEntity(String name, EntityType.EntityFactory<T> entityFactory, SpawnGroup category, float width, float height, int clientTrackingRange) {
+        EntityType<T> registry = Registry.register(Registry.ENTITY_TYPE, new Identifier(Init.MOD_ID, name),
+                FabricEntityTypeBuilder.create(category, entityFactory).dimensions(EntityDimensions.fixed(width, height)).trackRangeChunks(clientTrackingRange).build());
+        return () -> registry;
+    }
 
-
-    public static final EntityType<ModBoatEntity> BOAT = Registry.register(
-            Registry.ENTITY_TYPE, new Identifier(Init.MOD_ID, "ebony_boat"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ModBoatEntity::new)
-                    .dimensions(EntityDimensions.fixed(1.3754f, 0.5625f)).build());
-
-    public static final EntityType<ModChestBoatEntity> CHEST_BOAT = Registry.register(
-            Registry.ENTITY_TYPE, new Identifier(Init.MOD_ID, "ebony_chest_boat"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ModChestBoatEntity::new)
-                    .dimensions(EntityDimensions.fixed(1.3754f, 0.5625f)).build());
+    public static final Supplier<EntityType<ModBoatEntity>> BOAT = ModEntities.registerEntity("boat",
+            ModBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10
+    );
+    public static final Supplier<EntityType<ModChestBoatEntity>> CHEST_BOAT = ModEntities.registerEntity("chest_boat",
+            ModChestBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10
+    );
 
     public static final EntityType<AeothEntity> AEOTH = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(Init.MOD_ID, "aeoth"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, AeothEntity::new)
                     .dimensions(EntityDimensions.fixed(1f, 2f)).build());
 
+    public static void registerEntities() {
+
     }
+}

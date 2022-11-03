@@ -70,7 +70,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RareItems.ANGEL_TEARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EBONY_LADDER, RenderLayer.getCutout());
         EntityRendererRegistry.register(ModEntities.AEOTH, AeothRenderer::new);
-        EntityRendererRegistry.register(ModEntities.BOAT, context -> new ModBoatRenderer<>(context,false));
-        EntityRendererRegistry.register(ModEntities.CHEST_BOAT, context -> new ModBoatRenderer<>(context, true));
+        EntityRendererRegistry.register(ModEntities.BOAT.get(), context -> new ModBoatRenderer<>(context,false));
+        EntityRendererRegistry.register(ModEntities.CHEST_BOAT.get(), context -> new ModBoatRenderer<>(context, true));
     }
 }

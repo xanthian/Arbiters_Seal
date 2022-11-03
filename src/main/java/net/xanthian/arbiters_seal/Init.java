@@ -6,6 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.entity.ModEntities;
 import net.xanthian.arbiters_seal.items.gadgets.Gadgets;
 import net.xanthian.arbiters_seal.items.potions.PotionItems;
 import net.xanthian.arbiters_seal.particle.ModParticles;
@@ -49,6 +50,8 @@ public class Init implements ModInitializer {
         RareItems.registerRareItems();
         Gadgets.registerGadgetItems();
         PotionItems.registerPotionItems();
+        BoatItems.registerItems();
+        ModEntities.registerEntities();
 
         // Weapon Registration
         Axes.registerAxeItems();
