@@ -50,7 +50,6 @@ public class Init implements ModInitializer {
         RareItems.registerRareItems();
         Gadgets.registerGadgetItems();
         PotionItems.registerPotionItems();
-        BoatItems.registerItems();
         ModEntities.registerEntities();
 
         // Weapon Registration

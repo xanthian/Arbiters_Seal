@@ -17,66 +17,73 @@ import net.minecraft.world.event.GameEvent;
 import net.xanthian.arbiters_seal.entity.item.ModBoatEntity;
 import net.xanthian.arbiters_seal.entity.item.ModChestBoatEntity;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
 public class ModBoatItem extends BoatItem {
-    private static final Predicate<Entity> ENTITY_PREDICATE = EntityPredicates.EXCEPT_SPECTATOR.and(Entity::canHit);
+    private static final Predicate<Entity> SAILORS; 
     private final ModBoatEntity.Type type;
-    private final boolean hasChest;
+    private final boolean chest;
 
-    public ModBoatItem(boolean hasChest, ModBoatEntity.Type boatType, Settings prop) {
-        super(hasChest, null, prop);
-        this.hasChest = hasChest;
-        this.type = boatType;
+    public ModBoatItem(boolean chest, ModBoatEntity.Type type, Settings settings) {
+        super(chest, null, settings);
+        this.chest = chest;
+        this.type = type;
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        ItemStack itemstack = player.getStackInHand(hand);
-        HitResult hitresult = raycast(world, player, RaycastContext.FluidHandling.ANY);
-        if (hitresult.getType() == HitResult.Type.MISS) {
-            return TypedActionResult.pass(itemstack);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
+        HitResult hitResult = raycast(world, user, RaycastContext.FluidHandling.ANY);
+        if (hitResult.getType() == HitResult.Type.MISS) {
+            return TypedActionResult.pass(itemStack);
         } else {
-            Vec3d vec3d = player.getRotationVec(1.0F);
-            List<Entity> list = world.getOtherEntities(player, player.getBoundingBox().stretch(vec3d.multiply(5.0)).expand(1.0), ENTITY_PREDICATE);
+            Vec3d vec3d = user.getRotationVec(1.0F);
+            double d = 5.0;
+            List<Entity> list = world.getOtherEntities(user, user.getBoundingBox().stretch(vec3d.multiply(5.0)).expand(1.0), SAILORS);
             if (!list.isEmpty()) {
-                Vec3d eyePosition = player.getEyePos();
+                Vec3d vec3d2 = user.getEyePos();
+                Iterator var11 = list.iterator();
 
-                for (Entity entity : list) {
+                while(var11.hasNext()) {
+                    Entity entity = (Entity)var11.next();
                     Box box = entity.getBoundingBox().expand((double)entity.getTargetingMargin());
-                    if (box.contains(eyePosition)) {
-                        return TypedActionResult.pass(itemstack);
+                    if (box.contains(vec3d2)) {
+                        return TypedActionResult.pass(itemStack);
                     }
                 }
             }
 
-            if (hitresult.getType() == HitResult.Type.BLOCK) {
-                ModBoatEntity boat = this.getBoat(world, hitresult);
-                boat.setWoodType(this.type);
-                boat.setYaw(player.getYaw());
-                if (!world.isSpaceEmpty(boat, boat.getBoundingBox())) {
-                    return TypedActionResult.fail(itemstack);
+            if (hitResult.getType() == HitResult.Type.BLOCK) {
+                ModBoatEntity boatEntity = this.createEntity(world, hitResult);
+                boatEntity.setWoodType(this.type);
+                boatEntity.setYaw(user.getYaw());
+                if (!world.isSpaceEmpty(boatEntity, boatEntity.getBoundingBox())) {
+                    return TypedActionResult.fail(itemStack);
                 } else {
                     if (!world.isClient) {
-                        world.spawnEntity(boat);
-                        world.emitGameEvent(player, GameEvent.ENTITY_PLACE, hitresult.getPos());
-                        if (!player.getAbilities().creativeMode) {
-                            itemstack.decrement(1);
+                        world.spawnEntity(boatEntity);
+                        world.emitGameEvent(user, GameEvent.ENTITY_PLACE, hitResult.getPos());
+                        if (!user.getAbilities().creativeMode) {
+                            itemStack.decrement(1);
                         }
                     }
 
-                    player.incrementStat(Stats.USED.getOrCreateStat(this));
-                    return TypedActionResult.success(itemstack, world.isClient());
+                    user.incrementStat(Stats.USED.getOrCreateStat(this));
+                    return TypedActionResult.success(itemStack, world.isClient());
                 }
             } else {
-                return TypedActionResult.pass(itemstack);
+                return TypedActionResult.pass(itemStack);
             }
         }
     }
 
-    private ModBoatEntity getBoat(World level, HitResult hitResult) {
-        return this.hasChest ? ModChestBoatEntity.create(level, hitResult.getPos().x, hitResult.getPos().y, hitResult.getPos().z)
-                : ModBoatEntity.create(level, hitResult.getPos().x, hitResult.getPos().y, hitResult.getPos().z);
+    private ModBoatEntity createEntity(World world, HitResult hitResult) {
+        return (ModBoatEntity)(this.chest ? ModChestBoatEntity.create(world, hitResult.getPos().x, hitResult.getPos().y, hitResult.getPos().z)
+                : ModBoatEntity.create(world, hitResult.getPos().x, hitResult.getPos().y, hitResult.getPos().z));
+    }
+    static {
+        SAILORS = EntityPredicates.EXCEPT_SPECTATOR.and(Entity::canHit);
     }
 }

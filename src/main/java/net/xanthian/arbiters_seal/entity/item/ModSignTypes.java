@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.entity;
+package net.xanthian.arbiters_seal.entity.item;
 
 import net.minecraft.util.SignType;
 import net.xanthian.arbiters_seal.mixin.SignTypeAccessor;

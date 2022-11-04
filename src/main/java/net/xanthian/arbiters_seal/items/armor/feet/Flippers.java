@@ -21,7 +21,7 @@ public class Flippers extends ModFeetItem {
             ItemStack feet = player.getEquippedStack(EquipmentSlot.FEET);
             if (feet.getItem() == this && player.isTouchingWater()) {
                 if (player.age % 180 == 0) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1, 0, false, false, true));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 220, 0, false, false, true));
                 }
             }
         }

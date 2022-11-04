@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
-import net.xanthian.arbiters_seal.entity.ModSignTypes;
+import net.xanthian.arbiters_seal.entity.item.ModSignTypes;
 import net.xanthian.arbiters_seal.world.features.tree.EbonySaplingGenerator;
 
 public class ModBlocks {

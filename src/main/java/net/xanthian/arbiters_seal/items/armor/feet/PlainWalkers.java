@@ -13,4 +13,5 @@ public class PlainWalkers extends ModFeetItem {
         public Rarity getRarity(ItemStack stack) {
         return Rarity.RARE;
     }
+
 }

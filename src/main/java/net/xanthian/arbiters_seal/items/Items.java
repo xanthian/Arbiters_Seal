@@ -10,15 +10,19 @@ import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.entity.item.ModBoatEntity;
 import net.xanthian.arbiters_seal.entity.item.ModChestBoatEntity;
 
+import java.util.function.Supplier;
+
 public class Items {
 
     //EBONY
     public static final Item EBONY_SIGN = registerItem("objects/ebony_sign",
             new SignItem(new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS).maxCount(16), ModBlocks.EBONY_SIGN_BLOCK, ModBlocks.EBONY_WALL_SIGN_BLOCK));
-    public static final Item EBONY_BOAT = registerItem("boats/ebony_boat",
+
+    public static final Supplier<Item> EBONY_BOAT = registerBoatItem("boats/ebony_boat", () ->
             new ModBoatItem(false, ModBoatEntity.Type.EBONY, new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)));
-    public static final Item EBONY_CHEST_BOAT = registerItem("boats/ebony_chest_boat",
-             new ModBoatItem(true, ModChestBoatEntity.Type.EBONY, new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)));
+
+    public static final Supplier<Item> EBONY_CHEST_BOAT = registerBoatItem("boats/ebony_chest_boat", () ->
+            new ModBoatItem(true, ModChestBoatEntity.Type.EBONY, new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)));
 
     // BRONZE
     public static final Item BRONZE_INGOT = registerItem("materials/bronze_ingot", 
@@ -46,9 +50,12 @@ public class Items {
     public static final Item RAW_COLD_IRON = registerItem("materials/raw_cold_iron",
             new ModItem());
 
-    
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);
+    }
+    public static <T extends Item> Supplier<T> registerBoatItem(String name, Supplier<T> item) {
+        var register = Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item.get());
+        return () -> register;
     }
 
     public static void registerModItems() {}

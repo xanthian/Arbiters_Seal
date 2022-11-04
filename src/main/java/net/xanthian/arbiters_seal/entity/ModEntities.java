@@ -24,16 +24,13 @@ public class ModEntities {
     }
 
     public static final Supplier<EntityType<ModBoatEntity>> BOAT = ModEntities.registerEntity("boat",
-            ModBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10
-    );
-    public static final Supplier<EntityType<ModChestBoatEntity>> CHEST_BOAT = ModEntities.registerEntity("chest_boat",
-            ModChestBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10
-    );
+            ModBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10);
 
-    public static final EntityType<AeothEntity> AEOTH = Registry.register(
-            Registry.ENTITY_TYPE, new Identifier(Init.MOD_ID, "aeoth"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MISC, AeothEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 2f)).build());
+    public static final Supplier<EntityType<ModChestBoatEntity>> CHEST_BOAT = ModEntities.registerEntity("chest_boat",
+            ModChestBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10);
+
+    public static final Supplier<EntityType<AeothEntity>> AEOTH = ModEntities.registerEntity("aeoth",
+            AeothEntity::new, SpawnGroup.MISC,2f, 2f, 10);
 
     public static void registerEntities() {
 

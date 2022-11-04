@@ -20,7 +20,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.xanthian.arbiters_seal.entity.ModEntities;
@@ -39,8 +38,7 @@ public class ModChestBoatEntity  extends ModBoatEntity implements RideableInvent
 
     public static ModChestBoatEntity create(World world, double x, double y, double z) {
         ModChestBoatEntity boat = ModEntities.CHEST_BOAT.get().create(world);
-        boat.setPos(x, y, z);
-        boat.setVelocity(Vec3d.ZERO);
+        boat.setPosition(x, y, z);
         boat.prevX = x;
         boat.prevY = y;
         boat.prevZ = z;
@@ -80,7 +78,6 @@ public class ModChestBoatEntity  extends ModBoatEntity implements RideableInvent
         if (!this.world.isClient && reason.shouldDestroy()) {
             ItemScatterer.spawn(this.world, this, this);
         }
-
         super.remove(reason);
     }
 
@@ -100,7 +97,7 @@ public class ModChestBoatEntity  extends ModBoatEntity implements RideableInvent
 
     @Override
     public Item asItem() {
-        return getWoodType().getChestItem();
+        return getWoodType().getChestItemDrop();
     }
 
     @Override

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "arbiters_seal:materials/brass_ingot"
+      "item": "arbiters_seal:materials/bronze_ingot"
     },
     "#": {
       "item": "minecraft:stick"

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/angel_tears"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/dragonsblood_sap"
+    },
+    "Z": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "XZX"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/absorber_plus"
+  }
+}

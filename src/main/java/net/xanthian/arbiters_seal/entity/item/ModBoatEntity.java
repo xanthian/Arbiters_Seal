@@ -9,10 +9,9 @@ import net.minecraft.item.Item;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.entity.ModEntities;
-import net.xanthian.arbiters_seal.items.BoatItems;
+import net.xanthian.arbiters_seal.items.Items;
 
 import java.util.function.Supplier;
 
@@ -25,8 +24,7 @@ public class ModBoatEntity extends BoatEntity {
 
     public static ModBoatEntity create(World world, double x, double y, double z) {
         ModBoatEntity boat = ModEntities.BOAT.get().create(world);
-        boat.setPos(x, y, z);
-        boat.setVelocity(Vec3d.ZERO);
+        boat.setPosition(x, y, z);
         boat.prevX = x;
         boat.prevY = y;
         boat.prevZ = z;
@@ -62,7 +60,7 @@ public class ModBoatEntity extends BoatEntity {
 
     @Override
     public Item asItem() {
-        return this.getWoodType().getItem();
+        return this.getWoodType().getItemDrop();
     }
 
     @Override
@@ -71,7 +69,7 @@ public class ModBoatEntity extends BoatEntity {
     }
 
     public enum Type {
-        EBONY("ebony", BoatItems.EBONY_BOAT, BoatItems.EBONY_CHEST_BOAT);
+        EBONY("ebony", () -> Items.EBONY_BOAT.get(), () -> Items.EBONY_CHEST_BOAT.get());
 
         private final String name;
         private final Supplier<Item> item;
@@ -88,7 +86,6 @@ public class ModBoatEntity extends BoatEntity {
             if (type < 0 || type >= types.length) {
                 type = 0;
             }
-
             return types[type];
         }
 
@@ -107,11 +104,11 @@ public class ModBoatEntity extends BoatEntity {
             return name;
         }
 
-        public Item getItem() {
+        public Item getItemDrop() {
             return item.get();
         }
 
-        public Item getChestItem() {
+        public Item getChestItemDrop() {
             return chestItem.get();
         }
     }

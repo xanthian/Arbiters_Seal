@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "minecraft:bronze_armor"
+      "item": "arbiters_seal:chestpieces/bronze_armor"
     },
     "J": {
       "item": "arbiters_seal:materials/jammy_fruit"
