@@ -74,7 +74,7 @@ public abstract class LivingEntityMixin extends Entity {
     @Inject(at = @At("HEAD"), method = "canTarget(Lnet/minecraft/entity/LivingEntity;)Z", cancellable = true)
     private void pacifyMob(LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity thisEntity = ((LivingEntity) (Object) this);
-        if (thisEntity.hasStatusEffect(ModStatusEffects.MUTE)) {
+        if (thisEntity.hasStatusEffect(ModStatusEffects.SILENCE)) {
             cir.setReturnValue(false);
         }
     }

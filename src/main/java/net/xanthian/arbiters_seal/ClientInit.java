@@ -15,7 +15,6 @@ import net.xanthian.arbiters_seal.items.tools.Bows;
 import net.xanthian.arbiters_seal.items.tools.Crossbows;
 import net.xanthian.arbiters_seal.particle.ModParticles;
 import net.xanthian.arbiters_seal.particle.custom.SleepParticle;
-import net.xanthian.arbiters_seal.renderer.AeothRenderer;
 import net.xanthian.arbiters_seal.renderer.ModBoatRenderer;
 
 import static net.xanthian.arbiters_seal.renderer.ModPredicates.registerBowPredicates;
@@ -69,7 +68,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALOE_VERA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RareItems.ANGEL_TEARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EBONY_LADDER, RenderLayer.getCutout());
-        EntityRendererRegistry.register(ModEntities.AEOTH.get(), AeothRenderer::new);
+        //EntityRendererRegistry.register(ModEntities.AEOTH.get(), AeothRenderer::new);
         EntityRendererRegistry.register(ModEntities.BOAT.get(), context -> new ModBoatRenderer<>(context,false));
         EntityRendererRegistry.register(ModEntities.CHEST_BOAT.get(), context -> new ModBoatRenderer<>(context, true));
     }

@@ -23,8 +23,8 @@ public class Tongueslicer extends ModDaggerItem {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getType() == EntityType.GHAST || target.getType() == EntityType.BLAZE || target.getType() == EntityType.GUARDIAN) {
-                    if (target.getStatusEffect(ModStatusEffects.MUTE) == null || target.getStatusEffect(ModStatusEffects.MUTE).getDuration() < 20) {
-                        target.addStatusEffect(new StatusEffectInstance(ModStatusEffects.MUTE, 200, 0, true, true, true), target);
+                    if (target.getStatusEffect(ModStatusEffects.SILENCE) == null || target.getStatusEffect(ModStatusEffects.SILENCE).getDuration() < 20) {
+                        target.addStatusEffect(new StatusEffectInstance(ModStatusEffects.SILENCE, 200, 0, true, true, true), target);
                     }
                 }
             }

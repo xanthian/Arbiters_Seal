@@ -22,22 +22,22 @@ public class Shields {
             new ModShieldItem(ModShieldMaterial.GOLD));
 
     public static final Item WATER_SHIELD = registerItem("shields/water_shield",
-            new ModShieldItem(ModShieldMaterial.SILVER));
+            new WaterShield(ModShieldMaterial.SILVER));
 
     public static final Item FIRE_SHIELD = registerItem("shields/fire_shield",
-            new ModShieldItem(ModShieldMaterial.STEEL));
+            new FireShield(ModShieldMaterial.STEEL));
 
     public static final Item EARTH_SHIELD = registerItem("shields/earth_shield",
-            new ModShieldItem(ModShieldMaterial.BRONZE));
+            new EarthShield(ModShieldMaterial.BRONZE));
 
     public static final Item THUNDER_SHIELD = registerItem("shields/thunder_shield",
-            new ModShieldItem(ModShieldMaterial.GOLD));
+            new ThunderShield(ModShieldMaterial.GOLD));
 
     public static final Item TEORITE_SHIELD = registerItem("shields/teorite_shield",
             new ModShieldItem(ModShieldMaterial.TEORITE));
 
     public static final Item AEGIS_SHIELD = registerItem("shields/aegis_shield",
-            new ModShieldItem(ModShieldMaterial.DIAMOND));
+            new AegisShield(ModShieldMaterial.DIAMOND));
 
     public static final Item ARBITER_SHIELD = registerItem("shields/arbiter_shield",
             new ArbiterShield(ModShieldMaterial.DIAMOND));

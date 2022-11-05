@@ -9,8 +9,9 @@ public class MainGauche extends ModDaggerItem {
     public MainGauche(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed);
     }
-        @Override
-        public Rarity getRarity(ItemStack stack) {
+
+    @Override
+    public Rarity getRarity(ItemStack stack) {
         return Rarity.UNCOMMON;
     }
 

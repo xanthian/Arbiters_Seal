@@ -24,10 +24,9 @@ public class ArbiterShield extends ModShieldItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
         if (!world.isClient && (entity instanceof PlayerEntity player)) {
-            if (player.getEquippedStack(EquipmentSlot.MAINHAND).isOf(this) ||
-                    player.getEquippedStack(EquipmentSlot.OFFHAND).isOf(this)) {
-                if (player.getStatusEffect(ModStatusEffects.MUTE) != null) {
-                    player.removeStatusEffect(ModStatusEffects.MUTE);
+            if (player.getEquippedStack(EquipmentSlot.OFFHAND).isOf(this)) {
+                if (player.getStatusEffect(ModStatusEffects.SILENCE) != null) {
+                    player.removeStatusEffect(ModStatusEffects.SILENCE);
                 }
                 if (player.getStatusEffect(StatusEffects.BLINDNESS) != null) {
                     player.removeStatusEffect(StatusEffects.BLINDNESS);

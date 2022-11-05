@@ -6,7 +6,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.xanthian.arbiters_seal.items.tools.ModScytheItem;
-import net.xanthian.arbiters_seal.items.tools.Scythes;
 import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 
 import java.util.Random;
@@ -18,8 +17,7 @@ public class DaysHarvest extends ModScytheItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
-
-        if ((mainHand.getItem() == Scythes.DAYS_HARVEST)) {
+        if ((mainHand.getItem() == this)) {
             Random random = new Random();
             if (random.nextFloat() <= 0.62f) {
                 if (target.getStatusEffect(ModStatusEffects.BLEED) == null || target.getStatusEffect(ModStatusEffects.BLEED).getDuration() < 20) {

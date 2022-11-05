@@ -7,7 +7,7 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 
 public class DefenceDownEffect extends StatusEffect {
     public DefenceDownEffect() {
-        super(StatusEffectCategory.NEUTRAL, 9126145);
+        super(StatusEffectCategory.HARMFUL, 9126145);
         this.addAttributeModifier(EntityAttributes.GENERIC_ARMOR, "eebdfcf6-a994-45d3-ba65-7bb8a820a405",
                         -4.0, EntityAttributeModifier.Operation.ADDITION)
 

@@ -1,12 +1,14 @@
 package net.xanthian.arbiters_seal.items.tools.swords;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Rarity;
+import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.items.tools.ModSwordItem;
 
 public class Excalibur extends ModSwordItem {
@@ -20,14 +22,13 @@ public class Excalibur extends ModSwordItem {
     }
 
     @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
-
-        if ((mainHand.getItem() == this)) {
-            if (attacker.getStatusEffect(StatusEffects.REGENERATION) == null || attacker.getStatusEffect(StatusEffects.REGENERATION).getDuration() < 180) {
-                attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0, true, false, true), target);
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if (!world.isClient && (entity instanceof PlayerEntity player)) {
+            if (player.getEquippedStack(EquipmentSlot.MAINHAND).isOf(this)) {
+                if (player.age % 180 == 0) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 220, 0, true, false, true));
+                }
             }
         }
-        return super.postHit(stack, target, attacker);
     }
 }

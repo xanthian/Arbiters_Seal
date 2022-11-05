@@ -46,7 +46,7 @@ public class Spears {
             new HeavyLance(ToolMaterials.DIAMOND, 3, -3.0F));
 
     public static final Item GODRAY = registerItem("spears/godray",
-            new Godray(ToolMaterials.NETHERITE, 3, -3.0F));
+            new Godray(ToolMaterials.NETHERITE, 3, -2.9F));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

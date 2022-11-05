@@ -19,6 +19,12 @@ public class ModAttributes {
     public static final EntityAttribute GENERIC_CRIT_BOOST =
             new ClampedEntityAttribute("attribute.name.generic_crit_boost", 1.0, 0.0, 2.0).setTracked(true);
 
+    public static final EntityAttribute GENERIC_RANGE_BOOST =
+            new ClampedEntityAttribute("attribute.name.generic_range_boost", 1.0, 0.0, 10.0).setTracked(true);
+
+    public static final EntityAttribute GENERIC_DAMAGE_BOOST =
+            new ClampedEntityAttribute("attribute.name.generic_damage_boost", 1.0, 0.0, 10.0).setTracked(true);
+
     public static Map<String, EntityAttribute> ATTRIBUTES = new LinkedHashMap<>();
 
     static {

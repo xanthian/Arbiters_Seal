@@ -22,7 +22,7 @@ public class Staffs {
             new ModStaffItem(ModToolMaterial.SILVER, 3, -2.9F));
 
     public static final Item HEALING_STAFF = registerItem("staffs/healing_staff",
-            new HealingStaff(ToolMaterials.IRON, 2, -2.9F));
+            new HealingStaff(ToolMaterials.IRON, -2, -2.9F));
 
     public static final Item HEAVY_STAFF = registerItem("staffs/heavy_staff",
             new ModStaffItem(ToolMaterials.IRON, 3, -3.1F));

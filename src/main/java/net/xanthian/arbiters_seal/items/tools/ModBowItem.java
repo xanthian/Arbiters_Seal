@@ -1,11 +1,18 @@
 package net.xanthian.arbiters_seal.items.tools;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ArrowItem;
@@ -20,17 +27,28 @@ import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.material.ModBowTiers;
+import net.xanthian.arbiters_seal.util.ModAttributes;
 
 import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
 // Credit to mpbb Ironbows mod for code + idea
 
 public class ModBowItem extends BowItem {
     private final ModBowTiers tier;
+    private static final UUID CRIT_MODIFIER = UUID.fromString("9a20c4bb-fe0c-461d-808a-d01d8ae1e563");
+    private static final UUID RANGE_MODIFIER = UUID.fromString("b464a84a-602f-4bd4-bfe1-cd910e373ade");
+    private static final UUID DAMAGE_MODIFIER = UUID.fromString("3f62a33a-8cab-46bc-bdc0-9d5235a0a23e");
+
+    public float getCrit() {
+        return 0f;
+    }
 
     public ModBowItem(ModBowTiers tier) {
         super(new FabricItemSettings().maxDamage(tier.getDurability()).group(Init.ARBITERS_SEAL_WEAPONS));
         this.tier = tier;
+
     }
     private PersistentProjectileEntity customArrow(PersistentProjectileEntity arrow) {
         arrow.setDamage(arrow.getDamage() + this.tier.getDamageBonus());
@@ -118,13 +136,40 @@ public class ModBowItem extends BowItem {
                 tooltip.add(Text.literal(infoLine).formatted(Formatting.ITALIC, Formatting.GRAY));
             }
         } else {
-            tooltip.add(Text.literal(I18n.translate(stack.getTranslationKey() + ".tooltip").formatted(Formatting.ITALIC, Formatting.GRAY)));
+            tooltip.add(Text.literal(I18n.translate(key).formatted(Formatting.ITALIC, Formatting.GRAY)));
         }
-        tooltip.add(Text.literal(" "));
-        tooltip.add(Text.literal("+" + this.tier.getDamageBonus() + " ")
-                .append(Text.literal("Attack Bonus")).formatted(Formatting.DARK_GREEN));
-        tooltip.add(Text.literal(this.tier.getRangeBonus() + " ")
-                .append(Text.literal("Attack Range")).formatted(Formatting.DARK_GREEN));
         super.appendTooltip(stack, world, tooltip, context);
+    }
+
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
+        if (mainHand.getItem() == this) {
+            Random random = new Random();
+            if (random.nextFloat() <= this.getCrit()) {
+                float baseDamage = (float) attacker.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
+                float extraDamageMultiplier = 1.5F;
+                target.damage(DamageSource.GENERIC, (baseDamage * extraDamageMultiplier));
+                target.world.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_CRIT,
+                        SoundCategory.PLAYERS,1.0F,1.0F);
+            }
+        }
+        return super.postHit(stack, target, attacker);
+    }
+
+    @Override
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(ItemStack stack, EquipmentSlot slot) {
+        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
+        builder.putAll(modifiers);
+        if (slot == EquipmentSlot.MAINHAND) {
+            builder.put(ModAttributes.GENERIC_RANGE_BOOST, new EntityAttributeModifier(RANGE_MODIFIER, "crit increase", this.tier.getRangeBonus(),
+                    EntityAttributeModifier.Operation.ADDITION));
+            builder.put(ModAttributes.GENERIC_DAMAGE_BOOST, new EntityAttributeModifier(DAMAGE_MODIFIER, "crit increase", this.tier.getDamageBonus(),
+                    EntityAttributeModifier.Operation.ADDITION));
+            builder.put(ModAttributes.GENERIC_CRIT_BOOST, new EntityAttributeModifier(CRIT_MODIFIER, "crit increase", this.getCrit(),
+                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        }
+        return builder.build();
     }
 }

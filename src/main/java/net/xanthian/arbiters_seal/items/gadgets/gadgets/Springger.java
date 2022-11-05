@@ -17,10 +17,10 @@ public class Springger extends ModGadgetItem {
             if (!user.getAbilities().creativeMode) {
                 user.getStackInHand(hand).decrement(1);
             }
-            entity.takeKnockback(1,2,2);
+            entity.takeKnockback(1, user.getX() - entity.getX(), user.getZ() - entity.getZ());
             entity.damage(DamageSource.MAGIC,2);
         }
-        user.playSound(SoundEvents.ENTITY_GOAT_SCREAMING_PREPARE_RAM, 2.7f, 0.1f + (user.getRandom().nextFloat() * 0.2f));
+        user.playSound(SoundEvents.BLOCK_PACKED_MUD_HIT, 2.7f, 0.1f + (user.getRandom().nextFloat() * 0.2f));
         return super.useOnEntity(stack, user, entity, hand);
     }
 }

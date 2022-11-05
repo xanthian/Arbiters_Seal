@@ -7,13 +7,16 @@
 
   "effect.arbiters_seal.rebirth": "Rebirth",
   "effect.arbiters_seal.bleed": "Bleed",
-  "effect.arbiters_seal.mute": "Mute",
+  "effect.arbiters_seal.silence": "Silence",
   "effect.arbiters_seal.root": "Root",
   "effect.arbiters_seal.sleep": "Sleep",
+  "effect.arbiters_seal.charm": "Charm",
 
   "attribute.name.generic_jump_boost": "Jump Height",
   "attribute.name.generic_exp_boost": "Exp Boost",
   "attribute.name.generic_crit_boost": "Crit Chance",
+  "attribute.name.generic_damage_boost": "Damage Bonus",
+  "attribute.name.generic_range_boost": "Range Bonus",
 
   "item.arbiters_seal.axes.axe": "Axe",
   "item.arbiters_seal.axes.axe.tooltip": "A simple woodcutter's axe.",

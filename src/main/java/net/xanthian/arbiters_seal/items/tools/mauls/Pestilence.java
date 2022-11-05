@@ -19,7 +19,6 @@ public class Pestilence extends ModMaulItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         ItemStack mainHand = attacker.getEquippedStack(EquipmentSlot.MAINHAND);
-        target.takeKnockback(0.4000000059604645, 0.1, 0.1);
 
         if (mainHand.getItem() == this) {
             Random random = new Random();

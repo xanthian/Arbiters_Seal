@@ -15,8 +15,8 @@ public class RubyEarring extends ModTrinketItem {
             if (player.getStatusEffect(StatusEffects.SLOWNESS) != null) {
                 player.removeStatusEffect(StatusEffects.SLOWNESS);
             }
-            if (player.getStatusEffect(ModStatusEffects.MUTE) != null) {
-                player.removeStatusEffect(ModStatusEffects.MUTE);
+            if (player.getStatusEffect(ModStatusEffects.SILENCE) != null) {
+                player.removeStatusEffect(ModStatusEffects.SILENCE);
             }
             if (player.getStatusEffect(ModStatusEffects.SLEEP) != null) {
                 player.removeStatusEffect(ModStatusEffects.SLEEP);

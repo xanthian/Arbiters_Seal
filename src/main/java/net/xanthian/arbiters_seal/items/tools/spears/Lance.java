@@ -7,4 +7,9 @@ public class Lance extends ModSpearItem {
     public Lance(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed);
     }
+
+    @Override
+    public float getCrit() {
+        return 0.03F;
+    }
 }

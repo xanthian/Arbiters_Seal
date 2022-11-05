@@ -33,7 +33,7 @@ public class Helmets {
             new ModHelmetItem(ArmorMaterials.NETHERITE));
 
     public static final Item MITER = registerItem("helmets/miter",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+            new Miter(ArmorMaterials.NETHERITE));
 
     public static final Item WHITE_HAT = registerItem("helmets/white_hat",
             new ModHelmetItem(ArmorMaterials.NETHERITE));

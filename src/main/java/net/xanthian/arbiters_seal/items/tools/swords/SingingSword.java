@@ -16,14 +16,12 @@ public class SingingSword extends ModSwordItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (entity instanceof PlayerEntity player) {
-            ItemStack mainHand = player.getEquippedStack(EquipmentSlot.MAINHAND);
-            if ((mainHand.getItem() == this)) {
-                if (player.getStatusEffect(ModStatusEffects.SLEEP) != null) {
-                    player.removeStatusEffect(ModStatusEffects.SLEEP);
+        if (!world.isClient && (entity instanceof PlayerEntity player)) {
+            if (player.getEquippedStack(EquipmentSlot.MAINHAND).isOf(this)) {
+                    if (player.getStatusEffect(ModStatusEffects.SLEEP) != null) {
+                        player.removeStatusEffect(ModStatusEffects.SLEEP);
                 }
             }
         }
-        super.inventoryTick(stack, world, entity, slot, selected);
     }
 }

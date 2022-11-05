@@ -9,7 +9,13 @@ public class Reaper extends ModScytheItem {
     public Reaper(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed);
     }
-        @Override
+
+    @Override
+    public float getCrit() {
+        return 0.07F;
+    }
+
+    @Override
         public Rarity getRarity(ItemStack stack) {
             return Rarity.RARE;
         }
