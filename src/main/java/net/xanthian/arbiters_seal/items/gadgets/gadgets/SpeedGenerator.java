@@ -6,6 +6,9 @@ import net.xanthian.arbiters_seal.items.gadgets.ModGadgetItem;
 
 public class SpeedGenerator extends ModGadgetItem {
 
+    // todo
+    // AOE Haste
+
     @Override
     public Rarity getRarity(ItemStack stack) {
         return Rarity.UNCOMMON;

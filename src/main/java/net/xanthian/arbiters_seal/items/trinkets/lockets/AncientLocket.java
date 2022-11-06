@@ -21,7 +21,7 @@ public class AncientLocket extends ModTrinketItem {
         var modifiers =
                 super.getModifiers(stack, slot, entity, uuid);
         modifiers.put(ReachEntityAttributes.REACH,
-                new EntityAttributeModifier(REACH_MODIFIER, "Attack Damage", 2,
+                new EntityAttributeModifier(REACH_MODIFIER, "Reach Modifier", 2,
                         EntityAttributeModifier.Operation.ADDITION));
         return modifiers;
     }

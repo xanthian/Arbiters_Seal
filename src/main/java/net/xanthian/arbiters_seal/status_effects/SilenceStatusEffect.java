@@ -8,7 +8,7 @@ import net.minecraft.entity.mob.MobEntity;
 
 public class SilenceStatusEffect extends StatusEffect {
     public SilenceStatusEffect() {
-        super(StatusEffectCategory.NEUTRAL, 16266787);
+        super(StatusEffectCategory.HARMFUL, 16266787);
     }
 
     @Override

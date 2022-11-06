@@ -21,7 +21,7 @@ public class MirrorLocket extends ModTrinketItem {
         var modifiers =
                 super.getModifiers(stack, slot, entity, uuid);
         modifiers.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
-                new EntityAttributeModifier(KNOCKBACK_MODIFIER, "Knockback Resistance", 0.1,
+                new EntityAttributeModifier(KNOCKBACK_MODIFIER, "Knockback Resistance", 0.2,
                         EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         return modifiers;
     }

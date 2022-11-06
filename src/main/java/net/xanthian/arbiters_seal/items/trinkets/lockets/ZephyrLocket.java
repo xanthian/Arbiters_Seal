@@ -21,7 +21,7 @@ public class ZephyrLocket extends ModTrinketItem {
         var modifiers =
                 super.getModifiers(stack, slot, entity, uuid);
         modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED,
-                new EntityAttributeModifier(MOVE_SPEED_MODIFIER, "Movement Speed", 0.05,
+                new EntityAttributeModifier(MOVE_SPEED_MODIFIER, "Movement Speed", 0.075,
                         EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         return modifiers;
     }

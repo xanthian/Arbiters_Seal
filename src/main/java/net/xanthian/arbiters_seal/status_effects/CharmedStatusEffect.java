@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvents;
 
 public class CharmedStatusEffect extends StatusEffect {
     public CharmedStatusEffect() {
-        super(StatusEffectCategory.NEUTRAL, 16711851);
+        super(StatusEffectCategory.HARMFUL, 16711851);
     }
 
     @Override

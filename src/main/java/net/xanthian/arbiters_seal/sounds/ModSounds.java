@@ -8,6 +8,7 @@ import net.xanthian.arbiters_seal.Init;
 public class ModSounds {
 
     public static SoundEvent REBIRTH = registerSoundEvent("rebirth");
+    public static SoundEvent SPRINGGER = registerSoundEvent("springger");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Init.MOD_ID, name);

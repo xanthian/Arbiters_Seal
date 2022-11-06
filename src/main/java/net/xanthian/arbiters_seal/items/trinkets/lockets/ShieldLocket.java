@@ -21,7 +21,7 @@ public class ShieldLocket extends ModTrinketItem {
         var modifiers =
                 super.getModifiers(stack, slot, entity, uuid);
         modifiers.put(EntityAttributes.GENERIC_ARMOR,
-                new EntityAttributeModifier(DEFENCE_MODIFIER, "Armor", 1,
+                new EntityAttributeModifier(DEFENCE_MODIFIER, "Armor", 2,
                         EntityAttributeModifier.Operation.ADDITION));
         return modifiers;
     }

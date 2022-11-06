@@ -9,7 +9,7 @@ import net.minecraft.entity.mob.MobEntity;
 
 public class SleepStatusEffect extends StatusEffect {
     public SleepStatusEffect() {
-        super(StatusEffectCategory.NEUTRAL, 8100544);
+        super(StatusEffectCategory.HARMFUL, 8100544);
     }
         @Override
         public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {

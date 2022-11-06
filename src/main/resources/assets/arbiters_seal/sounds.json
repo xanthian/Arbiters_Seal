@@ -4,5 +4,11 @@
     "sounds": [
       "arbiters_seal:rebirth"
     ]
+  },
+  "springger": {
+    "subtitle": "arbiters_seal:springger",
+    "sounds": [
+      "arbiters_seal:springger"
+    ]
   }
 }

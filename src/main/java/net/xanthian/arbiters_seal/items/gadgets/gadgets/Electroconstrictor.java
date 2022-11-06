@@ -1,5 +1,6 @@
 package net.xanthian.arbiters_seal.items.gadgets.gadgets;
 
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -17,18 +18,21 @@ public class Electroconstrictor extends ModGadgetItem {
 
 
     @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (!user.getWorld().isClient && hand == Hand.MAIN_HAND) {
-            if (!user.getAbilities().creativeMode) {
-                user.getStackInHand(hand).decrement(1);
-            }
+    public ActionResult useOnEntity(ItemStack stack, PlayerEntity player, LivingEntity entity, Hand hand) {
+        if (!player.getWorld().isClient && player.getEquippedStack(EquipmentSlot.MAINHAND).isOf(this)) {
+            entity.damage(DamageSource.MAGIC,entity.getHealth()/4);
             Random random = new Random();
             if (random.nextFloat() <= 0.5f) {
-                entity.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ROOT, 1200, 0, false, true, true), user);
+                entity.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ROOT, 1200, 0, false, true, true), player);
             }
-            entity.damage(DamageSource.MAGIC,entity.getMaxHealth()/4);
+            if (!player.getAbilities().creativeMode) {
+                stack.setDamage(stack.getDamage() + 1);
+                if (stack.getDamage() > stack.getMaxDamage()) {
+                    stack.setCount(0);
+                }
+            }
         }
-        user.playSound(SoundEvents.BLOCK_BLASTFURNACE_FIRE_CRACKLE, 2.7f, 0.1f + (user.getRandom().nextFloat() * 0.2f));
-        return super.useOnEntity(stack, user, entity, hand);
+        player.playSound(SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, 0.3f, 0.1f + (player.getRandom().nextFloat() * 0.2f));
+        return super.useOnEntity(stack, player, entity, hand);
     }
 }

@@ -21,7 +21,7 @@ public class BattleLocket extends ModTrinketItem {
         var modifiers =
                 super.getModifiers(stack, slot, entity, uuid);
         modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE,
-                new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER, "Attack Damage", 1,
+                new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER, "Attack Damage", 1.5,
                         EntityAttributeModifier.Operation.ADDITION));
         return modifiers;
     }

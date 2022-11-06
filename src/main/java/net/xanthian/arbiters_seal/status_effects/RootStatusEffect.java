@@ -8,7 +8,7 @@ import net.xanthian.arbiters_seal.util.ModAttributes;
 
 public class RootStatusEffect extends StatusEffect {
     public RootStatusEffect() {
-        super(StatusEffectCategory.NEUTRAL, 9126145);
+        super(StatusEffectCategory.HARMFUL, 9126145);
         this.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "b97d749e-d108-43bd-b628-4d388efef68f",
                         -500.0, EntityAttributeModifier.Operation.ADDITION)
 

@@ -14,8 +14,9 @@ import java.util.List;
 
 public class ModGadgetItem extends Item {
     public ModGadgetItem() {
-        super(new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS));
+        super(new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS).maxDamage(5));
     }
+
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         String key = (stack.getTranslationKey() + ".tooltip");
