@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/stem_fruit",
+  "textures": {
+    "stem": "arbiters_seal:block/materials/jammy_fruit_stem",
+    "upperstem": "arbiters_seal:block/materials/attached_jammy_fruit_stem"
+  }
+}

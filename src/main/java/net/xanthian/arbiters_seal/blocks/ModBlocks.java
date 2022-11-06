@@ -5,11 +5,13 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
 import net.xanthian.arbiters_seal.entity.item.ModSignTypes;
+import net.xanthian.arbiters_seal.items.NormalItems;
 import net.xanthian.arbiters_seal.world.features.tree.EbonySaplingGenerator;
 
 public class ModBlocks {
@@ -68,9 +70,21 @@ public class ModBlocks {
     public static final Block AEGISITE_BLOCK = registerBlock("materials/aegisite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
     public static final Block ALOE_VERA = registerBlock("materials/aloe_vera",
-            new DeadBushBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
+            new AloeVeraBlock());
+    public static final Block ANGEL_TEARS = registerBlockWithoutBlockItem("materials/angel_tears",
+            new AngelTearsBlock());
     public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block JAMMY_FRUIT = registerBlockWithoutBlockItem("materials/jammy_fruit",
+            new JammyFruitBlock());
+    public static final Block JAMMY_FRUIT_STEM = registerBlockWithoutBlockItem("materials/jammy_fruit_stem",
+            new StemBlock((GourdBlock)JAMMY_FRUIT, () -> {
+                return NormalItems.JAMMY_FRUIT_SEEDS;
+            }, AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.STEM)));
+    public static final Block ATTACHED_JAMMY_FRUIT_STEM = registerBlockWithoutBlockItem("materials/attached_jammy_fruit_stem",
+            new AttachedStemBlock((GourdBlock)JAMMY_FRUIT, () -> {
+                return NormalItems.JAMMY_FRUIT_SEEDS;
+            }, AbstractBlock.Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD)));
     public static final Block METEOR_BLOCK = registerBlock("materials/meteor_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE)));
     public static final Block STEEL_BLOCK = registerBlock("materials/steel_block",
@@ -81,7 +95,7 @@ public class ModBlocks {
     public static final Block DENDRITE_BLOCK = registerBlock("materials/dendrite_block",
             new AmethystBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
     public static final Block BUDDING_DENDRITE = registerBlock("materials/budding_dendrite",
-            new BuddingAmethystBlock(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST)));
+            new BuddingDendriteBlock());
     public static final Block SMALL_DENDRITE_BUD = registerBlock("materials/small_dendrite_bud",
             new AmethystClusterBlock(3,4, FabricBlockSettings.copyOf(Blocks.SMALL_AMETHYST_BUD)));
     public static final Block MEDIUM_DENDRITE_BUD = registerBlock("materials/medium_dendrite_bud",

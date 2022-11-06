@@ -11,7 +11,7 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.entity.ModEntities;
-import net.xanthian.arbiters_seal.items.Items;
+import net.xanthian.arbiters_seal.items.NormalItems;
 
 import java.util.function.Supplier;
 
@@ -69,7 +69,7 @@ public class ModBoatEntity extends BoatEntity {
     }
 
     public enum Type {
-        EBONY("ebony", () -> Items.EBONY_BOAT.get(), () -> Items.EBONY_CHEST_BOAT.get());
+        EBONY("ebony", () -> NormalItems.EBONY_BOAT.get(), () -> NormalItems.EBONY_CHEST_BOAT.get());
 
         private final String name;
         private final Supplier<Item> item;

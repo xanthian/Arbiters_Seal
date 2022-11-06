@@ -10,6 +10,7 @@ import net.xanthian.arbiters_seal.entity.ModEntities;
 import net.xanthian.arbiters_seal.items.gadgets.Gadgets;
 import net.xanthian.arbiters_seal.items.potions.PotionItems;
 import net.xanthian.arbiters_seal.particle.ModParticles;
+import net.xanthian.arbiters_seal.sounds.ModSounds;
 import net.xanthian.arbiters_seal.util.*;
 import net.xanthian.arbiters_seal.items.*;
 import net.xanthian.arbiters_seal.items.armor.Chestpieces;
@@ -46,11 +47,13 @@ public class Init implements ModInitializer {
 
         // Generic Item registration
         ModBlocks.registerModBlocks();
-        Items.registerModItems();
+        NormalItems.registerModItems();
         RareItems.registerRareItems();
         Gadgets.registerGadgetItems();
         PotionItems.registerPotionItems();
         ModEntities.registerEntities();
+        ModSounds.registerModSounds();
+
 
         // Weapon Registration
         Axes.registerAxeItems();

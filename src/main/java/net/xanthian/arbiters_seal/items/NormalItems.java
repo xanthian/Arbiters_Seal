@@ -1,6 +1,7 @@
 package net.xanthian.arbiters_seal.items;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
 import net.minecraft.util.Identifier;
@@ -12,7 +13,7 @@ import net.xanthian.arbiters_seal.entity.item.ModChestBoatEntity;
 
 import java.util.function.Supplier;
 
-public class Items {
+public class NormalItems {
 
     //EBONY
     public static final Item EBONY_SIGN = registerItem("objects/ebony_sign",
@@ -49,6 +50,9 @@ public class Items {
 
     public static final Item RAW_COLD_IRON = registerItem("materials/raw_cold_iron",
             new ModItem());
+
+    public static final Item JAMMY_FRUIT_SEEDS = registerItem("materials/jammy_fruit_seeds",
+            (Item)(new AliasedBlockItem(ModBlocks.JAMMY_FRUIT_STEM, (new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);

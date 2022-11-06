@@ -13,9 +13,12 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Pair;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.items.trinkets.Trinkets;
+import net.xanthian.arbiters_seal.sounds.ModSounds;
 import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 import net.xanthian.arbiters_seal.util.ModAttributes;
 import org.jetbrains.annotations.Nullable;
@@ -79,32 +82,6 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    // Phoenix band totem
-    @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
-    private void usePhoenixBand(DamageSource source, CallbackInfoReturnable<Boolean> ci) {
-        LivingEntity livingEntity = (LivingEntity) (Object) this;
-        if (source.isOutOfWorld()) {
-            ci.setReturnValue(false);
-        } else {
-            if (TrinketsApi.getTrinketComponent(livingEntity).isPresent()) {
-                List<Pair<SlotReference, ItemStack>> list = TrinketsApi.getTrinketComponent(livingEntity).get().getEquipped(Trinkets.PHOENIX_BAND);
-                if (list.size() > 0) {
-                    ItemStack itemStack = list.get(0).getRight();
-                    if (itemStack != null) {
-                        itemStack.decrement(1);
-                        livingEntity.setHealth(1.0F);
-                        livingEntity.clearStatusEffects();
-                        livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 900, 1));
-                        livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1));
-                        livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 800, 0));
-                        //livingEntity.world.sendEntityStatus(livingEntity, (byte) 35);
-                        ci.setReturnValue(true);
-                    }
-                }
-            }
-        }
-    }
-
     // Rebirth status totem
     @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
     private void useRebirthStatusEffect(DamageSource source, CallbackInfoReturnable<Boolean> ci) {
@@ -114,13 +91,24 @@ public abstract class LivingEntityMixin extends Entity {
         } else {
             if (livingEntity.getStatusEffect(ModStatusEffects.REBIRTH) != null) {
                 livingEntity.removeStatusEffect(ModStatusEffects.REBIRTH);
-                livingEntity.setHealth(1.0F);
+                livingEntity.setHealth(10.0F);
                 livingEntity.clearStatusEffects();
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 900, 1));
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1));
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 800, 0));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 400, 1));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 220, 0));
+                livingEntity.setOnFireFor(10);
+                livingEntity.world.playSound(null, livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), ModSounds.REBIRTH, SoundCategory.NEUTRAL, 2.0F, 1.0F);
+                livingEntity.world.playSound(null, livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), SoundEvents.ITEM_TOTEM_USE, SoundCategory.NEUTRAL, 0.3F, 1.2F);
                 //livingEntity.world.sendEntityStatus(livingEntity, (byte) 35);
                 ci.setReturnValue(true);
+                if (TrinketsApi.getTrinketComponent(livingEntity).isPresent()) {
+                    List<Pair<SlotReference, ItemStack>> list = TrinketsApi.getTrinketComponent(livingEntity).get().getEquipped(Trinkets.PHOENIX_BAND);
+                    if (list.size() > 0) {
+                        ItemStack itemStack = list.get(0).getRight();
+                        if (itemStack != null) {
+                            itemStack.decrement(1);
+                        }
+                    }
+                }
             }
         }
     }

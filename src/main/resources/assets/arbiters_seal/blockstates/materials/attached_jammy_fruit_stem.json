@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "arbiters_seal:block/materials/attached_jammy_fruit_stem",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "arbiters_seal:block/materials/attached_jammy_fruit_stem",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "arbiters_seal:block/materials/attached_jammy_fruit_stem",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "arbiters_seal:block/materials/attached_jammy_fruit_stem"
+    }
+  }
+}

@@ -1,15 +1,13 @@
 package net.xanthian.arbiters_seal.items;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ChorusPlantBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.blocks.ModBlocks;
 
 public class RareItems {
 
@@ -26,8 +24,8 @@ public class RareItems {
     public static final Item AMMONIAC_GUM = registerItem("materials/ammoniac_gum",
             new ModRareItem());
 
-    public static final Block ANGEL_TEARS = registerBlock("materials/angel_tears",
-            new ChorusPlantBlock(FabricBlockSettings.copyOf(Blocks.CHORUS_PLANT).luminance(7)));
+    public static final Item ANGEL_TEARS = registerItem("materials/angel_tears",
+            new ModBlockItem(ModBlocks.ANGEL_TEARS));
 
     public static final Item CATALYST = registerItem("materials/catalyst",
             new ModRareItem());
@@ -69,7 +67,7 @@ public class RareItems {
             new ModRareItem());
 
     public static final Item JAMMY_FRUIT = registerItem("materials/jammy_fruit",
-            new ModRareItem());
+            new ModBlockItem(ModBlocks.JAMMY_FRUIT));
 
     public static final Item METEORITE = registerItem("materials/meteorite",
             new ModRareItem());

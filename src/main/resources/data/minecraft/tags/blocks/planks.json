@@ -1,4 +1,5 @@
-{  "replace": false,
+{
+  "replace": false,
   "values": [
     "arbiters_seal:materials/ebony_planks"
   ]

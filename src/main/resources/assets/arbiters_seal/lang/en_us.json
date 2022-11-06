@@ -41,6 +41,11 @@
   "item.arbiters_seal.axes.cry_havoc": "Cry Havoc",
   "item.arbiters_seal.axes.cry_havoc.tooltip": "As light as a feather, as\npowerful as a titan's maul.",
 
+  "item.arbiters_seal.boats.ebony_boat": "Ebony Boat",
+  "item.arbiters_seal.boats.ebony_chest_boat": "Ebony Chest Boat",
+  "entity.arbiters_seal.ebony_chest_boat": "Ebony Chest Boat",
+
+
   "item.arbiters_seal.bows.shortbow": "Shortbow",
   "item.arbiters_seal.bows.shortbow.tooltip": "A horsemans bow.",
   "item.arbiters_seal.bows.longbow": "Longbow",
@@ -439,8 +444,15 @@
   "block.arbiters_seal.materials.small_dendrite_bud": "Small Dendrite Bud",
   "block.arbiters_seal.materials.medium_dendrite_bud": "Medium Dendrite Bud",
   "block.arbiters_seal.materials.large_dendrite_bud": "Large Dendrite Bud",
-  "block.arbiters_seal.materials.angel_tears": "Angel Tears",
   "block.arbiters_seal.materials.aloe_vera": "Aloe Vera",
+  "block.arbiters_seal.materials.meteor_block": "Meteor Block",
+
+  "block.arbiters_seal.materials.angel_tears": "Angel Tears",
+  "block.arbiters_seal.materials.angel_tears.tooltip": "A boon to soldiers everywhere,\nthis flower blooms on battlefields and\nglows with a protective, healing light.",
+  "block.arbiters_seal.materials.attached_jammy_fruit_stem": "Attached Jammy Fruit Stem",
+  "block.arbiters_seal.materials.jammy_fruit_stem": "Jammy Fruit Stem",
+  "block.arbiters_seal.materials.jammy_fruit": "Jammy Fruit",
+  "block.arbiters_seal.materials.jammy_fruit.tooltip": "A fruit with flesh like jelly.\nMessy, yet deliciously sweet.",
 
   "item.arbiters_seal.materials.bronze_ingot": "Bronze Ingot",
   "item.arbiters_seal.materials.raw_silver": "Raw Silver",
@@ -451,6 +463,8 @@
   "item.arbiters_seal.materials.raw_cold_iron": "Raw Cold Iron",
   "item.arbiters_seal.materials.cold_iron_ingot": "Cold Iron Ingot",
   "item.arbiters_seal.materials.dendrite_crystal": "Dendrite Crystal",
+  "item.arbiters_seal.materials.jammy_fruit_seeds": "Jammy Fruit Seeds",
+
 
   "item.arbiters_seal.materials.adamant_ingot": "Adamant Ingot",
   "item.arbiters_seal.materials.adamant_ingot.tooltip": "A priceless legendary metal.\nAnything crafted of this metal will\nbe of truly remarkable quality.",
@@ -460,13 +474,10 @@
   "item.arbiters_seal.materials.aloe_leaf.tooltip": "A fleshy, juice-filled leaf with\nmany useful properties.",
   "item.arbiters_seal.materials.ammoniac_gum": "Ammoniac Gum",
   "item.arbiters_seal.materials.ammoniac_gum.tooltip": "An acrid and foul-smelling plant\nresin that is used to make bitter\nmedicine.",
-  "item.arbiters_seal.materials.angel_tears": "Angel Tears",
-  "item.arbiters_seal.materials.angel_tears.tooltip": "A boon to soldiers everywhere,\nthis flower blooms on battlefields and\nglows with a protective, healing light.",
   "item.arbiters_seal.materials.catalyst": "Catalyst",
   "item.arbiters_seal.materials.catalyst.tooltip": "A component that spurs on chemical\nreactions.",
   "item.arbiters_seal.materials.cobbleweed_pod": "Cobbleweed Pod",
   "item.arbiters_seal.materials.cobbleweed_pod.tooltip": "A rock-like seed pod that bleeds\na milky latex.",
-
   "item.arbiters_seal.materials.cold_iron_ingot.tooltip": "Rare and difficult to work,\nhis metal has many mystical properties.",
   "item.arbiters_seal.materials.coronal_plume": "Coronal Plume",
   "item.arbiters_seal.materials.coronal_plume.tooltip": "A purple, crown-emblazoned feather\nthat represents the right to rule.",
@@ -488,8 +499,6 @@
   "item.arbiters_seal.materials.gold_thread.tooltip": "A fine chain of gold for making\nmagic amulets.",
   "item.arbiters_seal.materials.godwood": "Godwood",
   "item.arbiters_seal.materials.godwood.tooltip": "Wood from the legendary godtree,\nused for making weapons that focus the\nwielder's strength to deific levels.",
-  "item.arbiters_seal.materials.jammy_fruit": "Jammy Fruit",
-  "item.arbiters_seal.materials.jammy_fruit.tooltip": "A fruit with flesh like jelly.\nMessy, yet deliciously sweet.",
   "item.arbiters_seal.materials.meteorite": "Meteorite",
   "item.arbiters_seal.materials.meteorite.tooltip": "A shooting star fallen to earth,\nthis cratered metal has otherworldly\nproperties.",
   "item.arbiters_seal.materials.mycoleather": "Mycoleather",
