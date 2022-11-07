@@ -15,7 +15,7 @@ public class Helmets {
             new ModHelmetItem(ModArmorMaterial.BRONZE));
 
     public static final Item PHYRGIAN_CAP = registerItem("helmets/phrygian_cap",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+            new ModHelmetItem(ArmorMaterials.LEATHER));
 
     public static final Item SILVER_CIRCLET = registerItem("helmets/silver_circlet",
             new ModHelmetItem(ModArmorMaterial.SILVER));
@@ -49,10 +49,10 @@ public class Helmets {
 
     // LIGHT
     public static final Item FUR_CAP = registerItem("helmets/fur_cap",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+            new ModHelmetItem(ArmorMaterials.LEATHER));
 
     public static final Item FEATHERED_CAP = registerItem("helmets/feathered_cap",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+            new ModHelmetItem(ArmorMaterials.LEATHER));
 
     //public static final Item LEATHER_HELMET = registerItem("helmets/leather_helmet",
             //new ModHelmetItem(ArmorMaterials.NETHERITE));

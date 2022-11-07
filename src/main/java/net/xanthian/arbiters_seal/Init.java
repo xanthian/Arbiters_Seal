@@ -7,6 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.entity.ModEntities;
+import net.xanthian.arbiters_seal.entity.villagers.ModVillagerTrades;
+import net.xanthian.arbiters_seal.entity.villagers.ModVillagers;
 import net.xanthian.arbiters_seal.items.gadgets.Gadgets;
 import net.xanthian.arbiters_seal.items.potions.PotionItems;
 import net.xanthian.arbiters_seal.particle.ModParticles;
@@ -51,8 +53,6 @@ public class Init implements ModInitializer {
         RareItems.registerRareItems();
         Gadgets.registerGadgetItems();
         PotionItems.registerPotionItems();
-        ModEntities.registerEntities();
-        ModSounds.registerModSounds();
 
 
         // Weapon Registration
@@ -79,13 +79,18 @@ public class Init implements ModInitializer {
         Shields.registerShieldItems();
 
         // Other stuff
+        ModEntities.registerEntities();
+        ModSounds.registerModSounds();
+        ModVillagerTrades.registerTrades();
+        ModVillagers.registerVillagers();
+        ModVillagers.registerTrades();
         ModAttributes.register();
-        ModWorldGen.generateModWorldGen();
         ModStatusEffects.registerStatusEffects();
         ModFlammableBlocks.registerFlammableBlocks();
         ModStrippableBlocks.registerStrippables();
         ModFuelItems.registerFuelItems();
         ModPOITypes.init();
         ModParticles.registerParticles();
+        ModWorldGen.generateModWorldGen();
     }
 }

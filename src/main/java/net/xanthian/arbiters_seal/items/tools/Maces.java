@@ -11,31 +11,31 @@ import net.xanthian.arbiters_seal.material.ModToolMaterial;
 public class Maces {
 
     public static final Item MACE = registerItem("maces/mace",
-            new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F));
+            new ModMaceItem(ToolMaterials.IRON, 3, -2.5F));
 
     public static final Item THUMPER = registerItem("maces/thumper",
-            new ModMaceItem(ToolMaterials.NETHERITE, 3, -2.5F));
+            new ModMaceItem(ToolMaterials.IRON, 3, -2.5F));
 
     public static final Item SILVER_MACE = registerItem("maces/silver_mace",
             new SilverMace(ModToolMaterial.SILVER, 3, -2.5F));
 
     public static final Item BATTLEMACE = registerItem("maces/battlemace",
-            new BattleMace(ToolMaterials.NETHERITE, 3, -2.5F));
+            new BattleMace(ToolMaterials.IRON, 3, -2.5F));
 
     public static final Item ENERGY_MACE = registerItem("maces/energy_mace",
-            new EnergyMace(ToolMaterials.NETHERITE, 3, -2.5F));
+            new EnergyMace(ToolMaterials.IRON, 3, -2.5F));
 
     public static final Item TEORITE_MACE = registerItem("maces/teorite_mace",
             new TeoriteMace(ModToolMaterial.TEORITE, 3, -2.5F));
 
     public static final Item HOLY_MACE = registerItem("maces/holy_mace",
-            new HolyMace(ToolMaterials.NETHERITE, 3, -2.5F));
+            new HolyMace(ToolMaterials.GOLD, 3, -2.5F));
 
     public static final Item GOEDENDAG = registerItem("maces/goedendag",
-            new Goedendag(ToolMaterials.NETHERITE, 3, -2.5F));
+            new Goedendag(ToolMaterials.DIAMOND, 3, -2.5F));
 
     public static final Item PERNACH = registerItem("maces/pernach",
-            new Pernach(ToolMaterials.NETHERITE, 3, -2.5F));
+            new Pernach(ToolMaterials.DIAMOND, 3, -2.5F));
 
     public static final Item SKULLCRUSHER = registerItem("maces/skullcrusher",
             new SkullCrusher(ToolMaterials.NETHERITE, 3, -2.5F));

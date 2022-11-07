@@ -54,6 +54,9 @@ public class NormalItems {
     public static final Item JAMMY_FRUIT_SEEDS = registerItem("materials/jammy_fruit_seeds",
             (Item)(new AliasedBlockItem(ModBlocks.JAMMY_FRUIT_STEM, (new FabricItemSettings().group(Init.ARBITERS_SEAL_ITEMS)))));
 
+    public static final Item BULLETS = registerItem("objects/bullets",
+            new ModItem());
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Init.MOD_ID, name), item);
     }

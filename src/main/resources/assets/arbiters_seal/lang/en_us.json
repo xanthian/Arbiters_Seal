@@ -789,5 +789,8 @@
   "item.arbiters_seal.trinkets.vigil_band": "Vigil Band",
   "item.arbiters_seal.trinkets.vigil_band.tooltip": "A garnet ring, to keep one alert.",
   "item.arbiters_seal.trinkets.zephyr_locket": "Zephyr Locket",
-  "item.arbiters_seal.trinkets.zephyr_locket.tooltip": "A pendant that grants the\nwearer the swiftness of the\nwind."
+  "item.arbiters_seal.trinkets.zephyr_locket.tooltip": "A pendant that grants the\nwearer the swiftness of the\nwind.",
+
+  "entity.minecraft.villager.gadgeteer": "Gadgeteer",
+  "entity.minecraft.villager.gunsmith": "Gunsmith"
 }
