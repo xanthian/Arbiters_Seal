@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:golden_sword"
+      "item": "minecraft:netherite_sword"
     },
     "1": {
       "item": "arbiters_seal:materials/meteorite"
@@ -12,7 +12,8 @@
     }
   },
   "pattern": [
-    "1#2"
+    " 1 ",
+    "2#2"
   ],
   "result": {
     "item": "arbiters_seal:swords/eternias"

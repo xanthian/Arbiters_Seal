@@ -15,7 +15,8 @@
     }
   },
   "pattern": [
-    "DRQ",
+    " D ",
+    "QRQ",
     " W "
   ],
   "result": {

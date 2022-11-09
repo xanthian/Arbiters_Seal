@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:leather"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    " F ",
+    "XXX",
+    "X X"
+  ],
+  "result": {
+    "item": "arbiters_seal:helmets/feathered_cap"
+  }
+}

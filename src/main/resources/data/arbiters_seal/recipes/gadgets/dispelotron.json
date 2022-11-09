@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/snakebite_oil"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/jammy_fruit"
+    }
+  },
+  "pattern": [
+    "XYX"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/dispelotron"
+  }
+}

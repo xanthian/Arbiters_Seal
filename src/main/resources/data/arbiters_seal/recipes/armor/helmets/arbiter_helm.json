@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "minecraft:diamond_helmet"
+      "item": "minecraft:netherite_helmet"
     },
     "Y": {
       "item": "arbiters_seal:materials/demon_leather"

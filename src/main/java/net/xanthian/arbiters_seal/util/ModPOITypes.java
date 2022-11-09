@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ModPOITypes {
-    public static void init() {
+    public static void registerPOI() {
         Map<BlockState, RegistryEntry<PointOfInterestType>> poiStatesToType = PointOfInterestTypesAccessor
                 .getPointOfInterestStatesToType();
 

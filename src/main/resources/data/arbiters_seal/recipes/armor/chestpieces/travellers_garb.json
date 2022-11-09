@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "minecraft:light_grey_wool"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "GWG",
+    "GSG",
+    "G G"
+  ],
+  "result": {
+    "item": "arbiters_seal:chestpieces/traveller_garb"
+  }
+}

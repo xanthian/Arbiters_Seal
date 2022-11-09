@@ -1,7 +1,7 @@
 package net.xanthian.arbiters_seal.world.gen;
 
 public class ModWorldGen {
-    public static void generateModWorldGen() {
+    public static void registerWorldGen() {
 
             ModTreeGeneration.generateTrees();
             ModOreGeneration.generateOres();

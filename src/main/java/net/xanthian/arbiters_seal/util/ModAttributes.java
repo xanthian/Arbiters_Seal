@@ -33,7 +33,7 @@ public class ModAttributes {
         ATTRIBUTES.put("generic.crit_boost", GENERIC_CRIT_BOOST);
     }
 
-    public static void register() {
+    public static void registerAttributes() {
         for (Map.Entry<String, EntityAttribute> pair : ATTRIBUTES.entrySet()) {
             Registry.register(Registry.ATTRIBUTE, Init.id(pair.getKey()), pair.getValue());
         }

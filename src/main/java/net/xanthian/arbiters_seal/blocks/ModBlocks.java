@@ -69,12 +69,16 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
     public static final Block AEGISITE_BLOCK = registerBlock("materials/aegisite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+    public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block STEEL_BLOCK = registerBlock("materials/steel_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block METEOR_BLOCK = registerBlock("materials/meteor_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE)));
     public static final Block ALOE_VERA = registerBlock("materials/aloe_vera",
             new AloeVeraBlock());
     public static final Block ANGEL_TEARS = registerBlockWithoutBlockItem("materials/angel_tears",
             new AngelTearsBlock());
-    public static final Block BRONZE_BLOCK = registerBlock("materials/bronze_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block JAMMY_FRUIT = registerBlockWithoutBlockItem("materials/jammy_fruit",
             new JammyFruitBlock());
     public static final Block JAMMY_FRUIT_STEM = registerBlockWithoutBlockItem("materials/jammy_fruit_stem",
@@ -85,10 +89,7 @@ public class ModBlocks {
             new AttachedStemBlock((GourdBlock)JAMMY_FRUIT, () -> {
                 return NormalItems.JAMMY_FRUIT_SEEDS;
             }, AbstractBlock.Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD)));
-    public static final Block METEOR_BLOCK = registerBlock("materials/meteor_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE)));
-    public static final Block STEEL_BLOCK = registerBlock("materials/steel_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
 
 
     // DENDRITE
@@ -104,6 +105,7 @@ public class ModBlocks {
             new AmethystClusterBlock(5, 3, FabricBlockSettings.copyOf(Blocks.LARGE_AMETHYST_BUD)));
     public static final Block DENDRITE_CLUSTER = registerBlock("materials/dendrite_cluster",
             new AmethystClusterBlock(7,3,FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)));
+
     // EBONY
     public static final Block EBONY_PLANKS = registerBlock("materials/ebony_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.DARK_OAK_PLANKS)));
@@ -173,6 +175,12 @@ public class ModBlocks {
 
     public static final Block EBONY_CRAFTING_TABLE = registerBlock("jobsites/ebony_crafting_table",
             new CraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+
+    public static final Block GADGET_STATION = registerBlock("jobsites/gadget_station",
+            new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE)));
+
+    public static final Block GUNSMITH_STATION = registerBlock("jobsites/gunsmith_station",
+            new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE)));
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);

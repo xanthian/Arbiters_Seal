@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    },
+    "Y": {
+      "item": "arbiters_seal:materials/ammoniac_gum"
+    }
+  },
+  "pattern": [
+    "X X",
+    "Y Y"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/speed_generator"
+  }
+}

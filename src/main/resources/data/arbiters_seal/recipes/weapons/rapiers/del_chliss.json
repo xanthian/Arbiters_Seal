@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "arbiters_seal:rapiers/rapier"
+      "item": "arbiters_seal:rapiers/teorite_rapier"
     },
     "1": {
       "item": "arbiters_seal:materials/adamant_ingot"
@@ -12,7 +12,8 @@
     }
   },
   "pattern": [
-    "1#2"
+    " 2",
+    "1#1"
   ],
   "result": {
     "item": "arbiters_seal:rapiers/del_chliss"

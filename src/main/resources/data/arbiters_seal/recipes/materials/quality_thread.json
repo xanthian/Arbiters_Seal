@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:string"
+    },
+    "G": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SGS",
+    "SSS"
+  ],
+  "result": {
+    "item": "arbiters_seal:materials/quality_thread"
+  }
+}

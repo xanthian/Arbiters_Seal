@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "arbiters_seal:materials/cold_iron_ingot"
+    },
+    "Z": {
+      "item": "arbiters_seal:materials/dragonblood_sap"
+    }
+  },
+  "pattern": [
+    "X Z"
+  ],
+  "result": {
+    "item": "arbiters_seal:gadgets/surpriser_plus"
+  }
+}
