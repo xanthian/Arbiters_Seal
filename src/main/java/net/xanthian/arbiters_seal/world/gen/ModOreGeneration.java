@@ -17,7 +17,7 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.NETHER_TEORITE_ORE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd().and(BiomeSelectors.excludeByKey(BiomeKeys.THE_END, BiomeKeys.SMALL_END_ISLANDS)),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.END_TEORITE_ORE_PLACED.getKey().get());
 
         // Silver
@@ -27,14 +27,14 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.NETHER_SILVER_ORE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd().and(BiomeSelectors.excludeByKey(BiomeKeys.THE_END, BiomeKeys.SMALL_END_ISLANDS)),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.END_SILVER_ORE_PLACED.getKey().get());
 
         // Cold Iron
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.FROZEN_PEAKS, BiomeKeys.FROZEN_RIVER, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.COLD_IRON_ORE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd().and(BiomeSelectors.excludeByKey(BiomeKeys.THE_END, BiomeKeys.SMALL_END_ISLANDS)),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.END_COLD_IRON_ORE_PLACED.getKey().get());
     }
 }

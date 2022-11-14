@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.xanthian.arbiters_seal.items.shields.ModShieldItem;
-import net.xanthian.arbiters_seal.items.shields.Shields;
 import net.xanthian.arbiters_seal.material.ModShieldTiers;
 
 import java.util.UUID;
@@ -51,7 +50,7 @@ public class CursedShield extends ModShieldItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack offHand = user.getEquippedStack(EquipmentSlot.OFFHAND);
-        if (offHand.getItem() == Shields.CURSED_SHIELD) {
+        if (offHand.getItem() == this) {
             TypedActionResult.success(UseAction.BLOCK);
         } else {
             TypedActionResult.success(UseAction.NONE);

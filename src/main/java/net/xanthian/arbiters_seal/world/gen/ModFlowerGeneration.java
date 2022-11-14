@@ -11,7 +11,7 @@ public class ModFlowerGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ALOE_VERA_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd().and(BiomeSelectors.excludeByKey(BiomeKeys.THE_END, BiomeKeys.SMALL_END_ISLANDS)),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ANGEL_TEARS_PLACED.getKey().get());
 
 

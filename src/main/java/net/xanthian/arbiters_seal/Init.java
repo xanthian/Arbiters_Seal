@@ -6,6 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
+import net.xanthian.arbiters_seal.entity.ModBlockEntities;
 import net.xanthian.arbiters_seal.entity.ModEntities;
 import net.xanthian.arbiters_seal.loot.ModChestLoot;
 import net.xanthian.arbiters_seal.loot.ModMobLoot;
@@ -82,6 +83,7 @@ public class Init implements ModInitializer {
 
         // Other stuff
         ModEntities.registerEntities();
+        ModBlockEntities.initialize();
         ModChestLoot.registerLootTables();
         ModMobLoot.modifyLootTables();
         ModSounds.registerModSounds();

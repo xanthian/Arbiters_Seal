@@ -29,7 +29,8 @@ public abstract class ArmorRendererMixin
     {
         if (armorItem instanceof ModChestItem || armorItem instanceof ModFeetItem || armorItem instanceof ModHelmetItem)
         {
-            String string2 = Init.MOD_ID + ":textures/models/armor/" + armorItem.toString() + "_layer_1.png";
+            //String string2 = Init.MOD_ID + ":textures/models/armor/" + armorItem.toString() + "_layer_1.png";
+            String string2 = Init.MOD_ID + ":textures/models/armor/" + armorItem.toString() + "_layer_" + (bl ? 2 : 1) + (string == null ? "" : "_" + string) + ".png";
             callbackIn.setReturnValue(ARMOR_TEXTURE_CACHE.computeIfAbsent(string2, Identifier::new));
         }
     }

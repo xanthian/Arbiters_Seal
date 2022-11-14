@@ -47,6 +47,7 @@
   "item.arbiters_seal.boats.ebony_boat": "Ebony Boat",
   "item.arbiters_seal.boats.ebony_chest_boat": "Ebony Chest Boat",
   "entity.arbiters_seal.ebony_chest_boat": "Ebony Chest Boat",
+  "container.arbiters_seal.ebony_chest" : "Ebony Chest",
 
   "item.arbiters_seal.bows.shortbow": "Shortbow",
   "item.arbiters_seal.bows.shortbow.tooltip": "A horsemans bow.",

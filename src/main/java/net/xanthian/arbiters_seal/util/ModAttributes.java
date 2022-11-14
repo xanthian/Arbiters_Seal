@@ -31,6 +31,8 @@ public class ModAttributes {
         ATTRIBUTES.put("generic.jump_boost", GENERIC_JUMP_BOOST);
         ATTRIBUTES.put("generic.exp_boost", GENERIC_EXP_BOOST);
         ATTRIBUTES.put("generic.crit_boost", GENERIC_CRIT_BOOST);
+        ATTRIBUTES.put("generic.range_boost", GENERIC_RANGE_BOOST);
+        ATTRIBUTES.put("generic.damage_boost", GENERIC_DAMAGE_BOOST);
     }
 
     public static void registerAttributes() {

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "G": {
-      "item": "minecraft:light_grey_wool"
+      "item": "minecraft:light_gray_wool"
     },
     "W": {
       "item": "minecraft:white_wool"

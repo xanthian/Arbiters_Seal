@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "minecraft:diamond_axe"
+      "item": "minecraft:netherite_axe"
     },
     "Y": {
       "item": "arbiters_seal:materials/adamant_ingot"

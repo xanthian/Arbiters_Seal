@@ -176,6 +176,9 @@ public class ModBlocks {
     public static final Block EBONY_CRAFTING_TABLE = registerBlock("jobsites/ebony_crafting_table",
             new CraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
 
+    public static final Block EBONY_CHEST = registerBlock("objects/ebony_chest",
+            new ModChestBlock());
+
     public static final Block GADGET_STATION = registerBlock("jobsites/gadget_station",
             new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE)));
 

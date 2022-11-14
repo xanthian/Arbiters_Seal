@@ -73,7 +73,7 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    // Mute Status effect
+    // Silence Status effect
     @Inject(at = @At("HEAD"), method = "canTarget(Lnet/minecraft/entity/LivingEntity;)Z", cancellable = true)
     private void pacifyMob(LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity thisEntity = ((LivingEntity) (Object) this);

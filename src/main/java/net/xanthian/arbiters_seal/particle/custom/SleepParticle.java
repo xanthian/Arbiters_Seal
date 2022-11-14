@@ -11,11 +11,11 @@ public class SleepParticle extends SpriteBillboardParticle {
                             SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(clientWorld, xCoord, yCoord, zcoord, xd, yd, zd);
 
-        this.velocityMultiplier = 0.6F;
+        this.velocityMultiplier = 1F;
         this.x = xd;
         this.y = yd;
         this.z = zd;
-        this.scale *= 0.75F;
+        this.scale *= 2.75F;
         this.maxAge = 20;
         this.setSpriteForAge(spriteSet);
 

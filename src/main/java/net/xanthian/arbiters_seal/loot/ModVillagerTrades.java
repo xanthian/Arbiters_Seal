@@ -9,6 +9,7 @@ import net.xanthian.arbiters_seal.items.NormalItems;
 import net.xanthian.arbiters_seal.items.RareItems;
 import net.xanthian.arbiters_seal.items.armor.Chestpieces;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
+import net.xanthian.arbiters_seal.items.shields.Shields;
 import net.xanthian.arbiters_seal.items.tools.*;
 
 public class ModVillagerTrades {
@@ -20,7 +21,7 @@ public class ModVillagerTrades {
                     factories -> {
                 factories.add((entity, random) -> (new TradeOffer(
                                     new ItemStack(Items.EMERALD, 7),
-                                    new ItemStack(Daggers.DIRK, 1), 12, 1, 0.2F)));
+                                    new ItemStack(Daggers.HIDDEN_KNIFE, 1), 12, 1, 0.2F)));
             });
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 1,
                     factories -> {
@@ -51,6 +52,12 @@ public class ModVillagerTrades {
                         factories.add((entity, random) -> (new TradeOffer(
                                 new ItemStack(Items.EMERALD, 7),
                                 new ItemStack(Scythes.PLOW, 1), 12, 1, 0.2F)));
+                    });
+            TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 2,
+                    factories -> {
+                        factories.add((entity, random) -> (new TradeOffer(
+                                new ItemStack(Items.EMERALD, 8),
+                                new ItemStack(Daggers.DIRK, 1), 12, 5, 0.2F)));
                     });
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3,
                     factories -> {
@@ -136,6 +143,12 @@ public class ModVillagerTrades {
                         factories.add((entity, random) -> (new TradeOffer(
                                 new ItemStack(NormalItems.SILVER_INGOT, 4),
                                 new ItemStack(Items.EMERALD, 1), 12, 10, 0.2F)));
+                    });
+            TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 3,
+                    factories -> {
+                        factories.add((entity, random) -> (new TradeOffer(
+                                new ItemStack(Items.EMERALD, 6),
+                                new ItemStack(Shields.BUCKLER, 1), 12, 10, 0.2F)));
                     });
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 4,
                     factories -> {

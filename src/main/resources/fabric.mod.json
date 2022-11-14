@@ -6,11 +6,10 @@
   "name": "Arbiter's Seal",
   "description": "Weapons, Tools, Blocks & Armor inspired by Fell Seal: Arbiters Mark",
   "authors": ["Xanthian"],
-  "contributors": ["VeganNatureQueen (awesome Aeoth model)"],
+  "contributors": ["VeganNatureQueen (awesome Aeoth model)", "Tamlighter (AMAZING textures)"],
   "contact": {
     "sources": "https://github.com/xanthian/Arbiters_Seal"
   },
-
   "license": "MIT",
   "icon": "assets/arbiters_seal/icon.png",
 
