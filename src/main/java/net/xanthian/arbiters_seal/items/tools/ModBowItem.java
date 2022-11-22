@@ -163,9 +163,9 @@ public class ModBowItem extends BowItem {
         Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(slot);
         builder.putAll(modifiers);
         if (slot == EquipmentSlot.MAINHAND) {
-            builder.put(ModAttributes.GENERIC_RANGE_BOOST, new EntityAttributeModifier(RANGE_MODIFIER, "crit increase", this.tier.getRangeBonus(),
+            builder.put(ModAttributes.GENERIC_RANGE_BOOST, new EntityAttributeModifier(RANGE_MODIFIER, "range increase", this.tier.getRangeBonus(),
                     EntityAttributeModifier.Operation.ADDITION));
-            builder.put(ModAttributes.GENERIC_DAMAGE_BOOST, new EntityAttributeModifier(DAMAGE_MODIFIER, "crit increase", this.tier.getDamageBonus(),
+            builder.put(ModAttributes.GENERIC_DAMAGE_BOOST, new EntityAttributeModifier(DAMAGE_MODIFIER, "dmg increase", this.tier.getDamageBonus(),
                     EntityAttributeModifier.Operation.ADDITION));
             builder.put(ModAttributes.GENERIC_CRIT_BOOST, new EntityAttributeModifier(CRIT_MODIFIER, "crit increase", this.getCrit(),
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL));

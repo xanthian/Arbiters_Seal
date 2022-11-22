@@ -6,6 +6,7 @@
   "mixins": [
     "BlockEntityTypeMixin",
     "CraftingScreenHandlerMixin",
+    "DamageTrackerMixin",
     "EnchantingTableBlockMixin",
     "LivingEntityMixin",
     "PointOfInterestTypesAccessor",
