@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityT
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.entity.item.ModChestEntity;
+import net.xanthian.arbiters_seal.entity.block.ModChestEntity;
 
 public class ModBlockEntities {
 

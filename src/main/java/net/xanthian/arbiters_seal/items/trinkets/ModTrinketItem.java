@@ -25,10 +25,10 @@ public class ModTrinketItem extends TrinketItem {
             String[] infoLines = info.split("\\r?\\n");
 
             for (String infoLine : infoLines) {
-                tooltip.add(Text.literal(infoLine).formatted(Formatting.ITALIC, Formatting.GRAY));
+                tooltip.add(Text.literal(infoLine).formatted(Formatting.ITALIC, Formatting.DARK_AQUA));
             }
         } else {
-            tooltip.add(Text.literal(I18n.translate(key).formatted(Formatting.ITALIC, Formatting.GRAY)));
+            tooltip.add(Text.literal(I18n.translate(key).formatted(Formatting.ITALIC, Formatting.DARK_AQUA)));
         }
         super.appendTooltip(stack, world, tooltip, context);
     }

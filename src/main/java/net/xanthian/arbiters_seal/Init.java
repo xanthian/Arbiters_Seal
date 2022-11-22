@@ -2,12 +2,18 @@ package net.xanthian.arbiters_seal;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.entity.ModBlockEntities;
-import net.xanthian.arbiters_seal.entity.ModEntities;
+
+import net.xanthian.arbiters_seal.entity.ModBoatEntities;
+import net.xanthian.arbiters_seal.entity.ModMobEntities;
+import net.xanthian.arbiters_seal.entity.mob.AeothEntity;
+import net.xanthian.arbiters_seal.entity.mob.VangalEntity;
+import net.xanthian.arbiters_seal.entity.mob.ZotzitEntity;
 import net.xanthian.arbiters_seal.loot.ModChestLoot;
 import net.xanthian.arbiters_seal.loot.ModMobLoot;
 import net.xanthian.arbiters_seal.loot.ModVillagerTrades;
@@ -28,6 +34,7 @@ import net.xanthian.arbiters_seal.items.trinkets.Trinkets;
 import net.xanthian.arbiters_seal.status_effects.ModStatusEffects;
 import net.xanthian.arbiters_seal.world.features.ModConfiguredFeatures;
 import net.xanthian.arbiters_seal.world.gen.ModWorldGen;
+import software.bernie.geckolib3.GeckoLib;
 
 public class Init implements ModInitializer {
 
@@ -82,7 +89,7 @@ public class Init implements ModInitializer {
         Shields.registerShieldItems();
 
         // Other stuff
-        ModEntities.registerEntities();
+        ModBoatEntities.registerBoatEntities();
         ModBlockEntities.initialize();
         ModChestLoot.registerLootTables();
         ModMobLoot.modifyLootTables();
@@ -97,6 +104,10 @@ public class Init implements ModInitializer {
         ModFuelItems.registerFuelItems();
         ModPOITypes.registerPOI();
         ModParticles.registerParticles();
+        GeckoLib.initialize();
+        FabricDefaultAttributeRegistry.register(ModMobEntities.ZOTZIT, ZotzitEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(ModMobEntities.AEOTH, AeothEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(ModMobEntities.VANGAL, VangalEntity.setAttributes());
         ModWorldGen.registerWorldGen();
     }
 }

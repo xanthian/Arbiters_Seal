@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.renderer;
+package net.xanthian.arbiters_seal.entity.item.renderer;
 
 import com.google.common.collect.Maps;
 import net.minecraft.client.render.OverlayTexture;

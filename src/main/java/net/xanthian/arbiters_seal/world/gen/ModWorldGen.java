@@ -7,5 +7,6 @@ public class ModWorldGen {
             ModOreGeneration.generateOres();
             ModGeodeGeneration.generateGeodes();
             ModFlowerGeneration.generateFlowers();
+            ModEntitySpawn.generateEntitySpawns();
     }
 }

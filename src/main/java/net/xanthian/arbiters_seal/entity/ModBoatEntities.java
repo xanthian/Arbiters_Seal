@@ -13,7 +13,7 @@ import net.xanthian.arbiters_seal.entity.item.ModChestBoatEntity;
 
 import java.util.function.Supplier;
 
-public class ModEntities {
+public class ModBoatEntities {
 
     public static <T extends Entity> Supplier<EntityType<T>>
     registerEntity(String name, EntityType.EntityFactory<T> entityFactory, SpawnGroup category, float width, float height, int clientTrackingRange) {
@@ -22,18 +22,13 @@ public class ModEntities {
         return () -> registry;
     }
 
-    public static final Supplier<EntityType<ModBoatEntity>> BOAT = ModEntities.registerEntity("boat",
+    public static final Supplier<EntityType<ModBoatEntity>> BOAT = ModBoatEntities.registerEntity("boat",
             ModBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10);
 
-    public static final Supplier<EntityType<ModChestBoatEntity>> CHEST_BOAT = ModEntities.registerEntity("chest_boat",
+    public static final Supplier<EntityType<ModChestBoatEntity>> CHEST_BOAT = ModBoatEntities.registerEntity("chest_boat",
             ModChestBoatEntity::new, SpawnGroup.MISC, 1.375F, 0.5625F, 10);
 
-
-
-//public static final Supplier<EntityType<AeothEntity>> AEOTH = ModEntities.registerEntity("aeoth",
-           // AeothEntity::new, SpawnGroup.MISC,2f, 2f, 10);
-
-    public static void registerEntities() {
+    public static void registerBoatEntities() {
 
     }
 }

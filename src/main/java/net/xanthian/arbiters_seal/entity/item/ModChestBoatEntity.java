@@ -22,7 +22,7 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
-import net.xanthian.arbiters_seal.entity.ModEntities;
+import net.xanthian.arbiters_seal.entity.ModBoatEntities;
 import org.jetbrains.annotations.Nullable;
 
 public class ModChestBoatEntity  extends ModBoatEntity implements RideableInventory, VehicleInventory {
@@ -37,7 +37,7 @@ public class ModChestBoatEntity  extends ModBoatEntity implements RideableInvent
     }
 
     public static ModChestBoatEntity create(World world, double x, double y, double z) {
-        ModChestBoatEntity boat = ModEntities.CHEST_BOAT.get().create(world);
+        ModChestBoatEntity boat = ModBoatEntities.CHEST_BOAT.get().create(world);
         boat.setPosition(x, y, z);
         boat.prevX = x;
         boat.prevY = y;

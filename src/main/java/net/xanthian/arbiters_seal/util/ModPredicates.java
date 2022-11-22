@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.renderer;
+package net.xanthian.arbiters_seal.util;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

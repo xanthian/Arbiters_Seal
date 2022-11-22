@@ -8,16 +8,21 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
-import net.xanthian.arbiters_seal.entity.ModEntities;
-import net.xanthian.arbiters_seal.entity.item.ModBoatModel;
+import net.xanthian.arbiters_seal.entity.ModBoatEntities;
+import net.xanthian.arbiters_seal.entity.ModMobEntities;
+import net.xanthian.arbiters_seal.entity.item.model.ModBoatModel;
+import net.xanthian.arbiters_seal.entity.mob.renderer.AeothRenderer;
+import net.xanthian.arbiters_seal.entity.mob.renderer.VangalRenderer;
+import net.xanthian.arbiters_seal.entity.mob.renderer.ZotzitRenderer;
 import net.xanthian.arbiters_seal.items.tools.Bows;
 import net.xanthian.arbiters_seal.items.tools.Crossbows;
 import net.xanthian.arbiters_seal.particle.ModParticles;
 import net.xanthian.arbiters_seal.particle.custom.SleepParticle;
-import net.xanthian.arbiters_seal.renderer.ModBoatRenderer;
+import net.xanthian.arbiters_seal.entity.item.renderer.ModBlockEntityRenderer;
+import net.xanthian.arbiters_seal.entity.item.renderer.ModBoatRenderer;
 
-import static net.xanthian.arbiters_seal.renderer.ModPredicates.registerBowPredicates;
-import static net.xanthian.arbiters_seal.renderer.ModPredicates.registerCrossbowPredicates;
+import static net.xanthian.arbiters_seal.util.ModPredicates.registerBowPredicates;
+import static net.xanthian.arbiters_seal.util.ModPredicates.registerCrossbowPredicates;
 
 
 @Environment(EnvType.CLIENT)
@@ -69,8 +74,12 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EBONY_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAMMY_FRUIT_STEM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_JAMMY_FRUIT_STEM, RenderLayer.getCutout());
-        //EntityRendererRegistry.register(ModEntities.AEOTH.get(), AeothRenderer::new);
-        EntityRendererRegistry.register(ModEntities.BOAT.get(), context -> new ModBoatRenderer<>(context,false));
-        EntityRendererRegistry.register(ModEntities.CHEST_BOAT.get(), context -> new ModBoatRenderer<>(context, true));
+
+        EntityRendererRegistry.register(ModBoatEntities.BOAT.get(), context -> new ModBoatRenderer<>(context,false));
+        EntityRendererRegistry.register(ModBoatEntities.CHEST_BOAT.get(), context -> new ModBoatRenderer<>(context, true));
+        EntityRendererRegistry.register(ModMobEntities.ZOTZIT, ZotzitRenderer::new);
+        EntityRendererRegistry.register(ModMobEntities.AEOTH, AeothRenderer::new);
+        EntityRendererRegistry.register(ModMobEntities.VANGAL, VangalRenderer::new);
+        ModBlockEntityRenderer.registerBlockEntityRenderer();
     }
 }

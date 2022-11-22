@@ -2,6 +2,7 @@ package net.xanthian.arbiters_seal.loot;
 
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
+import net.minecraft.loot.condition.KilledByPlayerLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -56,6 +57,7 @@ public class ModMobLoot {
             if (ENDER_DRAGON_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(1.0f)) //100%
                         .with(ItemEntry.builder(RareItems.DRAGONSBLOOD_SAP))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 5.0f)).build());
@@ -64,6 +66,7 @@ public class ModMobLoot {
             if (ENDER_DRAGON_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.25f)) // 25%
                         .with(ItemEntry.builder(Chestpieces.DRAGONSCALE_MAIL))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -72,6 +75,7 @@ public class ModMobLoot {
             if (ENDER_DRAGON_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.1f)) // 10%
                         .with(ItemEntry.builder(Daggers.DRAGONS_NAIL))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -82,6 +86,7 @@ public class ModMobLoot {
             if (EVOKER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Chestpieces.MASTER_ROBE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -92,6 +97,7 @@ public class ModMobLoot {
             if (WITCH_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //1%
                         .with(ItemEntry.builder(Chestpieces.SCHOLAR_ROBE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -100,6 +106,7 @@ public class ModMobLoot {
             if (WITCH_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Helmets.WIZARD_CONE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -108,6 +115,7 @@ public class ModMobLoot {
             if (WITCH_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Helmets.WITCH_CROWN))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -118,6 +126,7 @@ public class ModMobLoot {
             if (WARDEN_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Chestpieces.SOUL_ARMOR))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -126,6 +135,7 @@ public class ModMobLoot {
             if (WARDEN_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Helmets.VALIANT_HELM))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -136,6 +146,7 @@ public class ModMobLoot {
             if (WITHER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Shields.BEHEMOTH_GUARD))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -146,6 +157,7 @@ public class ModMobLoot {
             if (ZOMBIE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.OATH_BAND))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -156,6 +168,7 @@ public class ModMobLoot {
             if (CREEPER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.VIGIL_BAND))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -166,6 +179,7 @@ public class ModMobLoot {
             if (SKELETON_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.SAPPHIRE_EARRING))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -176,6 +190,7 @@ public class ModMobLoot {
             if (BLAZE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.RUBY_EARRING))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -186,6 +201,7 @@ public class ModMobLoot {
             if (PIGLIN_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.CLARITY_BAND))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -196,6 +212,7 @@ public class ModMobLoot {
             if (CAVE_SPIDER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.PURE_BAND))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -206,6 +223,7 @@ public class ModMobLoot {
             if (ENDERMAN_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) //0.5%
                         .with(ItemEntry.builder(Trinkets.SHINING_BAND))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -216,6 +234,7 @@ public class ModMobLoot {
             if (GHAST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Feet.HOVER_BOOTS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -226,6 +245,7 @@ public class ModMobLoot {
             if (WANDERING_TRADER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(KilledByPlayerLootCondition.builder())
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) //5%
                         .with(ItemEntry.builder(Trinkets.GLASSES))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());

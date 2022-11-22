@@ -1,4 +1,4 @@
-package net.xanthian.arbiters_seal.entity.item;
+package net.xanthian.arbiters_seal.entity.item.model;
 
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.model.ModelPart;
@@ -8,6 +8,7 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 import net.xanthian.arbiters_seal.Init;
+import net.xanthian.arbiters_seal.entity.item.ModBoatModelLayer;
 
 import java.util.function.Function;
 import java.util.function.Supplier;

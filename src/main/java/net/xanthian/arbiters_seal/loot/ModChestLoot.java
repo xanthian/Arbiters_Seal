@@ -1,10 +1,13 @@
 package net.xanthian.arbiters_seal.loot;
 
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.*;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.EnchantRandomlyLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.BinomialLootNumberProvider;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
@@ -28,8 +31,8 @@ public class ModChestLoot {
             = new Identifier("minecraft", "chests/desert_pyramid");
     private static final Identifier NETHER_BRIDGE_ID
             = new Identifier("minecraft", "chests/nether_bridge");
-    private static final Identifier BASTION_BRIDGE_ID
-            = new Identifier("minecraft", "chests/bastion_bridge");
+    private static final Identifier END_CITY_TREASURE_ID
+            = new Identifier("minecraft", "chests/end_city_treasure");
 
     public static void registerLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
@@ -225,6 +228,16 @@ public class ModChestLoot {
                         .conditionally(RandomChanceLootCondition.builder(0.10f)) // Drops 10% of the time
                         .with(ItemEntry.builder(Chestpieces.MOLTEN_ROBE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            // END CITY
+            if (END_CITY_TREASURE_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .with(ItemEntry.builder(Swords.SILVER_SWORD)
+                                .apply(new EnchantRandomlyLootFunction.Builder()
+                                        .add(Enchantments.KNOCKBACK)))
+                        .rolls(BinomialLootNumberProvider.create(3, 0.03F));
                 tableBuilder.pool(poolBuilder.build());
             }
         });

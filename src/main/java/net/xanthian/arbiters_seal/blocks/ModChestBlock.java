@@ -10,7 +10,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.xanthian.arbiters_seal.entity.ModBlockEntities;
-import net.xanthian.arbiters_seal.entity.item.ModChestEntity;
+import net.xanthian.arbiters_seal.entity.block.ModChestEntity;
 
 public class ModChestBlock extends ChestBlock {
     public ModChestBlock() {
@@ -20,7 +20,7 @@ public class ModChestBlock extends ChestBlock {
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
+        return BlockRenderType.ENTITYBLOCK_ANIMATED;
     }
 
     @Override

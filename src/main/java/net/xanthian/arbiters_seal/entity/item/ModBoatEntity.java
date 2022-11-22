@@ -10,7 +10,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.world.World;
-import net.xanthian.arbiters_seal.entity.ModEntities;
+import net.xanthian.arbiters_seal.entity.ModBoatEntities;
 import net.xanthian.arbiters_seal.items.NormalItems;
 
 import java.util.function.Supplier;
@@ -23,7 +23,7 @@ public class ModBoatEntity extends BoatEntity {
     }
 
     public static ModBoatEntity create(World world, double x, double y, double z) {
-        ModBoatEntity boat = ModEntities.BOAT.get().create(world);
+        ModBoatEntity boat = ModBoatEntities.BOAT.get().create(world);
         boat.setPosition(x, y, z);
         boat.prevX = x;
         boat.prevY = y;

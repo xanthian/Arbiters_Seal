@@ -34,7 +34,7 @@ public class ModVillagers {
     public static void registerTrades() {
 
         // Gunsmith
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,1,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 21),
@@ -42,7 +42,7 @@ public class ModVillagers {
                             6, 2, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,1,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.GUNPOWDER, 10),
@@ -50,7 +50,7 @@ public class ModVillagers {
                             6, 2, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,1,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.GUNPOWDER, 32),
@@ -58,7 +58,7 @@ public class ModVillagers {
                             6, 2, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,2,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 32),
@@ -66,7 +66,7 @@ public class ModVillagers {
                             3, 5, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,2,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Guns.FLINTLOCK, 1),
@@ -74,7 +74,7 @@ public class ModVillagers {
                             5, 5, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,2,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 32),
@@ -82,7 +82,7 @@ public class ModVillagers {
                             5, 5, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,3,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 32),
@@ -90,7 +90,7 @@ public class ModVillagers {
                             3, 10, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,3,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Guns.BOOMSTICK, 1),
@@ -98,7 +98,7 @@ public class ModVillagers {
                             3, 10, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,3,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(NormalItems.BULLETS, 32),
@@ -106,7 +106,7 @@ public class ModVillagers {
                             3, 10, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,3,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 32),
@@ -114,7 +114,7 @@ public class ModVillagers {
                             5, 10, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,4,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 4,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 48),
@@ -122,7 +122,7 @@ public class ModVillagers {
                             3, 15, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,4,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 4,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 3),
@@ -130,7 +130,7 @@ public class ModVillagers {
                             3, 15, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GUNSMITH,4,
+        TradeOfferHelper.registerVillagerOffers(GUNSMITH, 4,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Guns.LONG_BARREL, 1),
@@ -141,7 +141,7 @@ public class ModVillagers {
 
 
         // Gadgeteer
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,1,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 12),
@@ -149,7 +149,7 @@ public class ModVillagers {
                             5, 2, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,1,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 1),
@@ -157,7 +157,7 @@ public class ModVillagers {
                             12, 1, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,1,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 25),
@@ -165,7 +165,7 @@ public class ModVillagers {
                             2, 2, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,2,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(RareItems.ALOE_LEAF, 20),
@@ -173,7 +173,7 @@ public class ModVillagers {
                             10, 5, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,2,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Gadgets.SPRINGGER, 1),
@@ -181,7 +181,7 @@ public class ModVillagers {
                             10, 5, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,2,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 12),
@@ -189,7 +189,7 @@ public class ModVillagers {
                             2, 5, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,3,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 15),
@@ -197,7 +197,7 @@ public class ModVillagers {
                             2, 15, 0.02f
                     )));
                 });
-        TradeOfferHelper.registerVillagerOffers(GADGETEER,3,
+        TradeOfferHelper.registerVillagerOffers(GADGETEER, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 10),

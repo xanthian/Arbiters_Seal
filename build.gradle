@@ -15,12 +15,11 @@ repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
-	maven {
-		url "https://maven.jamieswhiteshirt.com/libs-release"
-		content {
-			includeGroup "com.jamieswhiteshirt"
-		}
+	maven { url "https://maven.jamieswhiteshirt.com/libs-release"
+		content { includeGroup "com.jamieswhiteshirt"}
 	}
+	maven { url "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
+
 }
 
 dependencies {
@@ -38,7 +37,8 @@ dependencies {
 	// reach entity
 	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
 	include "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
-
+	// geckolib
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.19:3.1.36"
 }
 loom {
 	accessWidenerPath = file("src/main/resources/arbiters_seal.accesswidener")

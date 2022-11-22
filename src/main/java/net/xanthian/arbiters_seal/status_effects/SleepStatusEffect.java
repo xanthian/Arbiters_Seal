@@ -6,6 +6,8 @@ import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.world.World;
+import net.xanthian.arbiters_seal.particle.ModParticles;
 
 public class SleepStatusEffect extends StatusEffect {
     public SleepStatusEffect() {
@@ -14,9 +16,14 @@ public class SleepStatusEffect extends StatusEffect {
 
     @Override
     public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
+        World world = entity.getWorld();
         if (entity instanceof MobEntity) {
-            ((MobEntity) entity).setAiDisabled(true);
-            (entity).setPose(EntityPose.SLEEPING);
+            if (!world.isClient()) {
+                ((MobEntity) entity).setAiDisabled(true);
+                (entity).setPose(EntityPose.SLEEPING);
+            } else {
+                world.addParticle(ModParticles.SLEEP_PARTICLE,true,entity.getX(),entity.getY(),entity.getZ(),entity.getX(),entity.getY()+1,entity.getZ());
+            }
         }
         super.onApplied(entity, attributes, amplifier);
     }

@@ -15,6 +15,10 @@
   "effect.arbiters_seal.sleep": "Sleep",
   "effect.arbiters_seal.thorns": "Thorns",
 
+  "entity.arbiters_seal.aeoth": "Aeoth",
+  "entity.arbiters_seal.vangal": "Vangal",
+  "entity.arbiters_seal.zotzit": "Zotzit",
+
   "attribute.name.generic_jump_boost": "Jump Height",
   "attribute.name.generic_exp_boost": "Exp Boost",
   "attribute.name.generic_crit_boost": "Crit Chance",
