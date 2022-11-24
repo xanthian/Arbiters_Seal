@@ -10,16 +10,21 @@ import net.minecraft.client.render.RenderLayer;
 import net.xanthian.arbiters_seal.blocks.ModBlocks;
 import net.xanthian.arbiters_seal.entity.ModBoatEntities;
 import net.xanthian.arbiters_seal.entity.ModMobEntities;
+import net.xanthian.arbiters_seal.entity.armor.renderer.WitchCrownRenderer;
+import net.xanthian.arbiters_seal.entity.armor.renderer.WizardConeRenderer;
 import net.xanthian.arbiters_seal.entity.item.model.ModBoatModel;
+import net.xanthian.arbiters_seal.entity.armor.renderer.BlackHatRenderer;
 import net.xanthian.arbiters_seal.entity.mob.renderer.AeothRenderer;
 import net.xanthian.arbiters_seal.entity.mob.renderer.VangalRenderer;
 import net.xanthian.arbiters_seal.entity.mob.renderer.ZotzitRenderer;
+import net.xanthian.arbiters_seal.items.armor.Helmets;
 import net.xanthian.arbiters_seal.items.tools.Bows;
 import net.xanthian.arbiters_seal.items.tools.Crossbows;
 import net.xanthian.arbiters_seal.particle.ModParticles;
 import net.xanthian.arbiters_seal.particle.custom.SleepParticle;
 import net.xanthian.arbiters_seal.entity.item.renderer.ModBlockEntityRenderer;
 import net.xanthian.arbiters_seal.entity.item.renderer.ModBoatRenderer;
+import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 import static net.xanthian.arbiters_seal.util.ModPredicates.registerBowPredicates;
 import static net.xanthian.arbiters_seal.util.ModPredicates.registerCrossbowPredicates;
@@ -81,5 +86,8 @@ public class ClientInit implements ClientModInitializer {
         EntityRendererRegistry.register(ModMobEntities.AEOTH, AeothRenderer::new);
         EntityRendererRegistry.register(ModMobEntities.VANGAL, VangalRenderer::new);
         ModBlockEntityRenderer.registerBlockEntityRenderer();
+        GeoArmorRenderer.registerArmorRenderer(new BlackHatRenderer(), Helmets.BLACK_HAT);
+        GeoArmorRenderer.registerArmorRenderer(new WitchCrownRenderer(), Helmets.WITCH_CROWN);
+        GeoArmorRenderer.registerArmorRenderer(new WizardConeRenderer(), Helmets.WIZARD_CONE);
     }
 }

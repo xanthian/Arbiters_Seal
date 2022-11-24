@@ -23,7 +23,7 @@ import net.xanthian.arbiters_seal.items.tools.Guns;
 
 public class ModVillagers {
 
-    public static final PointOfInterestType GUNSTATION = registerPOI("gunstation", ModBlocks.GUNSMITH_STATION);
+    public static final PointOfInterestType GUNSTATION = registerPOI("gunstation", ModBlocks.GUNSTATION);
     public static final VillagerProfession GUNSMITH = registerProfession("gunsmith",
             RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE_KEY, new Identifier(Init.MOD_ID, "gunstation")));
 

@@ -180,10 +180,10 @@ public class ModBlocks {
             new ModChestBlock());
 
     public static final Block GADGET_STATION = registerBlock("jobsites/gadget_station",
-            new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE).nonOpaque()));
 
-    public static final Block GUNSMITH_STATION = registerBlock("jobsites/gunsmith_station",
-            new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE)));
+    public static final Block GUNSTATION = registerBlock("jobsites/gunstation",
+            new Block(FabricBlockSettings.copyOf(Blocks.FLETCHING_TABLE).nonOpaque()));
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Init.MOD_ID, name), block);

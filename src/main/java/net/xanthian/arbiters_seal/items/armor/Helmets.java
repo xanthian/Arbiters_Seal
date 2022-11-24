@@ -30,7 +30,7 @@ public class Helmets {
             new ModHelmetItem(ModArmorMaterial.TEORITE));
 
     public static final Item WIZARD_CONE = registerItem("helmets/wizard_cone",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+            new WizardCone(ArmorMaterials.NETHERITE));
 
     public static final Item MITER = registerItem("helmets/miter",
             new Miter(ArmorMaterials.NETHERITE));
@@ -39,7 +39,7 @@ public class Helmets {
             new ModHelmetItem(ArmorMaterials.NETHERITE));
 
     public static final Item BLACK_HAT = registerItem("helmets/black_hat",
-            new ModHelmetItem(ArmorMaterials.NETHERITE));
+            new BlackHat(ArmorMaterials.NETHERITE));
 
     public static final Item ROYAL_CROWN = registerItem("helmets/royal_crown",
             new ModHelmetItem(ArmorMaterials.NETHERITE));

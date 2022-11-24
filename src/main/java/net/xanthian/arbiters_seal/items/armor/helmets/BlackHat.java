@@ -5,8 +5,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Rarity;
 import net.xanthian.arbiters_seal.items.armor.Helmets;
 import net.xanthian.arbiters_seal.items.armor.ModHelmetItem;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -23,16 +21,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class WitchCrown extends ModHelmetItem implements IAnimatable {
+public class BlackHat extends ModHelmetItem implements IAnimatable{
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
 
-    public WitchCrown(ArmorMaterial material) {
+    public BlackHat(ArmorMaterial material) {
         super(material);
-    }
-
-    @Override
-    public Rarity getRarity(ItemStack stack) {
-        return Rarity.RARE;
     }
 
 
@@ -65,7 +58,7 @@ public class WitchCrown extends ModHelmetItem implements IAnimatable {
 
         // Make sure the player is wearing all the armor. If they are, continue playing
         // the animation, otherwise stop
-        boolean isWearingAll = armorList.containsAll(Arrays.asList(Helmets.WITCH_CROWN));
+        boolean isWearingAll = armorList.containsAll(Arrays.asList(Helmets.BLACK_HAT));
         return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;
     }
 
